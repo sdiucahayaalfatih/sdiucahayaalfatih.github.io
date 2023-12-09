@@ -1,0 +1,786 @@
+.input-terisi {
+  background-color: #e8f6ff;
+  /* Ubah warna sesuai keinginan Anda */
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+.visi-misi {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, rgb(255, 0, 255), rgb(4, 0, 240));
+  color: white;
+  padding: 20px;
+  text-align: center;
+  background-size: 200% auto;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
+}
+
+.text-visi-judul h1 {
+  font-size: 2em;
+}
+
+.menu-visi {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.menu-visi li {
+  margin: 0 10px;
+  font-size: 1em;
+}
+
+.menu-visi a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-visi p {
+  color: white;
+  margin: 0 5px;
+}
+
+/*Pop Up Terkirim*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-box {
+  background-color: #fff;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 200px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.modal-box i {
+  font-size: 70px;
+  color: #4070f4;
+}
+
+.modal-box h2 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #333;
+}
+
+.modal-box h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+}
+
+.modal-box .buttons {
+  margin-top: 25px;
+}
+
+.modal-box button {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding: 6px 12px;
+  margin: 0 10px;
+  background-color: #265df2;
+  border-radius: 5px;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .modal-box {
+    max-width: 90%;
+  }
+
+  .modal-box i {
+    font-size: 50px;
+  }
+
+  .modal-box h2 {
+    font-size: 20px;
+  }
+
+  .modal-box h3 {
+    font-size: 14px;
+  }
+
+  .emoji {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-box {
+    max-width: 60%;
+  }
+
+  .modal-box i {
+    font-size: 46px;
+  }
+
+  .modal-box h2 {
+    font-size: 16px;
+  }
+
+  .modal-box h3 {
+    font-size: 10px;
+  }
+
+  .emoji {
+    font-size: 1.2em;
+  }
+}
+
+/*Formulir*/
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons button:hover {
+  background-color: #1f6b97;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.emoji {
+  font-size: 2em;
+}
+
+.formulir-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(230, 230, 230);
+  font-family: "Poppins", sans-serif;
+}
+
+.body {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.body header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+
+.body .form {
+  margin-top: 30px;
+}
+
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-box label {
+  color: #333;
+}
+
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+.form .gender-box {
+  margin-top: 20px;
+}
+
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.form .gender {
+  column-gap: 5px;
+}
+
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+
+.form .questions-box {
+  margin-top: 20px;
+}
+
+.questions-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.form :where(.questions-option, .question1) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.form .questions1 {
+  column-gap: 5px;
+}
+
+.questions1 input {
+  accent-color: rgb(130, 106, 251);
+}
+
+.form :where(.questions1 input, .questions1 label) {
+  cursor: pointer;
+}
+
+.questions1 label {
+  color: #707070;
+}
+
+.form .questions-box1 {
+  margin-top: 20px;
+}
+
+.questions-box1 h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.form :where(.questions-option2, .question2) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.question1 input[type="radio"] {
+  width: 20px;
+  /* Ubah lebar radio sesuai kebutuhan */
+  height: 20px;
+  /* Ubah tinggi radio sesuai kebutuhan */
+  /* Tambahan gaya CSS lainnya jika diperlukan */
+}
+
+.question2 input[type="radio"] {
+  width: 20px;
+  /* Ubah lebar radio sesuai kebutuhan */
+  height: 20px;
+  /* Ubah tinggi radio sesuai kebutuhan */
+  /* Tambahan gaya CSS lainnya jika diperlukan */
+}
+
+.question3 input[type="radio"] {
+  width: 20px;
+  /* Ubah lebar radio sesuai kebutuhan */
+  height: 20px;
+  /* Ubah tinggi radio sesuai kebutuhan */
+  /* Tambahan gaya CSS lainnya jika diperlukan */
+}
+
+.form .questions2 {
+  column-gap: 5px;
+}
+
+.questions2 input {
+  accent-color: rgb(130, 106, 251);
+}
+
+.form :where(.questions2 input, .questions2 label) {
+  cursor: pointer;
+}
+
+.questions2 label {
+  color: #707070;
+}
+
+.form .questions-box {
+  margin-top: 20px;
+}
+
+.questions-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.form :where(.questions-option, .question1) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.form .questions1 {
+  column-gap: 5px;
+}
+
+.questions1 input {
+  accent-color: rgb(130, 106, 251);
+}
+
+.form :where(.questions1 input, .questions1 label) {
+  cursor: pointer;
+}
+
+.questions1 label {
+  color: #707070;
+}
+
+.form .questions-box2 {
+  margin-top: 20px;
+}
+
+.questions-box2 h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.form :where(.questions-option3, .question3) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+
+.form .questions3 {
+  column-gap: 5px;
+}
+
+.questions3 input {
+  accent-color: rgb(130, 106, 251);
+}
+
+.form :where(.questions3 input, .questions3 label) {
+  cursor: pointer;
+}
+
+.questions3 label {
+  color: #707070;
+}
+
+.penghasilanibu :where(input, .select-box) {
+  margin-top: 15px;
+}
+
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+
+.form .input-box button {
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: linear-gradient(to right, rgb(217, 255, 0), rgb(7, 145, 30));
+}
+
+.form .button-submit button {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: linear-gradient(to right, rgb(255, 0, 255), rgb(4, 0, 240));
+  background-size: 200% auto;
+  animation: gradientAnimation 2s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
+}
+
+.form .button-submit:hover button {
+  background-position: 100% center;
+}
+
+.button-submit2 button {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-size: 200% auto;
+  animation: gradientAnimation 2s ease infinite;
+}
+
+.submit2::after {
+  content: "LOADING";
+  animation: loadingAnimation 2s linear infinite;
+  margin-left: 5px;
+  top: 50%;
+  left: 100%;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    content: "LOADING";
+  }
+
+  25% {
+    content: "LOADING.";
+  }
+
+  50% {
+    content: "LOADING..";
+  }
+
+  75% {
+    content: "LOADING...";
+  }
+
+  100% {
+    content: "LOADING....";
+  }
+}
+
+.form .input-data-wali {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.input-data-wali label {
+  color: #333;
+}
+
+.form :where(.input-data-wali input, .select-data-wali) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.input-data-wali input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.select-data-wali select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+
+.form .column-data-wali {
+  display: flex;
+  column-gap: 15px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+
+/*Indikator Bintang*/
+.required1 {
+  color: red;
+}
+
+.required2 {
+  color: red;
+}
+
+.required3 {
+  color: red;
+}
+
+.required4 {
+  color: red;
+}
+
+.required5 {
+  color: red;
+}
+
+.required6 {
+  color: red;
+}
+
+.required7 {
+  color: red;
+}
+
+.required8 {
+  color: red;
+}
+
+.required9 {
+  color: red;
+}
+
+.required10 {
+  color: red;
+}
+
+.required11 {
+  color: red;
+}
+
+.required12 {
+  color: red;
+}
+
+.required13 {
+  color: red;
+}
+
+.required14 {
+  color: red;
+}
+
+.required15 {
+  color: red;
+}
+
+.required16 {
+  color: red;
+}
+
+.required17 {
+  color: red;
+}
+
+.required18 {
+  color: red;
+}
+
+.required19 {
+  color: red;
+}
+
+.required20 {
+  color: red;
+}
+
+.required21 {
+  color: red;
+}
+
+.required22 {
+  color: red;
+}
+
+.required23 {
+  color: red;
+}
+
+.required24 {
+  color: red;
+}
+
+.required25 {
+  color: red;
+}
+
+.required26 {
+  color: red;
+}
+
+#nokksiswa-warning {
+  color: red;
+  font-size: 12px;
+}
+
+.nokksiswa-down {
+  color: red;
+}
+
+.maps-down {
+  color: red;
+}
+
+.maps-warning {
+  font-size: 12px;
+}
+
+#noniksiswa-warning {
+  color: red;
+  font-size: 12px;
+}
+
+.noniksiswa-down {
+  color: red;
+}
+
+#nonikayah-warning {
+  color: red;
+  font-size: 12px;
+}
+
+.nonikayah-down {
+  color: red;
+}
+
+#nikibu-warning {
+  color: red;
+  font-size: 12px;
+}
+
+.nikibu-down {
+  color: red;
+}
+
+#nikwali-warning {
+  color: red;
+  font-size: 12px;
+}
+
+.nikwali-down {
+  color: red;
+}
+
+.notelp-down {
+  color: red;
+}
+
+#notelp-warning {
+  color: red;
+  font-size: 12px;
+}
+
+.highlight-input {
+  border: 2px solid red;
+}
+
+#tahun-warning {
+  color: red;
+  font-size: 12px;
+}
+
+.tahunajaran-down {
+  color: red;
+}
+
+.alamatsekolah-down {
+  font-size: 12px;
+}
+
+#alamatsekolah-warning {
+  color: red;
+}
+
+.alamat-siswa {
+  font-size: 12px;
+}
+
+#alamat-siswa2 {
+  color: red;
+  font-size: 12px;
+}

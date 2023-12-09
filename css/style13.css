@@ -1,0 +1,158 @@
+.container-data {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, rgb(255, 0, 255), rgb(4, 0, 240));
+  color: white;
+  text-align: center;
+  background-size: 200% auto;
+  animation: gradientAnimation 5s ease infinite;
+  font-size: 20px;
+  box-sizing: border-box;
+  padding: 20px 50px;
+}
+
+/* Gaya untuk judul */
+.statuspendaftaran {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Gaya untuk dropdown tahun */
+.filter-tahun {
+  text-align: center;
+  padding: 10px 10px;
+}
+
+#pilihtahun {
+  padding: 10px 10px;
+  font-size: 16px;
+}
+
+/* Gaya untuk kolom pencarian siswa */
+.pencarian-siswa {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pencarian-siswa input {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  /* Tambahkan padding untuk memberi ruang di sekitar kotak pencarian */
+  background-color: #ffffff;
+  /* Latar belakang abu-abu */
+  border: 1px solid #ccc;
+  /* Border dengan warna abu-abu terang */
+  border-radius: 5px;
+  /* Sudut sudut kotak */
+}
+
+#search {
+  padding: 5px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Gaya untuk tabel */
+
+.container-dat {
+  padding: 20px 20px;
+}
+
+.data-table {
+  align-items: center;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+}
+
+tbody {
+  padding: 20px 20px;
+}
+
+@media (max-width: 600px) {
+  .container-data {
+    padding: 10px;
+  }
+
+  .statuspendaftaran {
+    font-size: 20px;
+  }
+
+  .data-table th,
+  .data-table td {
+    font-size: 10px;
+  }
+
+  /* Aturan CSS untuk layar ponsel */
+  .data-table th,
+  .data-table td {
+    padding: 5px;
+    /* Ubah padding untuk layar ponsel */
+  }
+}
+
+@media (max-width: 480px) {
+  .statuspendaftaran {
+    font-size: 14px;
+  }
+
+  .data-table th,
+  .data-table td {
+    font-size: 9px;
+  }
+
+  .container-data {
+    font-size: 10px;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
+}
+
+.menu-visi {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.menu-visi li {
+  margin: 0 10px;
+  font-size: 1em;
+}
+
+.menu-visi a {  
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.menu-visi p {
+  color: white;
+  margin: 0 5px;
+}

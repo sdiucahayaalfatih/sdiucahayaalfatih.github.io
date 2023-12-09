@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SDIU Cahaya Al-Fatih</title>
+  <link rel="website icon" type="png" href="sdiulogo/LOGOBOTTOM.png">
+  <link rel="stylesheet" href="css/style1.css" />
+  <link rel="stylesheet" href="css/style2.css" />
+  <link rel="stylesheet" href="css/style3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="modal-container" id="modalContainer">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div class="slide-container">
+        <div class="mySlides fade">
+          <img class="image25" src="Slide2.png" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img class="image25" src="Slide3.png" style="width: 100%" />
+        </div>
+
+        <div class="mySlides fade">
+          <img class="image25" src="Slide4.png" style="width: 100%" />
+        </div>
+
+        <!-- Tombol navigasi -->
+        <a class="preview" onclick="minSlides(-1)">&#10094;</a>
+        <a class="nexto" onclick="minSlides(1)">&#10095;</a>
+      </div>
+    </div>
+  </div>
+  <!--Navbar Paling Atas-->
+  <div id="navbar-one" class="navbar-one flex">
+    <div class="left flex">
+      <div class="email">
+        <a href="mailto:sdiucahayaalfatih@gmail.com"><img src="icon/email.svg" class="logososmed" />
+          <span>sdiucahayaalfatih@gmail.com</span></a>
+      </div>
+      <div class="call">
+        <a href="https://api.whatsapp.com/send/?phone=6287817850418&text&type=phone_number&app_absent=0"><img
+            src="icon/telp.svg" class="logososmed" />
+          <span>+62878-1785-0418</span></a>
+      </div>
+    </div>
+    <div class="right flex">
+      <div class="facebook">
+        <a href="https://www.facebook.com/sdiucahayaalfatih"><img src="icon/facebook.svg" class="logososmed" /></a>
+      </div>
+      <div class="messenger">
+        <a href="https://www.facebook.com/sdiucahayaalfatih"><img src="icon/messenger.svg" class="logososmed" /></a>
+      </div>
+      <div class="instragram">
+        <a href="https://www.instagram.com/sdiucahayaalfatih/?hl=id">
+          <img src="icon/instagram.svg" class="logososmed" /></a>
+      </div>
+      <div class="youtube">
+        <a href="https://www.youtube.com/@sdiucahayaalfatih9465/channels"><img src="icon/youtube.svg"
+            class="logososmed" /></a>
+      </div>
+      <div class="tiktok">
+        <a href=""><img src="icon/tiktok.svg" class="logososmed" /></a>
+      </div>
+    </div>
+  </div>
+  <!--Navbar Navigasi Menu-->
+  <div class="header stuck">
+    <a href="#" class="logo"><img src="sdiulogo/logoddiu1.png" alt="image" height="55px"></a>
+    <input class="toogle" type="checkbox" id="menu-bar" onclick="toggleMenu()" />
+    <div class="menutoogle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#">Profil Sekolah</a>
+          <ul>
+            <li><a href="profilsekolah.html">Profil Sekolah</a></li>
+            <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
+            <li><a href="visi-misi.html">Visi Misi & Tujuan</a></li>
+            <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
+            <li><a href="fasilitas.html">Fasilitas</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Program Sekolah</a>
+          <ul>
+            <li><a href="#">Program Sekolah</a></li>
+            <li><a href="kurikulum.html">Kurikulum</a></li>
+            <li><a href="#">Agenda Kegiatan</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Akademik</a>
+          <ul>
+            <li><a href="#">Kalender Akademik</a></li>
+            <li><a href="#">Kultur Sekolah</a></li>
+            <li><a href="#">Jadwal Pembelajaran</a></li>
+            <li><a href="#">Esktrakulikuler</a></li>
+            <li><a href="#">Spiritual Habits</a></li>
+            <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Prestasi</a></li>
+        <li>
+          <a href="#">Berita</a>
+          <ul>
+            <li><a href="pengumuman.html">Pengumuman</a></li>
+            <li><a href="#">Galery</a></li>
+            <li><a href="#">Kegiatan</a></li>
+            <li><a href="#id-berita-pengumuman">Artikel/Berita</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#about-saya">About Me</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!--Slide-->
+  <div id="navbar-slider" class="slider">
+    <div class="mysliderr fade" style="display: block">
+      <div class="txt">
+        <h1>Ayo daftarkan Diri Anda Segera</h1>
+        <p>Gabung Bersama Kami</p>
+      </div>
+      <img class="animation-image" src="Slide1.jpg" style="width: 100%; height: 100%" />
+    </div>
+    <div class="mysliderr fade">
+      <div class="txt">
+        <h1>Banyak Program Unggulan</h1>
+        <p>Seperti Progam Tahfidz, TPQ, MDTA, dll</p>
+      </div>
+      <img class="animation-image" src="Slide2.png" style="width: 100%; height: 100%" />
+    </div>
+    <div class="mysliderr fade">
+      <div class="txt">
+        <h1>Pendidikan Karakter</h1>
+        <p>Mengajarkan Pendidikan Anak Secara Bertahap dan Sabar</p>
+      </div>
+      <img class="animation-image" src="Slide3.png" style="width: 100%; height: 100%" />
+    </div>
+    <div class="mysliderr fade">
+      <div class="txt">
+        <h1>Program Tahfidz Quran</h1>
+        <p>Menjadikan Anak Cinta Al-Quran</p>
+      </div>
+      <img class="animation-image" src="Slide4.png" style="width: 100%; height: 100%" />
+    </div>
+    <div class="mysliderr fade">
+      <div class="txt">
+        <h1>Daftarkan Diri Anda Segera</h1>
+        <p>Gabung Bersama Kami Menjadi satu keluarga yayasan</p>
+      </div>
+      <img class="animation-image" src="Slide5.png" style="width: 100%; height: 100%" />
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="dotsbox" style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+  </div>
+
+  <!--Visi Misi Sekolah-->
+  <section id="section-visi-misi" class="visi">
+    <h1>VISI KAMI</h1>
+    <h2>"Membangun Generasi Qur'ani, Beradab, Cerdas, Pembelajar, dan Berteknologi"</h2>
+    <p>Mari bergabung bersama kami, untuk menjadi bagian dari keluarga besar</p>
+  </section>
+  <div id="about-saya" class="about-me">
+    <h1><span>▸</span>TENTANG KAMI<span>◂</span></h1>
+  </div>
+  <div class="layanan-menu">
+    <div class="layanan satu">
+      <a href="Pendaftaran.html"><img src="icon/pendaftaran-icon.svg"></a>
+      <h1>Pendaftaran Online</h1>
+      <p>Daftarkan putri anda segera disekolah kami, Quota terbatas</p>
+    </div>
+    <div class="layanan dua">
+      <a href="kurikulum.html"><img src="icon/kurikulum-icon.svg"></a>
+      <h1>Kurikulum</h1>
+      <p>Informasi Mengenai Kurikulum yang di gunakan di SDIU Cahaya Al-Fatih</p>
+    </div>
+    <div class="layanan tiga">
+      <a href="https://wa.me/6287817850418"><img src="icon/hubungi-icon.svg"></a>
+      <h1>Hubungi Kami</h1>
+      <p>Bila masih ada yang ingin Ibu/Bapak tanyakan silahkan hubungi kami pada kontak yang telah disediakan, atau
+        mengunjungi alamat kami langsung</p>
+    </div>
+  </div>
+  </main>
+  </section>
+
+
+  <!--VISI DAN MISI LABEL-->
+  <div id="navbar-label-visi-misi" class="label1-visi-misi">
+    <div class="label1 visi1">
+      <h1>VISI</h1>
+      <p>"Mencetak Generasi Qura'ni, Beradab, Cerdas, Pembelajar, dan Bertekhnologi"</p>
+    </div>
+    <div class="label1 Misi1">
+      <h1>MISI</h1>
+      <ol>
+        <li>Memperkenalkan dan menjadikan siswa akrab dengan Al-Quran</li>
+        <li>Mengondisikan siswa dalam suasana yang menyenangkan dalam beribadah</li>
+        <li>Menumbuhkan rasa kesadaran dan kepedulian terhadap lingkungan hidup</li>
+        <li>Menjalin kerja sama berbagi dengan lembaga lain dalam merealisasikan program sekolah</li>
+        <li>Mempersiapkan insan yang terlibat aktif dalam upaya perlindungan dan pengelolaan lingkungan hidup</li>
+        <li>Menumbuhkan jiwa kemandirian, sikap bertanggung jawab, menjadi teladan bagi keluarga dan lingkungan sebagai
+          generasi yang berkarakter</li>
+        <li>Mengembangkan budaya belajar yang baik ( learning how to learn ) serta belaajr sepanjang hayat ( long life
+          education ) dan menyenangkan.</li>
+        <li>Mempersiapkan siswa dengan dasar-dasar kemampuan untuk melanjutkan kejenjang yang lebih tinggi</li>
+      </ol>
+    </div>
+    <div class="label1 Tujuan1">
+      <h1>TUJUAN</h1>
+      <p>"Mengembangkan kemampuan dan membentuk watak serta peradaban bangsa yang bermartabat dalam rangka mencerdaskan
+        kehidupan bangsa, bertujuan untuk berkembangnya potensi peserta didik agar menjadi manusia yang beriman dan
+        bertakwa kepada Tuhan Yang Maha Esa, berakhlak mulia, sehat, berilmu, cakap, kreatif, mandiri, dan menjadi warga
+        negara yang demokratis serta bertanggung jawab."</p>
+    </div>
+  </div>
+
+  <!-- Artikel Recent-->
+  <!-- Artikel Terupdate -->
+  <section id="id-berita-pengumuman" class="blog section1">
+    <div class="heading-berita">
+      <h1>Berita Terupdate</h1>
+    </div>
+    <div class="box-container">
+      <div class="shadow">
+        <div class="image">
+          <img src="https://i0.wp.com/www.biem.co/wp-content/uploads/2020/10/kepsek-sdiu-cahaya-biemdotco.jpg" alt="">
+          <h3><i class="fas fa-heart"></i>0</h3>
+        </div>
+        <div class="content">
+          <h3>SDIU Cahaya Al-Fatih Sekolah Generasi Alpha Masa Kini</h3>
+          <p>obat biem, situasi pandemi seperti sekarang seharusnya tak menghalangi kita dalam mencerdaskan generasi....
+          </p>
+          <a href="https://www.biem.co/read/2020/10/02/65923/sdiu-cahaya-al-fatih-sekolah-generasi-alpha-masa-kini/"
+            class="btn">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <div class="shadow">
+        <div class="image">
+          <img src="https://i0.wp.com/www.biem.co/wp-content/uploads/2021/02/SD-ISLAM-CAHAYA.jpg" alt="">
+          <h3><i class="fas fa-heart"></i> 77</h3>
+        </div>
+        <div class="content">
+          <h3>SD Islam Negri Unggulan Cahaya Al-Fatih Gelar Lomba Mewarnai Se-Pandeglang</h3>
+          <p>SD Islam Unggulan Cahaya Al Fatih menggelar lomba mewarnai tingkat PAUD, TK, dan RA se-Kabupaten .... </p>
+          <a href="https://www.biem.co/read/2021/02/15/74156/sd-islam-unggulan-cahaya-al-fatih-gelar-lomba-mewarnai-se-pandeglang/"
+            class="btn">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <div class="shadow">
+        <div class="image">
+          <img src="https://assets.ayobandung.com/crop/0x0:0x0/750x500/webp/photo/2022/08/09/2462980649.jpg" alt="">
+          <h3><i class="fas fa-heart"></i> 52</h3>
+        </div>
+        <div class="content">
+          <h3>Melihat dari Dekat Metode Pendidikan Karakter SDIU Cahaya Al Fatih Pandeglang</h3>
+          <p> Sekolah Dasar Islam Unggulan atau SDIU Cahaya Al-Fatih, Kabupaten Pandeglang menerapkan metode pendidikan
+            karakter...</p>
+          <a href="https://www.bantenraya.com/nasional/pr-1274099252/melihat-dari-dekat-metode-pendidikan-karakter-sdiu-cahaya-al-fatih-pandeglang"
+            class="btn">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <div class="shadow">
+        <div class="image">
+          <img src="https://assets.ayobandung.com/crop/0x0:0x0/750x500/webp/photo/2022/06/22/2012044975.jpg" alt="">
+          <h3><i class="fas fa-heart" id="likeIcon"></i></h3>
+        </div>
+        <div class="content">
+          <h3>Dua Siwa SDIU Cahaya Al-Fatih Pandeglang Rebut Juara Pertama Lomba Tahfidz</h3>
+          <p>M. Alfatih dan Kean, siswa SDIU Cahaya Al Fatih Pandeglang berhasil menjadi juara pertama dalam lomba
+            tahfidz tingkat SD/MI pada ...</p>
+          <a href="https://www.bantenraya.com/nasional/pr-1273721158/dua-siwa-sdiu-cahaya-al-fatih-pandeglang-rebut-juara-pertama-lomba-tahfidz"
+            class="btn">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <div class="shadow">
+        <div class="image">
+          <img src="https://assets.ayobandung.com/crop/0x0:0x0/750x500/webp/photo/2022/04/18/140276873.jpg" alt="">
+          <h3><i class="fas fa-heart"></i> 50</h3>
+        </div>
+        <div class="content">
+          <h3>Cetak Generasi Qurani, SDIU Cahaya Al Fatih Pandeglang Terapkan Dua Metode Pelatihan</h3>
+          <p>SD Islam Unggulan Cahaya atau SDIU Cahaya Al Fatih Pandeglang menggelar pelatihan seni membaca Alquran
+            selama Ramadhan...</p>
+          <a href="https://www.bantenraya.com/nasional/pr-1273224901/cetak-generasi-qurani-sdiu-cahaya-al-fatih-pandeglang-terapkan-dua-metode-pelatihan"
+            class="btn">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <div class="shadow">
+        <div class="image">
+          <img src="https://assets.ayobandung.com/crop/0x0:0x0/750x500/webp/photo/2022/01/12/3764248095.jpg" alt="">
+          <h3><i class="fas fa-heart"></i> 40</h3>
+        </div>
+        <div class="content">
+          <h3>SDIU Cahaya Al Fatih Ciptakan Para Penghafal Alquran</h3>
+          <p>SD Islam Unggulan atau SDIU Cahaya Al Fatih, Kabupaten Pandeglang menggelar Ujian Tasmi Alquran di Aula of
+            Room Setda Kabupaten Pandeglang.</p>
+          <a href="https://www.bantenraya.com/pendidikan/pr-1272351698/sdiu-cahaya-al-fatih-ciptakan-para-penghafal-alquran"
+            class="btn">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <div class="shadow">
+        <div class="image">
+          <img
+            src="https://assets.ayobandung.com/crop/0x0:0x0/750x500/webp/photo/bantenraya/2021/08/IMG-20210821-WA0000_resize_12.jpg"
+            alt="">
+          <h3><i class="fas fa-heart"></i>73</h3>
+        </div>
+        <div class="content">
+          <h3>SDIU Cahaya Al Fatih Gelar Kegiatan Wonderfull Muharram</h3>
+          <p>Tahun Baru Islam 1 Muharram 1443 H. SDIU Cahaya Al Fatih menyelenggarakan kegiatan Worderfull Muharram.
+            Kegiatan Peringatan Hari Besar Islam (PHBI) ini menyongsong tema “Raih Prestasi di Masa Pandemi dengan
+            Berbagi”.</p>
+          <a href="https://www.bantenraya.com/pendidikan/pr-1271105132/sdiu-cahaya-al-fatih-gelar-kegiatan-wonderfull-muharram"
+            class="btn">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <div class="shadow">
+        <div class="image">
+          <img
+            src="https://assets.ayobandung.com/crop/0x0:0x0/750x500/webp/photo/bantenraya/2021/07/WhatsApp-Image-2021-07-07-at-19.11.10.jpeg"
+            alt="">
+          <h3><i class="fas fa-heart"></i>99</h3>
+        </div>
+        <div class="content">
+          <h3>SDIU Cahaya Al-Fatih Tingkatkan SDM Guru</h3>
+          <p>Dalam rangka meningkatkan kompetensi guru dalam menghadapi tahun ajaran baru 2021-2022. SD Islam Unggulan
+            (SDIU) Cahaya Al-Fatih, Pandeglang mengadakan pelatihan kompetensi guru.</p>
+          <a href="https://www.bantenraya.com/pendidikan/pr-1271104236/sdiu-cahaya-alfatih-tingkatkan-sdm-guru"
+            class="btn">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <div class="shadow">
+        <div class="image">
+          <img
+            src="https://assets.ayobandung.com/crop/0x0:0x0/750x500/webp/photo/bantenraya/2021/05/IMG-20210518-WA0004_resize_17.jpg"
+            alt="">
+          <h3><i class="fas fa-heart"></i>99</h3>
+        </div>
+        <div class="content">
+          <h3>SDIU Cahaya Al-Fatih Tanamkan Pribadi Dermawan Sejak Dini</h3>
+          <p>Peserta didik SD Islam Unggulan (SDIU) Cahaya Al Fatih, Kecamatan Kaduhejo, Kabupaten Pandeglang menggelar
+            kegiatan Menjadi Santri Cilik Memulai Dermawan Sejak Dini.</p>
+          <a href="https://www.bantenraya.com/pendidikan/pr-1271103048/sdiu-cahaya-alfatih-tanamkan-pribadi-dermawan-sejak-dini"
+            class="btn">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="myModal" class="modal">
+    <div class="modal-box">
+      <i class="fa-regular fa-circle-check"></i>
+      <h2>Pesan Telah Terkirim</h2>
+      <h3>Terimakasih telah menghubungi Kami</h3>
+      <h3>Pesan anda akan segera kami balas secepat mungkin<p class="emoji">&#x1F603;</p>
+      </h3>
+      <div class="buttons">
+        <button id="closeBtn" class="close-btn">Ok, Close</button>
+      </div>
+    </div>
+  </div>
+  <!--HUBUNGI KAMI FORM-->
+  <section>
+    <div id="footer-end-me" class="marginsty">
+      <div class="bodisty">
+        <div class="container22">
+          <div class="content22">
+            <div class="image-box">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15861.757154629464!2d106.0707518!3d-6.3371018!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e423d2738b603dd%3A0x7d6fc4df1ca994e4!2sSDIU%20Cahaya%20Al%20Fatih!5e0!3m2!1sid!2sid!4v1684069002504!5m2!1sid!2sid"
+                style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                class="maps-design"></iframe>
+            </div>
+            <form id="form"
+              action="https://script.google.com/macros/s/AKfycby8Tl3NvGr2vIPSadX6HS-rq5nEDPFlHq3dKJ3gqA4zQc49iIN1nbhamj6fV88RzJUz/exec">
+              <div class="topic">
+                <h4>Hubungi Kami</h4>
+                <p>
+                  Bila ada pertanyaan, silahkan hubungi kami diform yang telah kami sediakan, pesan anda akan kami balas
+                  sesegera mungkin pada jam kerja.
+                </p>
+              </div>
+              <div class="input-box">
+                <input name="nama" type="text" autocomplete="off" required />
+                <label>Enter your name</label>
+              </div>
+              <div class="input-box">
+                <input name="email" type="text" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                  autocomplete="off" required />
+                <label>Alamat email</label>
+              </div>
+              <div class="input-box">
+                <input name="nomorphone" type="text" autocomplete="off" required />
+                <label>Nomor HP</label>
+              </div>
+              <div class="message-box">
+                <textarea style="resize: none;" name="isipesan" autocomplete="off" required></textarea>
+                <label>Enter your message</label>
+              </div>
+              <div class="input-box">
+                <input id="submitButton" class="submitbutton" type="submit" value="Send Message" />
+                <div id="loading-container" class="loading-container" style="display: none;">
+                  <div class="loading"></div>
+                  <div class="loading-text">Loading...</div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="content-footer">
+      <div class="top-footer">
+        <div class="logo-details">
+          <span class="my-logo">SDIU Cahaya Al-Fatih</span>
+          <p>
+            Palurahan, Kec. Kaduhejo, Kab. Pandeglang Banten Kode Pos 42252
+          </p>
+        </div>
+        <div class="media-icons">
+          <a href="https://www.facebook.com/sdiucahayaalfatih"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.facebook.com/sdiucahayaalfatih"><i class="fab fa-facebook-messenger"></i></a>
+          <a href="https://www.instagram.com/sdiucahayaalfatih/?hl=id"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/@sdiucahayaalfatih9465/channels"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Profil Sekolah</li>
+          <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
+          <li><a href="visi-misi.html"> Visi Misi & Tujuan</a></li>
+          <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
+          <li><a href="fasilitas.html">Fasilitas</a></li>
+
+        </ul>
+        <ul class="box">
+          <li class="link_name">Program Sekolah</li>
+          <li><a href="profilsekolah.html">Profil Sekolah</a></li>
+          <li><a href="kurikulum.html">Kurikulum</a></li>
+          <li><a href="#">Agenda Kegiatann</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Akademik</li>
+          <li><a href="#">Kalender Akademik</a></li>
+          <li><a href="#">Kultur Sekolah</a></li>
+          <li><a href="#">Jadwal Pembelajaran</a></li>
+          <li><a href="#">Esktrakulikuler</a></li>
+          <li><a href="#">Spiritual Habbits</a></li>
+          <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Berita</li>
+          <li><a href="pengumuman.html">Pengumuman</a></li>
+          <li><a href="#">Galeri</a></li>
+          <li><a href="#">Kegiatan</a></li>
+          <li><a href="#id-berita-pengumuman">Artikel/Berita</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2023 <a href="#">SDIU CAF</a>All rights reserved</span>
+        <span class="policy_terms">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms & condition</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://wa.me/6287817850418" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float animatedi infinitei rubberBandi"></i>
+  </a>
+
+
+  <script src="json/modalscript.js"></script>
+  <script src="json/jsfile.js"></script>
+  <script src="json/upload2.js"></script>
+  <script src="https://unpkg.com/feather-icons" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!--Kumpulan Scrip-->
+  <script src="https://unpkg.com/feather-icons" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="jsfile.js"></script>
+  <script src="https://unpkg.com/feather-icons" crossorigin="anonymous"></script>
+  <script> feather.replace(); </script>
+
+
+
+
+
+
+</body>
+
+</html>

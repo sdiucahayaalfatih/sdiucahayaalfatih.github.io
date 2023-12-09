@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.marginsty {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.bodisty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #38b6ff;
+  position: relative;
+}
+
+.container22 {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container22 .content22 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 25px 20px;
+}
+
+.content22 .topic {
+  font-weight: 500;
+  color: #1f6b97;
+  text-align: center;
+  font-size: 22px;
+}
+
+.content22 .topic p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+.content22 .image-box .maps-design {
+  width: 100%;
+  height: 400px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.image-box {
+  width: 40%;
+  margin-left: 30px;
+}
+
+.content22 form {
+  width: 40%;
+  margin-right: 30px;
+  position: relative;
+}
+
+.content22 .input-box {
+  height: 50px;
+  width: 100%;
+  margin: 16px 0;
+  position: relative;
+}
+
+.content22 .input-box input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  padding-left: 16px;
+  background: #cbecff;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.content22 .input-box input:focus,
+.content22 .input-box input:valid {
+  border-color: #1f6b97;
+  background-color: #fff;
+}
+
+.content22 .input-box label {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  color: #636c72;
+  font-size: 15px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.content22 .input-box input:focus ~ label,
+.content22 .input-box input:valid ~ label {
+  top: 0;
+  left: 12px;
+  font-size: 14px;
+  color: #1f6b97;
+  background: #fff;
+}
+.content22 .message-box {
+  height: 50px;
+  width: 100%;
+  margin: 16px 0;
+  min-height: 100px;
+  position: relative;
+  margin: 16px 0;
+}
+.content22 .message-box textarea {
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 6px 16px;
+  background: #cbecff;
+  border: 2px solid transparent;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.content22 .message-box textarea:focus,
+.content22 .message-box textarea:valid {
+  border-color: #1f6b97;
+  background-color: #fff;
+}
+
+.content22 .message-box label {
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  font-size: 16px;
+  color: #636c72;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.content22 .message-box textarea:focus ~ label,
+.content22 .message-box textarea:valid ~ label {
+  top: -10px;
+  left: 12px;
+  font-size: 14px;
+  color: #1f6b97;
+  background: #fff;
+}
+
+.content22 .input-box input[type="submit"] {
+  color: #fff;
+  background: #1f6b97;
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.content22 .input-box input[type="submit"]:hover {
+  background-color: #38b6ff;
+}
+
+.content22 .input-box input[type="submit2"] {
+  color: #fff;
+  background: #1f6b97;
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.content22 .input-box input[type="submit2"]:hover {
+  background-color: #38b6ff;
+}
+
+/* Tambahkan style untuk loading berada di tengah */
+.loading-container {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  z-index: 9999;
+  font-weight: bold;
+  display: none;
+}
+
+.loading {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #bdbdbd;
+  border-top-color: #3700ff;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  font-size: 16px;
+  color: #1f6b97;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 1050px) {
+  .container22 {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .container22 .content22 {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .image-box {
+    width: 80%;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .content22 form {
+    width: 80%;
+    margin-right: 0;
+  }
+  .content22 .image-box .maps-design {
+    width: 100%;
+    height: 200px; /* Sesuaikan dengan tinggi yang diinginkan */
+  }
+}
+/*Pop Up Terkirim*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-box {
+  background-color: #fff;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 200px auto;
+  padding: 20px;
+  text-align: center;
+}
+.modal-box i {
+  font-size: 70px;
+  color: #4070f4;
+}
+.modal-box h2 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #333;
+}
+.modal-box h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+}
+.modal-box .buttons {
+  margin-top: 25px;
+}
+.modal-box button {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding: 6px 12px;
+  margin: 0 10px;
+  background-color: #265df2;
+  border-radius: 5px;
+  color: white;
+}
+.buttons {
+  margin-top: 20px;
+}
+.buttons button:hover {
+  background-color: #1f6b97;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.emoji {
+  font-size: 2em;
+}
+@media (max-width: 600px) {
+  .modal-box {
+    max-width: 90%;
+  }
+
+  .modal-box i {
+    font-size: 50px;
+  }
+
+  .modal-box h2 {
+    font-size: 20px;
+  }
+
+  .modal-box h3 {
+    font-size: 14px;
+  }
+  .emoji {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 480px) {
+  .modal-box {
+    max-width: 60%;
+  }
+
+  .modal-box i {
+    font-size: 46px;
+  }
+
+  .modal-box h2 {
+    font-size: 16px;
+  }
+
+  .modal-box h3 {
+    font-size: 10px;
+  }
+  .emoji {
+    font-size: 1.2em;
+  }
+}
