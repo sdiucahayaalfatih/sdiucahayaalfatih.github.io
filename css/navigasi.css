@@ -173,11 +173,10 @@ body {
     background: rgb(255, 255, 255);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transform: translateX(100%);
-    transition: all 1s;
+    display: none;
   }
-  .navbar.openMenu {
-    transform: translateX(0%);
+  #menu-bar:checked ~ .navbar {
+    display: initial;
   }
   .header {
     padding: 5px;
@@ -249,20 +248,6 @@ body {
 
 /*ukuran layar handphone*/
 @media (max-width: 480px) {
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgb(255, 255, 255);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transform: translateX(100%);
-    transition: all 1s;
-  }
-  .navbar.openMenu {
-    transform: translateX(0%);
-  }
   .email span {
     display: none;
   }
