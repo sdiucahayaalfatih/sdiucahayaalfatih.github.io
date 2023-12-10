@@ -4,24 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visi Misi & Tujuan</title>
-    <link rel="website icon" type="png" href="sdiulogo/LOGOBOTTOM.png" />
-    <link rel="stylesheet" href="css/style6.css" />
+    <title>SDIU Cahaya Al-Fatih</title>
+    <link rel="stylesheet" href="css/navigasi.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/style15.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald&display=swap"
-      rel="stylesheet"
-    />
   </head>
-
   <body>
     <!--Navbar Paling Atas-->
-    <nav id="navbar-one" class="navbar-one flex">
+    <div id="navbar-one" class="navbar-one flex">
       <div class="left flex">
         <div class="email">
           <a href="mailto:sdiucahayaalfatih@gmail.com"
@@ -44,7 +38,9 @@
           /></a>
         </div>
         <div class="messenger">
-          <a href=""><img src="icon/messenger.svg" class="logososmed" /></a>
+          <a href="https://www.facebook.com/sdiucahayaalfatih"
+            ><img src="icon/messenger.svg" class="logososmed"
+          /></a>
         </div>
         <div class="instragram">
           <a href="https://www.instagram.com/sdiucahayaalfatih/?hl=id">
@@ -60,15 +56,19 @@
           <a href=""><img src="icon/tiktok.svg" class="logososmed" /></a>
         </div>
       </div>
-    </nav>
-
+    </div>
     <!--Navbar Navigasi Menu-->
     <div class="header">
-      <a href="visi-misi.html" class="logo"
+      <a href="agendakegiatan.html" class="logo"
         ><img src="sdiulogo/logoddiu1.png" alt="image" height="55px"
       /></a>
-      <input class="toogle" type="checkbox" id="menu-bar" />
-      <div class="menutoogle" id="menu-toggle" onclick="toggleMenu()">
+      <input
+        class="toogle"
+        type="checkbox"
+        id="menu-bar"
+        onclick="toggleMenu()"
+      />
+      <div class="menutoogle" id="menu-toggle">
         <span></span>
         <span></span>
         <span></span>
@@ -81,7 +81,7 @@
             <ul>
               <li><a href="profilsekolah.html">Profil Sekolah</a></li>
               <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
-
+              <li><a href="visi-misi.html">Visi Misi & Tujuan</a></li>
               <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
               <li><a href="fasilitas.html">Fasilitas</a></li>
             </ul>
@@ -91,7 +91,6 @@
             <ul>
               <li><a href="programsekolah.html">Program Sekolah</a></li>
               <li><a href="kurikulum.html">Kurikulum</a></li>
-              <li><a href="agendakegiatan.html">Agenda Kegiatan</a></li>
             </ul>
           </li>
           <li>
@@ -107,102 +106,107 @@
           <li>
             <a href="#">Berita</a>
             <ul>
-              <li><a href="pengumuman.html">Pengumuman</a></li>
               <li><a href="#">Galery</a></li>
               <li><a href="index.html">Artikel/Berita</a></li>
             </ul>
           </li>
-
           <li><a href="#about-saya">About Me</a></li>
         </ul>
       </nav>
     </div>
-
-    <div class="visi-misi">
-      <div class="text-visi-judul">
-        <h1>Visi Misi & Tujuan</h1>
+    <div class="profil-sekolah-banner" id="profilsekolah">
+      <div class="profilsekolah-judul">
+        <h1>PROGRAM SEKOLAH</h1>
       </div>
-      <ul class="menu-visi">
+      <ul class="menu-profilsekolah">
         <li><a href="index.html">Home</a></li>
         <li>
           <p>></p>
         </li>
-        <li><a>Visi Misi & Tujuan</a></li>
+        <li><a>Agenda Kegiatan</a></li>
       </ul>
     </div>
-
-    <div id="visi-judul" class="visi-judul1">
-      <h1><span>▸</span>Visi<span>◂</span></h1>
-    </div>
-
-    <div class="visi19">
-      <div class="visi20">
-        <div class="visi21">
+    <div class="container">
+      <h1>Agenda Kegiatan Sehari-hari</h1>
+      <p>
+        Berikut ini merupakan agenda kegiatan sehari-hari siswa SDIU Cahaya
+        Al-Fatih
+      </p>
+      <div class="agenda">
+        <div class="agenda-item">
+          <i class="fas fa-tint"></i>
+          <h2>Berwudhu</h2>
           <p>
-            "Mencetak Generasi Qura'ni, Beradab, Cerdas, Pembelajar, dan
-            Bertekhnologi"
+            Anak-anak setiap akan masuk kelas akan melaksanakan wudhu terlebih
+            dahulu, dan akan didampingi oleh guru pendamping di tempat wudhu.
           </p>
         </div>
-      </div>
-    </div>
-
-    <div id="visi-judul" class="visi-judul1">
-      <h1><span>▸</span>Misi<span>◂</span></h1>
-    </div>
-    <div class="misi19">
-      <div class="misi20">
-        <div class="misi21">
-          <ol>
-            <li>Memperkenalkan dan menjadikan siswa akrab dengan Al-Quran</li>
-            <li>
-              Mengondisikan siswa dalam suasana yang menyenangkan dalam
-              beribadah
-            </li>
-            <li>
-              Menumbuhkan rasa kesadaran dan kepedulian terhadap lingkungan
-              hidup
-            </li>
-            <li>
-              Menjalin kerja sama berbagi dengan lembaga lain dalam
-              merealisasikan program sekolah
-            </li>
-            <li>
-              Mempersiapkan insan yang terlibat aktif dalam upaya perlindungan
-              dan pengelolaan lingkungan hidup
-            </li>
-            <li>
-              Menumbuhkan jiwa kemandirian, sikap bertanggung jawab, menjadi
-              teladan bagi keluarga dan lingkungan sebagai generasi yang
-              berkarakter
-            </li>
-            <li>
-              Mengembangkan budaya belajar yang baik ( learning how to learn )
-              serta belaajr sepanjang hayat ( long life education ) dan
-              menyenangkan.
-            </li>
-            <li>
-              Mempersiapkan siswa dengan dasar-dasar kemampuan untuk melanjutkan
-              kejenjang yang lebih tinggi
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <div id="visi-judul" class="visi-judul1">
-      <h1><span>▸</span>Tujuan<span>◂</span></h1>
-    </div>
-    <div class="tujuan19">
-      <div class="tujuan20">
-        <div class="tujuan21">
+        <div class="agenda-item">
+          <i class="fas fa-sun"></i>
+          <h2>Sholat Sunnah Duha</h2>
           <p>
-            "Mengembangkan kemampuan dan membentuk watak serta peradaban bangsa
-            yang bermartabat dalam rangka mencerdaskan kehidupan bangsa,
-            bertujuan untuk berkembangnya potensi peserta didik agar menjadi
-            manusia yang beriman dan bertakwa kepada Tuhan Yang Maha Esa,
-            berakhlak mulia, sehat, berilmu, cakap, kreatif, mandiri, dan
-            menjadi warga negara yang demokratis serta bertanggung jawab."
+            Setiap hari juga anak-anak akan dibimbing untuk melaksanakan shalat
+            Duha setelah wudhu, minimal 2 rakaat sebelum pembelajaran.
           </p>
+        </div>
+
+        <div class="agenda-item">
+          <i class="fas fa-praying-hands"></i>
+          <h2>Berdzikir dan Shalawat</h2>
+          <p>Mengirim salam kepada Nabi Muhammad ﷺ.</p>
+        </div>
+
+        <div class="agenda-item">
+          <i class="fas fa-book-reader"></i>
+          <h2>BTQ dan Tadarus</h2>
+          <p>
+            Sebelum pembelajaran, anak-anak akan diarahkan untuk membaca
+            Al-Qur'an.
+          </p>
+        </div>
+        <div class="agenda-item">
+          <i class="fas fa-users"></i>
+          <h2>Baris depan kelas</h2>
+          <p>
+            Sebelum pembelajaran, anak-anak akan dibariskan di depan kelas untuk
+            membangkitkan semangat belajar.
+          </p>
+        </div>
+
+        <div class="agenda-item">
+          <i class="fas fa-mosque"></i>
+          <h2>Sholat Dzuhur berjama'ah</h2>
+          <p>Setiap hari siswa akan melaksanakan sholat Dzuhur bersama.</p>
+        </div>
+
+        <div class="agenda-item">
+          <i class="fas fa-language"></i>
+          <h2>Hafalan kosa kata Bahasa Arab & Bahasa Inggris</h2>
+          <p>
+            Siswa akan diberikan hafalan kosakata bahasa Inggris dan Arab setiap
+            harinya.
+          </p>
+        </div>
+
+        <div class="agenda-item">
+          <i class="fas fa-book-open"></i>
+          <h2>Literasi (Reading Time)</h2>
+          <p>
+            Anak-anak akan diberikan waktu untuk membaca buku yang mereka sukai
+            setiap minggunya.
+          </p>
+        </div>
+
+        <div class="agenda-item">
+          <i class="fas fa-praying-hands"></i>
+          <h2>Do'a Harian</h2>
+          <p>Anak-anak akan dibimbing dan diberikan hafalan doa-doa harian.</p>
+        </div>
+
+        <div class="agenda-item">
+          <i class="fas fa-mosque"></i>
+          <h2>Jumtaq (Jum'at Taqwa)</h2>
+          <p>Kegiatan khusus di hari Jumat untuk meningkatkan taqwa.</p>
         </div>
       </div>
     </div>
@@ -236,7 +240,7 @@
           <ul class="box">
             <li class="link_name">Profil Sekolah</li>
             <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
-
+            <li><a href="visi-misi.html"> Visi Misi & Tujuan</a></li>
             <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
             <li><a href="fasilitas.html">Fasilitas</a></li>
           </ul>
@@ -273,25 +277,6 @@
         </div>
       </div>
     </footer>
-
-    <script
-      src="https://unpkg.com/feather-icons"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!--Kumpulan Scrip-->
-    <script
-      src="https://unpkg.com/feather-icons"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script
-      src="https://unpkg.com/feather-icons"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      feather.replace();
-    </script>
-    <script src="json/hamburger.js"></script>
+    <script src=""></script>
   </body>
 </html>

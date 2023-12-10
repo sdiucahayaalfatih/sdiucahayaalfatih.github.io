@@ -1,0 +1,142 @@
+.profil-sekolah-banner {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, rgb(255, 0, 255), rgb(4, 0, 240));
+  color: white;
+  padding: 20px;
+  text-align: center;
+  background-size: 200% auto;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
+}
+
+.profilsekolah-judul h1 {
+  font-size: 2em;
+}
+
+.menu-profilsekolah {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.menu-profilsekolah li {
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+
+.menu-profilsekolah a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-profilsekolah p {
+  color: white;
+  margin: 0 5px;
+}
+
+@media (max-width: 900px) {
+  .profilsekolah-judul h1 {
+    font-size: 2em;
+  }
+
+  .menu-profilsekolah li {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 600px) {
+  .profilsekolah-judul h1 {
+    font-size: 1.5em;
+  }
+
+  .menu-profilsekolah li {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .profilsekolah-judul h1 {
+    font-size: 1em;
+  }
+
+  .menu-profilsekolah li {
+    font-size: 0.5em;
+  }
+}
+.container {
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.container h1,
+p {
+  padding: 5px;
+  text-align: center;
+}
+
+.program {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.program-item {
+  width: 45%;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/* Efek hover */
+.program-item:hover {
+  transform: translateY(-5px); /* Translasi ke atas */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Bayangan yang lebih besar */
+}
+.program-item i {
+  font-size: 36px;
+  margin-bottom: 15px;
+  display: block;
+  text-align: center;
+  color: blue; /* Warna ikon */
+}
+
+.program-item h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.program-item p {
+  text-align: justify;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .program-item {
+    width: calc(100% - 20px);
+  }
+}

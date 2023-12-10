@@ -4,24 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visi Misi & Tujuan</title>
-    <link rel="website icon" type="png" href="sdiulogo/LOGOBOTTOM.png" />
-    <link rel="stylesheet" href="css/style6.css" />
+    <title>SDIU Cahaya Al-Fatih</title>
+    <link rel="stylesheet" href="css/navigasi.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/style16.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald&display=swap"
-      rel="stylesheet"
-    />
   </head>
-
   <body>
     <!--Navbar Paling Atas-->
-    <nav id="navbar-one" class="navbar-one flex">
+    <div id="navbar-one" class="navbar-one flex">
       <div class="left flex">
         <div class="email">
           <a href="mailto:sdiucahayaalfatih@gmail.com"
@@ -60,15 +54,19 @@
           <a href=""><img src="icon/tiktok.svg" class="logososmed" /></a>
         </div>
       </div>
-    </nav>
-
+    </div>
     <!--Navbar Navigasi Menu-->
     <div class="header">
-      <a href="visi-misi.html" class="logo"
+      <a href="ekstrakulikuler.html" class="logo"
         ><img src="sdiulogo/logoddiu1.png" alt="image" height="55px"
       /></a>
-      <input class="toogle" type="checkbox" id="menu-bar" />
-      <div class="menutoogle" id="menu-toggle" onclick="toggleMenu()">
+      <input
+        class="toogle"
+        type="checkbox"
+        id="menu-bar"
+        onclick="toggleMenu()"
+      />
+      <div class="menutoogle" id="menu-toggle">
         <span></span>
         <span></span>
         <span></span>
@@ -81,7 +79,7 @@
             <ul>
               <li><a href="profilsekolah.html">Profil Sekolah</a></li>
               <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
-
+              <li><a href="visi-misi.html">Visi Misi & Tujuan</a></li>
               <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
               <li><a href="fasilitas.html">Fasilitas</a></li>
             </ul>
@@ -99,109 +97,159 @@
             <ul>
               <li><a href="#">Kalender Akademik</a></li>
               <li><a href="#">Jadwal Pembelajaran</a></li>
-              <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
               <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
             </ul>
           </li>
           <li><a href="#">Prestasi</a></li>
           <li>
-            <a href="#">Berita</a>
+            <a href="index.html">Berita</a>
             <ul>
-              <li><a href="pengumuman.html">Pengumuman</a></li>
               <li><a href="#">Galery</a></li>
               <li><a href="index.html">Artikel/Berita</a></li>
             </ul>
           </li>
-
           <li><a href="#about-saya">About Me</a></li>
         </ul>
       </nav>
     </div>
-
-    <div class="visi-misi">
-      <div class="text-visi-judul">
-        <h1>Visi Misi & Tujuan</h1>
+    <div class="profil-sekolah-banner" id="profilsekolah">
+      <div class="profilsekolah-judul">
+        <h1>PROGRAM SEKOLAH</h1>
       </div>
-      <ul class="menu-visi">
+      <ul class="menu-profilsekolah">
         <li><a href="index.html">Home</a></li>
         <li>
           <p>></p>
         </li>
-        <li><a>Visi Misi & Tujuan</a></li>
+        <li><a>Agenda Kegiatan</a></li>
       </ul>
     </div>
-
-    <div id="visi-judul" class="visi-judul1">
-      <h1><span>▸</span>Visi<span>◂</span></h1>
-    </div>
-
-    <div class="visi19">
-      <div class="visi20">
-        <div class="visi21">
+    <div class="container">
+      <h1>Kegiatan Ekstrakurikuler</h1>
+      <p>Berikut ini kegitakan Ekstrakulikuler di SDIU Cahaya Al-Fatih :</p>
+      <div class="activities">
+        <div class="activity">
+          <i class="fas fa-compass"></i>
+          <h2>Pramuka</h2>
           <p>
-            "Mencetak Generasi Qura'ni, Beradab, Cerdas, Pembelajar, dan
-            Bertekhnologi"
+            Sesuai dengan Permendikbud No. 63 Tahun 2003, Ekskul pramuka wajib
+            bagi setiap instansi pendidikan, hal ini dimaksudkan untuk membentuk
+            karakter nasionalis siswa. SDIU juga mewajibkan Ekskul pramuka dan
+            dilaksanakan setiap satu kali seminggu.
           </p>
         </div>
-      </div>
-    </div>
-
-    <div id="visi-judul" class="visi-judul1">
-      <h1><span>▸</span>Misi<span>◂</span></h1>
-    </div>
-    <div class="misi19">
-      <div class="misi20">
-        <div class="misi21">
-          <ol>
-            <li>Memperkenalkan dan menjadikan siswa akrab dengan Al-Quran</li>
-            <li>
-              Mengondisikan siswa dalam suasana yang menyenangkan dalam
-              beribadah
-            </li>
-            <li>
-              Menumbuhkan rasa kesadaran dan kepedulian terhadap lingkungan
-              hidup
-            </li>
-            <li>
-              Menjalin kerja sama berbagi dengan lembaga lain dalam
-              merealisasikan program sekolah
-            </li>
-            <li>
-              Mempersiapkan insan yang terlibat aktif dalam upaya perlindungan
-              dan pengelolaan lingkungan hidup
-            </li>
-            <li>
-              Menumbuhkan jiwa kemandirian, sikap bertanggung jawab, menjadi
-              teladan bagi keluarga dan lingkungan sebagai generasi yang
-              berkarakter
-            </li>
-            <li>
-              Mengembangkan budaya belajar yang baik ( learning how to learn )
-              serta belaajr sepanjang hayat ( long life education ) dan
-              menyenangkan.
-            </li>
-            <li>
-              Mempersiapkan siswa dengan dasar-dasar kemampuan untuk melanjutkan
-              kejenjang yang lebih tinggi
-            </li>
-          </ol>
-        </div>
-      </div>
-    </div>
-
-    <div id="visi-judul" class="visi-judul1">
-      <h1><span>▸</span>Tujuan<span>◂</span></h1>
-    </div>
-    <div class="tujuan19">
-      <div class="tujuan20">
-        <div class="tujuan21">
+        <div class="activity">
+          <i class="fa-solid fa-search"></i>
+          <h2>Badminton</h2>
           <p>
-            "Mengembangkan kemampuan dan membentuk watak serta peradaban bangsa
-            yang bermartabat dalam rangka mencerdaskan kehidupan bangsa,
-            bertujuan untuk berkembangnya potensi peserta didik agar menjadi
-            manusia yang beriman dan bertakwa kepada Tuhan Yang Maha Esa,
-            berakhlak mulia, sehat, berilmu, cakap, kreatif, mandiri, dan
-            menjadi warga negara yang demokratis serta bertanggung jawab."
+            Siswa juga akan diberikan ekskul badminton tiap minggunya, dilatih
+            dan diberikan pengajaran mengenai badminton
+          </p>
+        </div>
+
+        <div class="activity">
+          <i class="fas fa-handshake"></i>
+          <h2>Silat</h2>
+          <p>
+            Seni bela diri tradisional dari daerah banten ini merupakan hal yang
+            memang perlu diajarkan kepada siswa, selain membentuk kepribadian
+            yang berani akan tetapi bisa untuk melindungi dirinya dan orang
+            disekitarnya, serta mampu bersaing disaat kompetensi berlangsung
+          </p>
+        </div>
+
+        <div class="activity">
+          <i class="fas fa-music"></i>
+          <h2>Marawis</h2>
+          <p>
+            Kelompok musik tradisional Islam, mengajarkan siswa akan syair-syair
+            shalawat kepada Nabi Muhammad SAW. Agar mereka senantiasa mencintai
+            nabinya.
+          </p>
+        </div>
+
+        <div class="activity">
+          <i class="fas fa-futbol"></i>
+          <h2>Futsal</h2>
+          <p>
+            Sepak bola adalah olahraga yang bermanfaat bagi siswa di sekolah
+            karena memiliki banyak keuntungan, tidak hanya dari segi fisik
+            tetapi juga dalam hal pengembangan sosial dan mental, dan
+            meningkatkan keterampilan siswa.
+          </p>
+        </div>
+
+        <div class="activity">
+          <i class="fas fa-pen"></i>
+          <h2>Kaligrafi</h2>
+          <p>
+            Seni kaligrafi adalah seni menulis yang indah dan artistik yang
+            melibatkan pembuatan huruf atau kata-kata dengan tata letak, gaya,
+            dan estetika tertentu. Ini adalah keterampilan yang sangat menarik
+            dan bermanfaat bagi siswa di sekolah karena memiliki sejumlah
+            manfaat pendidikan dan kreatif.
+          </p>
+        </div>
+        <div class="activity">
+          <i class="fas fa-book-open"></i>
+          <h2>Story Telling</h2>
+          <p>
+            Storytelling, atau bercerita, adalah kegiatan yang sangat berharga
+            bagi siswa di sekolah karena dapat merangsang imajinasi, memperluas
+            wawasan, pengetahuan dan memperkaya pengalaman mereka.
+          </p>
+        </div>
+
+        <div class="activity">
+          <i class="fas fa-spell-check"></i>
+          <h2>Spelling Bee</h2>
+          <p>
+            Spelling Bee adalah kegiatan di mana peserta diuji untuk mengeja
+            kata-kata dalam bahasa asing. Ini adalah kompetisi yang melibatkan
+            kemampuan mengeja kata-kata dengan benar dan tepat, seperti
+            Mendorong siswa untuk mempelajari dan mengingat banyak kata baru.
+            Meningkatkan pemahaman mereka tentang struktur kata dan ejaan yang
+            benar.
+          </p>
+        </div>
+
+        <div class="activity">
+          <i class="fas fa-mosque"></i>
+          <h2>Khitobah</h2>
+          <p>
+            Khitobah merupakan istilah dalam Islam yang merujuk pada suatu
+            proses introspeksi, penyesalan, dan niat untuk memperbaiki diri yang
+            dilakukan oleh seorang Muslim. Hal ini umumnya dilakukan sebagai
+            upaya untuk memperbaiki hubungan dengan Allah SWT dan memperbaiki
+            perilaku yang mungkin dianggap tidak baik..
+          </p>
+        </div>
+
+        <div class="activity">
+          <i class="fas fa-paint-brush"></i>
+          <h2>Menggambar dan Mewarnai</h2>
+          <p>
+            Menggambar dan mewarnai adalah kegiatan kreatif yang sangat
+            bermanfaat bagi siswa di sekolah karena melibatkan banyak aspek
+            perkembangan mereka, mulai dari keterampilan motorik halus hingga
+            ekspresi kreatif. Ini adalah cara yang fantastis bagi siswa untuk
+            mengekspresikan diri mereka, mengembangkan keterampilan kreatif, dan
+            menghargai keindahan seni sekaligus menjadikan proses pembelajaran
+            lebih menyenangkan.
+          </p>
+        </div>
+
+        <div class="activity">
+          <i class="fas fa-calculator"></i>
+          <h2>Matematika</h2>
+          <p>
+            Matematika adalah mata pelajaran yang sangat penting dan luas dalam
+            kurikulum sekolah. Ini melibatkan studi tentang angka, pola,
+            struktur, dan hubungan antara konsep-konsep matematis. Ekskul
+            matematika ini dimaksukan untuk mengolah daya ingat kembali siswa
+            tentang pembelajaran matematika dan supaya mereka juga cinta
+            terhadap matematika dengan melalui berbagai pendekatan yang
+            menyenangkan
           </p>
         </div>
       </div>
@@ -236,7 +284,7 @@
           <ul class="box">
             <li class="link_name">Profil Sekolah</li>
             <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
-
+            <li><a href="visi-misi.html"> Visi Misi & Tujuan</a></li>
             <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
             <li><a href="fasilitas.html">Fasilitas</a></li>
           </ul>
@@ -250,7 +298,6 @@
             <li class="link_name">Akademik</li>
             <li><a href="#">Kalender Akademik</a></li>
             <li><a href="#">Jadwal Pembelajaran</a></li>
-            <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
             <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
           </ul>
           <ul class="box">
@@ -273,25 +320,6 @@
         </div>
       </div>
     </footer>
-
-    <script
-      src="https://unpkg.com/feather-icons"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!--Kumpulan Scrip-->
-    <script
-      src="https://unpkg.com/feather-icons"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script
-      src="https://unpkg.com/feather-icons"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      feather.replace();
-    </script>
-    <script src="json/hamburger.js"></script>
+    <script src=""></script>
   </body>
 </html>

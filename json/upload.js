@@ -40,7 +40,8 @@ form.addEventListener("submit", (e) => {
 function openWhatsApp() {
   var phoneNumber = "6281293524242"; // Nomor telepon tujuan dengan kode negara (tanpa tanda plus)
 
-  var message = "Assalamualaikum Miss/Mrs. Saya telah melakukan pendaftaran online, dan ini bukti transaksi yang telah saya lakukan."; // Isi pesan yang ingin dikirim
+  var message =
+    "Assalamualaikum Miss/Mrs. Saya telah melakukan pendaftaran online, dan ini bukti transaksi yang telah saya lakukan."; // Isi pesan yang ingin dikirim
 
   // Buat URL untuk membuka WhatsApp dengan nomor yang ditentukan dan pesan
   var url =
@@ -54,14 +55,15 @@ function openWhatsApp() {
 }
 
 // Event listener untuk saat tombol ditekan
-document.getElementById("closeBtn").addEventListener("click", function() {
+document.getElementById("closeBtn").addEventListener("click", function () {
   openWhatsApp();
 });
 // Function to open WhatsApp chat
 function openWhatsApp() {
   var phoneNumber = "6281293524242"; // Nomor telepon tujuan dengan kode negara (tanpa tanda plus)
 
-  var message = "Assalamualaikum Miss/Mrs. Saya ingin bertanya Seputar Pembayaran?"; // Isi pesan yang ingin dikirim
+  var message =
+    "Assalamualaikum Miss/Mrs. Saya ingin bertanya Seputar Pembayaran?"; // Isi pesan yang ingin dikirim
 
   // Buat URL untuk membuka WhatsApp dengan nomor yang ditentukan dan pesan
   var url =
@@ -75,7 +77,6 @@ function openWhatsApp() {
 }
 
 // Event listener untuk saat tombol ditekan
-document.getElementById("admKam").addEventListener("click", function() {
+document.getElementById("admKam").addEventListener("click", function () {
   openWhatsApp();
 });
-
