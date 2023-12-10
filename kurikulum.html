@@ -122,13 +122,10 @@
           <div class="deskripsi-content">
             <h3>
               Kurikulum Yang di Pakai Di SDIU Cahaya Al-Fatih Adalah Kurikulum
-              K13 yang di padukan dengan Kurikulum Diniyah
+              Dinas, Kurikulum Diniyah, dan Kurikulum Mandiri.
             </h3>
-            <p>
-              Kurikulum K13 merupakan kurikulum Nasional yang telah dikembangkan
-              bertahun-tahun dan telah memenuhi dua dimensi kurikulum, yaitu
-              rencana pengaturan mengenai tujuan, isi, dan bahan pelajaran serta
-              cara yang digunakan untuk kegiatan pembelajaran.
+            <div class="font-colorblue"><h1>Apa itu kurikulum Dinas?</h1></h3>
+            <p>Kurikulum dinas adalah kurikulum yang diturunkan oleh lembaga atau badan pemerintah yang bertanggung jawab atas pengelolaan dan pengembangan sistem pendidikan di suatu daerah atau wilayah tertentu. Kurikulum dinas merujuk pada rencana pembelajaran dan pengajaran yang digunakan oleh lembaga-lembaga pendidikan yang berada di bawah naungan atau pengawasan dinas pendidikan tersebut.
             </p>
           </div>
         </div>
@@ -141,6 +138,7 @@
         </div>
         <div class="deskripsi-2">
           <div class="deskripsi-content-2">
+            <div class="font-colorblue"><h1>Kurikulum Diniyah</h1></div>
             <h3>Pengertian Kurikulum Diniyah</h3>
             <p>
               berdasarkan Peraturan Menteri Agama (PMA) Nomor 31 tahun 2020,
@@ -153,8 +151,24 @@
         </div>
       </div>
     </div>
+    <div class="wrapper">
+      <div class="background-wrapper">
+        <div class="gambar1">
+          <img src="ilus-1-1.jpg" />
+        </div>
+        <div class="deskripsi">
+          <div class="deskripsi-content">
+            <h3>
+              Kurikulum Mandiri
+            </h3>
+            <div class="font-colorblue"><h1>Apa itu kurikulum Mandiri?</h1></h3>
+            <p>Kurikulum mandiri mengacu pada kurikulum yang dikembangkan secara independen oleh suatu lembaga pendidikan, baik itu sekolah, perguruan tinggi, atau institusi pendidikan lainnya. Kurikulum ini dirancang oleh lembaga tersebut sendiri, berbeda dengan kurikulum resmi atau nasional yang telah ditetapkan oleh pemerintah.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="judul-teks"><h1>Implementasi Ketiga Kurikulum</h1></div>
     <div class="equal row gap-24 grid grid-3">
-      <div class="icon-box column gap-24">
+      <div class="icon-box column gap-24 animate-on-scroll">
         <div class="icon">
           <img class="icon-img" src="icon/krk-1.svg" />
         </div>
@@ -167,7 +181,7 @@
           </p>
         </div>
       </div>
-      <div class="icon-box column gap-24">
+      <div class="icon-box column gap-24 animate-on-scroll">
         <div class="icon">
           <img class="icon-img" src="icon/krk-2.svg" />
         </div>
@@ -181,7 +195,7 @@
           </p>
         </div>
       </div>
-      <div class="icon-box column gap-24">
+      <div class="icon-box column gap-24 animate-on-scroll">
         <div class="icon">
           <img class="icon-img" src="icon/krk-3.svg" />
         </div>
@@ -193,7 +207,7 @@
           </p>
         </div>
       </div>
-      <div class="icon-box column gap-24">
+      <div class="icon-box column gap-24 animate-on-scroll">
         <div class="icon">
           <img class="icon-img" src="icon/krk-4.svg" />
         </div>
@@ -206,7 +220,7 @@
           </p>
         </div>
       </div>
-      <div class="icon-box column gap-24">
+      <div class="icon-box column gap-24 animate-on-scroll">
         <div class="icon">
           <img class="icon-img" src="icon/krk-5.svg" />
         </div>
@@ -221,7 +235,7 @@
           </p>
         </div>
       </div>
-      <div class="icon-box column gap-24">
+      <div class="icon-box column gap-24 animate-on-scroll">
         <div class="icon">
           <img class="icon-img" src="icon/krk-6.svg" />
         </div>
@@ -236,6 +250,29 @@
         </div>
       </div>
     </div>
+    <script>
+      // Ambil semua elemen yang akan diberi animasi
+const elements = document.querySelectorAll('.animate-on-scroll');
+
+// Fungsi untuk memeriksa apakah elemen masuk ke dalam viewport
+function checkElements() {
+  elements.forEach(element => {
+    const elementPosition = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementPosition < windowHeight * 0.75) {
+      element.classList.add('show');
+    }
+  });
+}
+
+// Panggil fungsi ketika halaman di-scroll
+window.addEventListener('scroll', checkElements);
+
+// Panggil fungsi saat halaman dimuat (untuk menampilkan elemen yang mungkin sudah masuk dalam viewport)
+window.addEventListener('load', checkElements);
+
+    </script>
     <footer>
       <div class="content-footer">
         <div class="top-footer">

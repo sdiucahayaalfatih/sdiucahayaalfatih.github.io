@@ -230,3 +230,30 @@
     font-size: 8px;
   }
 }
+
+.font-colorblue {
+  color: blue;
+}
+
+.judul-teks {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  text-align: center;
+  border-bottom: 4px solid rgb(0, 0, 0);
+  padding-bottom: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* Tambahkan gaya animasi */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}

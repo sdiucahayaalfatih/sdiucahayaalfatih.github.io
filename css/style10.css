@@ -46,16 +46,16 @@ body {
   height: 20px;
 }
 
-.left>div {
+.left > div {
   margin-left: 10px;
 }
 
-.right>div {
+.right > div {
   margin-left: 10px;
 }
 
-.left>div:hover,
-.right>div:hover {
+.left > div:hover,
+.right > div:hover {
   color: black;
   transition: all 0.5s;
 }
@@ -116,7 +116,7 @@ body {
   box-shadow: #333;
 }
 
-.header .navbar ul li:hover>ul {
+.header .navbar ul li:hover > ul {
   display: initial;
 }
 
@@ -174,16 +174,16 @@ body {
   transition: transform 0.3s;
 }
 
-#menu-bar:checked~#menu-toggle span:nth-child(1) {
+#menu-bar:checked ~ #menu-toggle span:nth-child(1) {
   background-color: #ffffff;
   transform: rotate(45deg) translate(7px, 6px);
 }
 
-#menu-bar:checked~#menu-toggle span:nth-child(2) {
+#menu-bar:checked ~ #menu-toggle span:nth-child(2) {
   opacity: 0;
 }
 
-#menu-bar:checked~#menu-toggle span:nth-child(3) {
+#menu-bar:checked ~ #menu-toggle span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
   background-color: white;
 }
@@ -221,7 +221,7 @@ body {
     display: none;
   }
 
-  #menu-bar:checked~.navbar {
+  #menu-bar:checked ~ .navbar {
     display: initial;
   }
 
@@ -446,5 +446,13 @@ body {
 @media (max-width: 500px) {
   .isi-text-sambutan {
     font-size: 2em;
+  }
+  .text-salam h1 {
+    font-size: 2.2em;
+  }
+
+  .menu-main li {
+    margin: 0 10px;
+    font-size: 1.2em;
   }
 }
