@@ -15,6 +15,7 @@ html {
 body {
   min-height: 100vh;
   background-color: white;
+  overflow-x: hidden;
 }
 .flex {
   display: flex;
@@ -173,10 +174,11 @@ body {
     background: rgb(255, 255, 255);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    display: none;
+    transform: translateX(100%);
+    transition: all 1s; /* Animasi transisi */
   }
-  #menu-bar:checked ~ .navbar {
-    display: initial;
+  .navbar.openMenu {
+    transform: translateX(0);
   }
   .header {
     padding: 5px;
@@ -255,4 +257,3 @@ body {
     display: none;
   }
 }
-

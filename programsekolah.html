@@ -263,6 +263,42 @@
         </div>
       </div>
     </footer>
-    <script src=""></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const programItems = document.querySelectorAll(".program-item");
+
+        function showItems() {
+          programItems.forEach((item, index) => {
+            const top = item.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (top < windowHeight) {
+              setTimeout(() => {
+                item.style.opacity = "1";
+                if (index % 2 === 0) {
+                  item.classList.add("left-to-right");
+                } else {
+                  item.classList.add("right-to-left");
+                }
+              }, 300 * index); // Mengatur penundaan munculnya setiap elemen
+            }
+          });
+        }
+
+        window.addEventListener("scroll", showItems);
+        showItems(); // Panggil fungsi saat halaman dimuat untuk menampilkan elemen yang sudah ada di dalam tampilan
+      });
+      function toggleMenu() {
+        var menuBar = document.getElementById("menu-bar");
+        var navbar = document.querySelector(".navbar");
+
+        if (menuBar.checked) {
+          // Checkbox diperiksa, tambahkan class "openMenu" ke elemen navbar
+          navbar.classList.add("openMenu");
+        } else {
+          // Checkbox tidak diperiksa, hapus class "openMenu" dari elemen navbar
+          navbar.classList.remove("openMenu");
+        }
+      }
+    </script>
   </body>
 </html>
