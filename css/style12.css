@@ -42,9 +42,10 @@
 }
 
 .deskripsi-content p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.7;
-  color: #666;
+  color: #000000;
+  text-align: justify;
 }
 
 /* Responsif */
@@ -64,20 +65,20 @@
 }
 @media (max-width: 600px) {
   .deskripsi-content h3 {
-    font-size: 20px;
+    font-size: 26px;
   }
 
   .deskripsi-content p {
-    font-size: 10px;
+    font-size: 20px;
   }
 }
 @media (max-width: 480px) {
   .deskripsi-content h3 {
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .deskripsi-content p {
-    font-size: 8px;
+    font-size: 18px;
   }
 }
 .wrapper-2 {
@@ -126,9 +127,10 @@
 }
 
 .deskripsi-content-2 p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.7;
-  color: #666;
+  color: #000000;
+  text-align: justify;
 }
 
 /* Responsif */
@@ -214,20 +216,20 @@
     flex-basis: 100%;
   }
   .deskripsi-content-2 h3 {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .deskripsi-content-2 p {
-    font-size: 10px;
+    font-size: 20px;
   }
 }
 @media (max-width: 480px) {
   .deskripsi-content-2 h3 {
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .deskripsi-content-2 p {
-    font-size: 8px;
+    font-size: 18px;
   }
 }
 
