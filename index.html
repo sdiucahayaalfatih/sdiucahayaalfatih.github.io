@@ -7,9 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SDIU Cahaya Al-Fatih</title>
   <link rel="website icon" type="png" href="sdiulogo/LOGOBOTTOM.png">
+  <link rel="stylesheet" href="css/navigasi.css" />
+  <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/style1.css" />
   <link rel="stylesheet" href="css/style2.css" />
-  <link rel="stylesheet" href="css/style3.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,12 +122,12 @@
           </ul>
         </li>
 
-        <li><a href="#about-saya">About Me</a></li>
+        <li><a href="contacus.html">Contac Us</a></li>
       </ul>
     </nav>
   </div>
 
-  <!--Slide-->
+  <!--Slide Preview-->
   <div id="navbar-slider" class="slider">
     <div class="mysliderr fade" style="display: block">
       <div class="txt">
@@ -185,23 +186,40 @@
     <h1><span>▸</span>TENTANG KAMI<span>◂</span></h1>
   </div>
   <div class="layanan-menu">
-    <div class="layanan satu">
+    <div class="layanan">
       <a href="Pendaftaran.html"><img src="icon/pendaftaran-icon.svg"></a>
       <h1>Pendaftaran Online</h1>
       <p>Daftarkan putri anda segera disekolah kami, Quota terbatas</p>
     </div>
-    <div class="layanan dua">
+    <div class="layanan">
       <a href="kurikulum.html"><img src="icon/kurikulum-icon.svg"></a>
       <h1>Kurikulum</h1>
       <p>Informasi Mengenai Kurikulum yang di gunakan di SDIU Cahaya Al-Fatih</p>
     </div>
-    <div class="layanan tiga">
+    <div class="layanan">
       <a href="https://wa.me/6287817850418"><img src="icon/hubungi-icon.svg"></a>
       <h1>Hubungi Kami</h1>
       <p>Bila masih ada yang ingin Ibu/Bapak tanyakan silahkan hubungi kami pada kontak yang telah disediakan, atau
         mengunjungi alamat kami langsung</p>
     </div>
   </div>
+  <script>
+    // Fungsi untuk menambahkan class 'hovered' saat elemen di-hover
+    document.addEventListener('DOMContentLoaded', function() {
+      var layananItems = document.querySelectorAll('.layanan');
+  
+      layananItems.forEach(function(item) {
+        item.addEventListener('mouseenter', function() {
+          this.classList.add('hovered');
+        });
+  
+        item.addEventListener('mouseleave', function() {
+          this.classList.remove('hovered');
+        });
+      });
+    });
+  </script>
+  
   </main>
   </section>
 

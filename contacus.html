@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SDIU Cahaya Al-Fatih</title>
+    <link rel="stylesheet" href="css/navigasi.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--Navbar Paling Atas-->
+    <div id="navbar-one" class="navbar-one flex">
+      <div class="left flex">
+        <div class="email">
+          <a href="mailto:sdiucahayaalfatih@gmail.com"
+            ><img src="icon/email.svg" class="logososmed" />
+            <span>sdiucahayaalfatih@gmail.com</span></a
+          >
+        </div>
+        <div class="call">
+          <a
+            href="https://api.whatsapp.com/send/?phone=6287817850418&text&type=phone_number&app_absent=0"
+            ><img src="icon/telp.svg" class="logososmed" />
+            <span>+62878-1785-0418</span></a
+          >
+        </div>
+      </div>
+      <div class="right flex">
+        <div class="facebook">
+          <a href="https://www.facebook.com/sdiucahayaalfatih"
+            ><img src="icon/facebook.svg" class="logososmed"
+          /></a>
+        </div>
+        <div class="messenger">
+          <a href=""><img src="icon/messenger.svg" class="logososmed" /></a>
+        </div>
+        <div class="instragram">
+          <a href="https://www.instagram.com/sdiucahayaalfatih/?hl=id">
+            <img src="icon/instagram.svg" class="logososmed"
+          /></a>
+        </div>
+        <div class="youtube">
+          <a href="https://www.youtube.com/@sdiucahayaalfatih9465/channels"
+            ><img src="icon/youtube.svg" class="logososmed"
+          /></a>
+        </div>
+        <div class="tiktok">
+          <a href=""><img src="icon/tiktok.svg" class="logososmed" /></a>
+        </div>
+      </div>
+    </div>
+    <!--Navbar Navigasi Menu-->
+    <div class="header">
+      <a href="pengumuman.html" class="logo"
+        ><img src="sdiulogo/logoddiu1.png" alt="image" height="55px"
+      /></a>
+      <input
+        class="toogle"
+        type="checkbox"
+        id="menu-bar"
+        onclick="toggleMenu()"
+      />
+      <div class="menutoogle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Profil Sekolah</a>
+            <ul>
+              <li><a href="profilsekolah.html">Profil Sekolah</a></li>
+              <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
+              <li><a href="visi-misi.html">Visi Misi & Tujuan</a></li>
+              <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
+              <li><a href="fasilitas.html">Fasilitas</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Program Sekolah</a>
+            <ul>
+              <li><a href="programsekolah.html">Program Sekolah</a></li>
+              <li><a href="kurikulum.html">Kurikulum</a></li>
+              <li><a href="agendakegiatan.html">Agenda Kegiatan</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Akademik</a>
+            <ul>
+              <li><a href="kaldik.html">Kalender Akademik</a></li>
+              <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
+              <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Prestasi</a></li>
+          <li>
+            <a href="#">Berita</a>
+            <ul>
+              <li><a href="#">Galery</a></li>
+              <li><a href="index.html">Artikel/Berita</a></li>
+            </ul>
+          </li>
+          <li><a href="contacus.html">Contac Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <style>
+      .profil-sekolah-banner {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to right, rgb(255, 0, 255), rgb(4, 0, 240));
+        color: white;
+        padding: 20px;
+        text-align: center;
+        background-size: 200% auto;
+        animation: gradientAnimation 5s ease infinite;
+      }
+
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% center;
+        }
+
+        50% {
+          background-position: 100% center;
+        }
+
+        100% {
+          background-position: 0% center;
+        }
+      }
+
+      .profilsekolah-judul h1 {
+        font-size: 2em;
+      }
+
+      .menu-profilsekolah {
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+      }
+
+      .menu-profilsekolah li {
+        margin: 0 10px;
+        font-size: 1.5em;
+      }
+
+      .menu-profilsekolah a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .menu-profilsekolah p {
+        color: white;
+        margin: 0 5px;
+      }
+
+      @media (max-width: 900px) {
+        .profilsekolah-judul h1 {
+          font-size: 2em;
+        }
+
+        .menu-profilsekolah li {
+          font-size: 1.2em;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .profilsekolah-judul h1 {
+          font-size: 1.5em;
+        }
+
+        .menu-profilsekolah li {
+          font-size: 0.8em;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .profilsekolah-judul h1 {
+          font-size: 1em;
+        }
+
+        .menu-profilsekolah li {
+          font-size: 0.5em;
+        }
+      }
+      .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+      }
+
+      .container-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .maps-container,
+      .contact-info {
+        width: 100%;
+      }
+
+      .maps-design {
+        width: 100%;
+        height: 500px;
+        border: 0;
+      }
+
+      .contact-info {
+        padding: 20px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 5px 0;
+      }
+      p a {
+        color: blue;
+        transition: color 0.3s ease;
+      }
+      p a:hover {
+        background-color: transparent; /* Untuk menghapus latar belakang efek */
+        background-image: linear-gradient(to right, #00ffea, #0c4dff);
+        -webkit-background-clip: text; /* Untuk menerapkan clip pada warna teks */
+        color: transparent; /* Untuk membuat teks asli menjadi transparan */
+      }
+      .contact-info h1 i {
+        margin-right: 10px;
+        color: #4285f4;
+      }
+
+      @media screen and (min-width: 768px) {
+        .container-box {
+          flex-direction: row;
+          height: auto;
+        }
+
+        .maps-container {
+          flex: 1;
+          height: 400px;
+        }
+
+        .contact-info {
+          flex: 1;
+          padding: 20px 40px;
+        }
+      }
+    </style>
+    <div class="profil-sekolah-banner" id="profilsekolah">
+      <div class="profilsekolah-judul">
+        <h1>Contac Us</h1>
+      </div>
+      <ul class="menu-profilsekolah">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <p>></p>
+        </li>
+        <li><a>Contac Us</a></li>
+      </ul>
+    </div>
+    <div class="body-a">
+      <div class="contact-container">
+        <div class="container-box">
+          <div class="maps-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15861.757154629464!2d106.0707518!3d-6.3371018!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e423d2738b603dd%3A0x7d6fc4df1ca994e4!2sSDIU%20Cahaya%20Al%20Fatih!5e0!3m2!1sid!2sid!4v1684069002504!5m2!1sid!2sid"
+              class="maps-design"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+          <div class="contact-info">
+            <div class="alamat-i">
+              <h1><i class="fas fa-map-marker-alt"></i>Alamat :</h1>
+              <p>
+                Kp. Cangkuliang RT/RW 001/004, Kel. Palurahan, Kec. Kaduhejo,
+                Kabupaten Pandeglang Banten, Kode Pos 42253
+              </p>
+            </div>
+            <div class="email-i">
+              <h1><i class="far fa-envelope"></i>Email :</h1>
+              <p>
+                <a href="mailto:sdiucahayaalfatih@gmail.com">
+                  sdiucahayaalfatih@gmail.com
+                </a>
+              </p>
+            </div>
+            <div class="nomortelp-i">
+              <h1><i class="fas fa-phone-alt"></i>Nomor telp :</h1>
+              <p>
+                Admin PPDB :
+                <a
+                  href="https://api.whatsapp.com/send/?phone=6287817850418&text&type=phone_number&app_absent=0"
+                  >+62878-1785-0418</a
+                >
+              </p>
+              <p>
+                Administrasi PPDB :
+                <a
+                  href="https://api.whatsapp.com/send/?phone=6281293524242&text&type=phone_number&app_absent=0"
+                  >+62812-9352-4242</a
+                >
+              </p>
+            </div>
+            <div class="informasi-i">
+              <h1>
+                <i class="fas fa-money-check-alt"></i>Informasi Pembayaran PPDB
+                :
+              </h1>
+              <p>No. Rekening BNI A.N Annisa Octavia</p>
+              <p>0982444530</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </style>
+    <footer>
+      <div class="content-footer">
+        <div class="top-footer">
+          <div class="logo-details">
+            <span class="my-logo">SDIU Cahaya Al-Fatih</span>
+            <p>
+              Palurahan, Kec. Kaduhejo, Kab. Pandeglang Banten Kode Pos 42252
+            </p>
+          </div>
+          <div class="media-icons">
+            <a href="https://www.facebook.com/sdiucahayaalfatih"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.facebook.com/sdiucahayaalfatih"
+              ><i class="fab fa-facebook-messenger"></i
+            ></a>
+            <a href="https://www.instagram.com/sdiucahayaalfatih/?hl=id"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@sdiucahayaalfatih9465/channels"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Profil Sekolah</li>
+            <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
+            <li><a href="visi-misi.html"> Visi Misi & Tujuan</a></li>
+            <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
+            <li><a href="fasilitas.html">Fasilitas</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Program Sekolah</li>
+            <li><a href="profilsekolah.html">Profil Sekolah</a></li>
+            <li><a href="kurikulum.html">Kurikulum</a></li>
+            <li><a href="agendakegiatan.html">Agenda Kegiatann</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Akademik</li>
+            <li><a href="kaldik.html">Kalender Akademik</a></li>
+            <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
+            <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Berita</li>
+            <li><a href="#">Galeri</a></li>
+            <li><a href="index.html">Artikel/Berita</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text"
+            >Copyright © 2023 <a href="#">SDIU CAF</a>All rights reserved</span
+          >
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

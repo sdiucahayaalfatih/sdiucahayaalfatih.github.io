@@ -37,7 +37,7 @@
   color: white;
 }
 
-/* Untuk slide gambar */
+/* Untuk slide gambar Modal*/
 .slide-container {
   position: relative;
 }
@@ -82,189 +82,6 @@
 .nexto:hover {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  box-sizing: border-box;
-  outline: none;
-  text-decoration: none;
-}
-
-html {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-body {
-  min-height: 100vh;
-  background-color: white;
-}
-
-.flex {
-  display: flex;
-  padding: 20px 1px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/*Navbar Atas*/
-.email span {
-  font-size: 16px;
-}
-
-.call span {
-  font-size: 16px;
-}
-
-.navbar-one {
-  background-color: #ffffff;
-  color: white;
-  height: 20px;
-}
-
-.left > div {
-  margin-left: 10px;
-}
-
-.right > div {
-  margin-left: 10px;
-}
-
-.left > div:hover,
-.right > div:hover {
-  color: black;
-  transition: all 0.5s;
-}
-
-.logososmed {
-  width: 20px;
-  height: 20px;
-}
-
-/*Navbar Navigasi*/
-.header {
-  position: sticky;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-color: #1da1f2;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  padding: 0px 3%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1000;
-}
-
-.header .navbar ul {
-  list-style: none;
-}
-
-.header .navbar ul li {
-  position: relative;
-  float: left;
-}
-
-.header .navbar ul li a {
-  font-size: 13px;
-  padding: 20px;
-  color: black;
-  display: block;
-}
-
-.header .navbar ul li a:hover {
-  background: #0b5297;
-  color: #fff;
-}
-
-.header .navbar ul li ul {
-  position: absolute;
-  left: 0;
-  width: 200px;
-  background-color: white;
-  box-shadow: 5px 10px 18px #888888;
-  display: none;
-}
-
-.header .navbar ul li ul li {
-  width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: #333;
-}
-
-.header .navbar ul li:hover > ul {
-  display: initial;
-}
-
-.header label {
-  font-size: 20px;
-  color: black;
-  cursor: pointer;
-  display: none;
-}
-
-/* Hamburger menu navigasi*/
-.menutoogle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-}
-
-.menutoogle span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin-bottom: 5px;
-}
-
-#menu-bar {
-  display: block;
-  cursor: pointer;
-  width: 28px;
-  height: 28px;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 10px;
-  z-index: 2;
-  opacity: 0;
-}
-
-#menu-toggle {
-  display: none;
-  position: relative;
-  cursor: pointer;
-  padding: 10px;
-}
-
-#menu-toggle span {
-  display: none;
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin-bottom: 5px;
-  transition: transform 0.3s;
-}
-
-#menu-bar:checked ~ #menu-toggle span:nth-child(1) {
-  background-color: #ffffff;
-  transform: rotate(45deg) translate(7px, 6px);
-}
-
-#menu-bar:checked ~ #menu-toggle span:nth-child(2) {
-  opacity: 0;
-}
-
-#menu-bar:checked ~ #menu-toggle span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-  background-color: white;
 }
 
 /*Slide Preview*/
@@ -506,26 +323,26 @@ body {
 }
 
 .layanan h1 {
-  margin: 15px;
+  margin: 22px;
   font-size: 30px;
 }
 
-/*Animasi pada gambar*/
-.layanan a::after {
+.layanan p {
+  font-size: 18px;
+}
+
+/* Animasi gambar dan garis bawah */
+.layanan-menu .layanan img {
+  transition: transform 0.3s, opacity 0.3s; /* Transisi untuk scaling dan opacity */
+}
+
+.layanan-menu .layanan a::after {
   content: "";
   display: block;
   padding-bottom: 0.3rem;
-  border-bottom: 0.3rem solid #56bcff;
+  border-bottom: 0.4rem solid #56bcff;
   transform: scaleX(0);
-  transition: transform 0.2s linear;
-}
-
-.layanan a:hover::after {
-  transform: scaleX(0.5);
-}
-
-.layanan-menu .layanan img {
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s ease; /* Transisi untuk garis bawah */
 }
 
 .layanan-menu .layanan:hover img {
@@ -533,8 +350,8 @@ body {
   transform: scale(1.1);
 }
 
-.layanan p {
-  font-size: 14px;
+.layanan-menu .layanan:hover a::after {
+  transform: scaleX(0.5);
 }
 
 .text1-sambutan {
@@ -926,7 +743,7 @@ body {
   text-align: center;
   font-size: 30px;
   box-shadow: 2px 2px 3px #3a3a3a;
-  z-index: 9999;
+  z-index: 99;
 }
 
 .my-float {

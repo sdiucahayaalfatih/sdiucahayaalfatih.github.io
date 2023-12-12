@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SDIU Cahaya Alfatih - Grafik Jumlah Siswa</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .carousel {
+        display: flex;
+        padding: 0;
+        transition: transform 0.5s ease;
+      }
+
+      .card {
+        list-style: none;
+      }
+
+      .img {
+        width: 100%;
+        height: auto;
+      }
+
+      /* Gaya untuk tombol geser */
+      #left,
+      #right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 24px;
+        color: #000;
+        background-color: #ccc;
+        padding: 5px 10px;
+        z-index: 2;
+      }
+
+      #left {
+        left: 10px;
+      }
+
+      #right {
+        right: 10px;
+      }
+    </style>
+    <script>
+      const carousel = document.querySelector(".carousel");
+      const cards = document.querySelectorAll(".card");
+      const leftBtn = document.getElementById("left");
+      const rightBtn = document.getElementById("right");
+
+      let counter = 0;
+      const cardWidth = cards[0].offsetWidth;
+
+      rightBtn.addEventListener("click", () => {
+        counter++;
+        if (counter > cards.length - 4) {
+          counter = cards.length - 4;
+        }
+        carousel.style.transform = `translateX(-${cardWidth * counter}px)`;
+      });
+
+      leftBtn.addEventListener("click", () => {
+        counter--;
+        if (counter < 0) {
+          counter = 0;
+        }
+        carousel.style.transform = `translateX(-${cardWidth * counter}px)`;
+      });
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <i id="left" class="fa-solid fa-angle-left"></i>
+      <ul class="carousel">
+        <li class="card">
+          <div class="img">
+            <img src="images/img-1.jpg" alt="img" draggable="false" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img src="images/img-2.jpg" alt="img" draggable="false" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img src="images/img-3.jpg" alt="img" draggable="false" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img src="images/img-4.jpg" alt="img" draggable="false" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img src="images/img-5.jpg" alt="img" draggable="false" />
+          </div>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img src="images/img-6.jpg" alt="img" draggable="false" />
+          </div>
+        </li>
+      </ul>
+      <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+  </body>
+</html>

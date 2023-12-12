@@ -107,12 +107,14 @@ p {
   margin-bottom: 20px;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 /* Efek hover */
-.activity:hover {
-  transform: translateY(-5px); /* Translasi ke atas */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Bayangan yang lebih besar */
+.activity.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 .activity i {
   font-size: 36px;

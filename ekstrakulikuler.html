@@ -25,9 +25,9 @@
         </div>
         <div class="call">
           <a
-            href="https://api.whatsapp.com/send/?phone=6281380786576&text&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=6287817850418&text&type=phone_number&app_absent=0"
             ><img src="icon/telp.svg" class="logososmed" />
-            <span>+62813-80786576</span></a
+            <span>+62878-1785-0418</span></a
           >
         </div>
       </div>
@@ -107,7 +107,7 @@
               <li><a href="index.html">Artikel/Berita</a></li>
             </ul>
           </li>
-          <li><a href="#about-saya">About Me</a></li>
+          <li><a href="contacus.html">Contac Us</a></li>
         </ul>
       </nav>
     </div>
@@ -253,7 +253,6 @@
         </div>
       </div>
     </div>
-
     <footer>
       <div class="content-footer">
         <div class="top-footer">
@@ -279,6 +278,36 @@
             ></a>
           </div>
         </div>
+        <script>
+          // Ambil semua elemen kegiatan
+          const activities = document.querySelectorAll(".activity");
+
+          // Fungsi untuk memeriksa apakah elemen terlihat dalam viewport
+          function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+              rect.top >= 0 &&
+              rect.left >= 0 &&
+              rect.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.right <=
+                (window.innerWidth || document.documentElement.clientWidth)
+            );
+          }
+
+          // Fungsi untuk menambahkan kelas 'active' saat elemen masuk ke dalam viewport
+          function showActivities() {
+            activities.forEach((activity) => {
+              if (isElementInViewport(activity)) {
+                activity.classList.add("active");
+              }
+            });
+          }
+
+          // Panggil fungsi showActivities saat halaman dimuat dan di-scroll
+          window.addEventListener("DOMContentLoaded", showActivities);
+          window.addEventListener("scroll", showActivities);
+        </script>
         <div class="link-boxes">
           <ul class="box">
             <li class="link_name">Profil Sekolah</li>

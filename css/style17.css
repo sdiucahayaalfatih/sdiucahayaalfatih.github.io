@@ -1,0 +1,88 @@
+/* Gaya CSS untuk div */
+.container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Gaya CSS untuk ikon */
+.icon {
+  font-size: 48px;
+  color: #3498db;
+}
+
+/* Gaya CSS untuk teks */
+.text {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+  color: #000000;
+  margin-top: 10px;
+}
+
+.penjelasan {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #003cff;
+  border-radius: 8px;
+  background-color: #003cff;
+  font-size: 20px;
+  color: #ffffff;
+}
+/* Gaya untuk galeri foto */
+.gallery {
+  display: grid;
+  gap: 20px;
+  margin: 20px 20px;
+}
+
+.photo-group {
+  margin-bottom: 20px;
+}
+
+.photo-group h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Menyusun 3 kolom */
+  gap: 10px;
+}
+
+.photo {
+  padding: 5px;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+  .photos {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Mengubah menjadi 2 kolom saat responsif */
+  }
+}
+
+@media (max-width: 768px) {
+  .photos {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Mengubah menjadi 1 kolom saat layar HP */
+  }
+}
