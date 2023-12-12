@@ -199,10 +199,14 @@
 
 /*Dekorasi Text pada Slider*/
 .txt h1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #25d366;
   color: yellow;
   font-size: 50px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-family: "Archivo Narrow", sans-serif;
 }
 
@@ -540,11 +544,25 @@
     font-size: 8px;
     margin-bottom: 10px;
   }
+  .txt h1 {
+    font-size: 50px; /* Atur ukuran font yang diinginkan */
+  }
+
+  .txt p {
+    font-size: 24px; /* Atur ukuran font yang diinginkan */
+  }
 }
 
 @media screen and (max-width: 767px) {
   .shadow {
     flex-basis: 100%;
+  }
+  .txt h1 {
+    font-size: 55px; /* Atur ukuran font yang diinginkan */
+  }
+
+  .txt p {
+    font-size: 28px; /* Atur ukuran font yang diinginkan */
   }
 }
 
@@ -607,6 +625,13 @@
 @media (max-width: 700px) {
   .heading-berita h1 {
     font-size: 2.3rem;
+  }
+  .txt h1 {
+    font-size: 20px;
+  }
+
+  .txt p {
+    font-size: 16px;
   }
 }
 
