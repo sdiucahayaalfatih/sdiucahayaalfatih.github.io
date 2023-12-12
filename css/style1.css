@@ -550,21 +550,6 @@
 
 /*Breake Point Event*/
 @media (max-width: 980px) {
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    display: none;
-  }
-
-  #menu-bar:checked ~ .navbar {
-    display: initial;
-  }
-
   .visi h1 {
     font-size: 25px;
   }
@@ -576,43 +561,6 @@
   .visi p {
     font-size: 10px;
   }
-
-  .header {
-    padding: 5px;
-  }
-
-  .header label {
-    display: initial;
-  }
-
-  #menu-toggle {
-    display: block;
-    position: relative;
-    cursor: pointer;
-    padding: 10px;
-  }
-
-  #menu-toggle span {
-    display: block;
-  }
-
-  .header .navbar ul li {
-    width: 100%;
-  }
-
-  .header .navbar ul li ul {
-    position: relative;
-    width: 100%;
-  }
-
-  .header .navbar ul li ul li {
-    background-color: #eee;
-  }
-
-  .header .navbar ul li a {
-    text-align: center;
-  }
-
   .txt {
     line-height: 25px;
     top: 50%;
@@ -633,46 +581,6 @@
     to {
       left: 50%;
     }
-  }
-}
-
-/*ukuran mobile*/
-@media (max-width: 900px) {
-  .header {
-    padding: 5px;
-  }
-
-  .header .navbar ul li {
-    width: 100%;
-  }
-
-  .header .navbar ul li ul {
-    position: relative;
-    width: 100%;
-  }
-
-  .header .navbar ul li ul li {
-    background-color: #eee;
-  }
-
-  .header .navbar ul li a {
-    text-align: center;
-  }
-
-  .txt h1 {
-    font-size: 25px;
-  }
-
-  .txt p {
-    font-size: 17px;
-  }
-
-  .email span {
-    font-size: 12px;
-  }
-
-  .call span {
-    font-size: 12px;
   }
 }
 
