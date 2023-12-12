@@ -5,15 +5,16 @@
   box-sizing: border-box;
   outline: none;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   background-color: white;
 }
 .flex {
