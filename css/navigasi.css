@@ -66,6 +66,7 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  overflow-x: hidden;
 }
 
 .header .navbar ul {
@@ -176,6 +177,7 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     transform: translateX(100%);
     transition: opacity 1s ease, transform 1s ease;
+    overflow-x: hidden;
   }
   #menu-bar:checked ~ .navbar {
     opacity: 1;
