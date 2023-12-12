@@ -69,6 +69,11 @@
   .menu-profilsekolah li {
     font-size: 1.1em;
   }
+  .visi19,
+  .misi19,
+  .tujuan19 {
+    font-size: 1em;
+  }
 }
 
 @media (max-width: 480px) {
@@ -78,6 +83,11 @@
 
   .menu-profilsekolah li {
     font-size: 1em;
+  }
+  .visi19,
+  .misi19,
+  .tujuan19 {
+    font-size: 0.5em;
   }
 }
 
