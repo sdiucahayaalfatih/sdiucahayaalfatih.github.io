@@ -1,6 +1,6 @@
-/* CSS dasar untuk modal */
+/* CSS dasar untuk slide */
 .modal-container {
-  display: none;
+  display: flex;
   position: fixed;
   z-index: 9999;
   left: 0;

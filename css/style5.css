@@ -64,6 +64,8 @@
 /*Pop Up Terkirim*/
 .modal {
   display: none;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 9999;
   left: 0;
@@ -78,9 +80,10 @@
   background-color: #fff;
   border-radius: 5px;
   max-width: 500px;
-  margin: 200px auto;
+  margin: auto; /* Changed margin */
   padding: 20px;
   text-align: center;
+  position: relative; /* Added position */
 }
 
 .modal-box i {
@@ -159,7 +162,21 @@
     font-size: 1.2em;
   }
 }
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
 
+.close-btn:focus,
+.close-btn:hover {
+  color: #f00; /* Warna saat di-hover atau difokus */
+}
 /*Formulir*/
 .buttons {
   margin-top: 20px;

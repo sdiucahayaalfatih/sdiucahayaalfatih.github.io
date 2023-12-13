@@ -18,8 +18,8 @@ form.addEventListener("submit", (e) => {
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
       console.log("Success!", response);
-      // Menampilkan modal
-      modal.style.display = "block";
+      // Menampilkan modal dengan mengatur display menjadi flex
+      modal.style.display = "flex";
 
       // Mengembalikan tampilan tombol submit awal
       buttonSubmit2.parentElement.style.display = "none";
@@ -36,47 +36,16 @@ form.addEventListener("submit", (e) => {
     });
 });
 
-// Function to open WhatsApp chat
-function openWhatsApp() {
-  var phoneNumber = "6281293524242"; // Nomor telepon tujuan dengan kode negara (tanpa tanda plus)
-
-  var message =
-    "Assalamualaikum Miss/Mrs. Saya telah melakukan pendaftaran online, dan ini bukti transaksi yang telah saya lakukan."; // Isi pesan yang ingin dikirim
-
-  // Buat URL untuk membuka WhatsApp dengan nomor yang ditentukan dan pesan
-  var url =
-    "https://api.whatsapp.com/send?phone=" +
-    phoneNumber +
-    "&text=" +
-    encodeURIComponent(message);
-
-  // Buka link pada tab/window baru
-  window.open(url);
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
 }
 
-// Event listener untuk saat tombol ditekan
-document.getElementById("closeBtn").addEventListener("click", function () {
-  openWhatsApp();
-});
-// Function to open WhatsApp chat
-function openWhatsApp() {
-  var phoneNumber = "6281293524242"; // Nomor telepon tujuan dengan kode negara (tanpa tanda plus)
-
-  var message =
-    "Assalamualaikum Miss/Mrs. Saya ingin bertanya Seputar Pembayaran?"; // Isi pesan yang ingin dikirim
-
-  // Buat URL untuk membuka WhatsApp dengan nomor yang ditentukan dan pesan
-  var url =
-    "https://api.whatsapp.com/send?phone=" +
-    phoneNumber +
-    "&text=" +
-    encodeURIComponent(message);
-
-  // Buka link pada tab/window baru
-  window.open(url);
+function kirimBuktiPembayaran() {
+  window.open("https://wa.me/6281293524242", "_blank"); // Mengarahkan ke WhatsApp dengan nomor tertentu
 }
 
-// Event listener untuk saat tombol ditekan
-document.getElementById("admKam").addEventListener("click", function () {
-  openWhatsApp();
-});
+function chatLangsungAdministrasi() {
+  window.open("https://wa.me/6281293524242", "_blank"); // Mengarahkan ke WhatsApp dengan nomor tertentu
+  // Atau Anda dapat menggunakan metode lain untuk mengirim pesan atau melakukan tindakan tertentu
+}
