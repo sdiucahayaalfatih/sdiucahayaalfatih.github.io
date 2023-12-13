@@ -166,27 +166,26 @@ body {
 /*Breake Point Event*/
 @media (max-width: 980px) {
   .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    position: fixed;
+    top: 0;
+    left: -100%;
     background: rgb(255, 255, 255);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    animation: slideFromRight 1s ease forwards;
+    width: 80%;
+    max-width: 100%;
+    transition: left 0.3s ease;
   }
   @keyframes slideFromRight {
     from {
-      transform: translateX(100%);
+      left: -100%;
     }
     to {
-      transform: translateX(0);
+      left: 0;
     }
   }
-
   #menu-bar:checked ~ .navbar {
-    display: initial;
+    left: 0; /* Geser navbar masuk layar saat tombol menu ditekan */
   }
   .header {
     padding: 5px;

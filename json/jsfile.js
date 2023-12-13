@@ -45,22 +45,22 @@ const slider = document.getElementById("navbar-slider");
 let touchStartX = 0;
 let touchEndX = 0;
 
-slider.addEventListener("touchstart", function(event) {
+slider.addEventListener("touchstart", function (event) {
   touchStartX = event.touches[0].clientX;
 });
 
-slider.addEventListener("touchmove", function(event) {
+slider.addEventListener("touchmove", function (event) {
   touchEndX = event.touches[0].clientX;
 });
 
-slider.addEventListener("touchend", function() {
+slider.addEventListener("touchend", function () {
   if (touchStartX - touchEndX > 50) {
     plusSlides(1); // Geser slide ke kanan
   } else if (touchEndX - touchStartX > 50) {
     plusSlides(-1); // Geser slide ke kiri
   }
 });
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   var floatElement = document.querySelector(".float");
   var windowHeight = window.innerHeight;
   var documentHeight = document.documentElement.scrollHeight;
@@ -73,20 +73,15 @@ window.addEventListener("scroll", function() {
   }
 });
 // hamburger menu
-// hamburger menu
+// Ubah fungsi toggleMenu() agar sesuai dengan aturan tampilan navbar Anda
 function toggleMenu() {
-  var menuBar = document.getElementById("menu-bar");
-  var navbar = document.querySelector(".navbar");
+  const menuToggle = document.getElementById("menu-bar");
+  const navbar = document.querySelector(".navbar");
 
-  if (menuBar.checked) {
-    // Checkbox diperiksa, tambahkan class "openMenu" ke elemen navbar
-    navbar.classList.add("openMenu");
-  } else {
-    // Checkbox tidak diperiksa, hapus class "openMenu" dari elemen navbar
-    navbar.classList.remove("openMenu");
-  }
+  menuToggle.addEventListener("click", function () {
+    navbar.classList.toggle("active");
+  });
 }
-
 
 function togglePindahKelas() {
   var statuspendaftaran = document.getElementById("statuspendaftaran");
