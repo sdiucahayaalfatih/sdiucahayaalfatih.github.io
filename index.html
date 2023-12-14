@@ -83,12 +83,13 @@
       <span></span>
       <span></span>
     </div>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
+      <button class="close-navbtn" onclick="closeNavbar()"><i class="fas fa-times"></i></button>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li>
           <a href="#">Profil Sekolah</a>
-          <ul>
+          <ul class="submenu">
             <li><a href="profilsekolah.html">Profil Sekolah</a></li>
             <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
             <li><a href="visi-misi.html">Visi Misi & Tujuan</a></li>
@@ -98,7 +99,7 @@
         </li>
         <li>
           <a href="#">Program Sekolah</a>
-          <ul>
+          <ul class="submenu">
             <li><a href="programsekolah.html">Program Sekolah</a></li>
             <li><a href="kurikulum.html">Kurikulum</a></li>
             <li><a href="agendakegiatan.html">Agenda Kegiatan</a></li>
@@ -106,7 +107,7 @@
         </li>
         <li>
           <a href="#">Akademik</a>
-          <ul>
+          <ul class="submenu">
             <li><a href="kaldik.html">Kalender Akademik</a></li>
             <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
             <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
@@ -115,7 +116,7 @@
         <li><a href="#">Prestasi</a></li>
         <li>
           <a href="index.html">Berita</a>
-          <ul>
+          <ul class="submenu">
             <li><a href="pengumuman.html">Pengumuman</a></li>
             <li><a href="#">Galery</a></li>
             <li><a href="#id-berita-pengumuman">Artikel/Berita</a></li>
@@ -512,8 +513,7 @@
   <a href="https://wa.me/6287817850418" class="float" target="_blank">
     <i class="fa fa-whatsapp my-float animatedi infinitei rubberBandi"></i>
   </a>
-
-
+  <script src="json/hamburgermenu.js"></script>
   <script src="json/modalscript.js"></script>
   <script src="json/jsfile.js"></script>
   <script src="json/upload2.js"></script>

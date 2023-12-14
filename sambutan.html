@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SDIU Cahaya Al-Fatih</title>
   <link rel="website icon" type="png" href="sdiulogo/LOGOBOTTOM.png">
+  <link rel="stylesheet" href="css/navigasi.css" />
+  <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/style10.css" />
   <link rel="stylesheet" href="css/style11.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -16,93 +18,91 @@
 </head>
 
 <body>
-  <!--Navbar Paling Atas-->
-  <nav id="navbar-one" class="navbar-one flex">
-    <div class="left flex">
-      <div class="email">
-        <a href="mailto:sdiucahayaalfatih@gmail.com"><img src="icon/email.svg" class="logososmed" />
-          <span>sdiucahayaalfatih@gmail.com</span></a>
+    <!--Navbar Paling Atas-->
+    <div id="navbar-one" class="navbar-one flex">
+      <div class="left flex">
+        <div class="email">
+          <a href="mailto:sdiucahayaalfatih@gmail.com"><img src="icon/email.svg" class="logososmed" />
+            <span>sdiucahayaalfatih@gmail.com</span></a>
+        </div>
+        <div class="call">
+          <a href="https://api.whatsapp.com/send/?phone=6287817850418&text&type=phone_number&app_absent=0"><img
+              src="icon/telp.svg" class="logososmed" />
+            <span>+62878-1785-0418</span></a>
+        </div>
       </div>
-      <div class="call">
-        <a href="https://api.whatsapp.com/send/?phone=6287817850418&text&type=phone_number&app_absent=0"><img
-            src="icon/telp.svg" class="logososmed" />
-          <span>+62878-1785-0418</span></a>
+      <div class="right flex">
+        <div class="facebook">
+          <a href="https://www.facebook.com/sdiucahayaalfatih"><img src="icon/facebook.svg" class="logososmed" /></a>
+        </div>
+        <div class="messenger">
+          <a href="https://www.facebook.com/sdiucahayaalfatih"><img src="icon/messenger.svg" class="logososmed" /></a>
+        </div>
+        <div class="instragram">
+          <a href="https://www.instagram.com/sdiucahayaalfatih/?hl=id">
+            <img src="icon/instagram.svg" class="logososmed" /></a>
+        </div>
+        <div class="youtube">
+          <a href="https://www.youtube.com/@sdiucahayaalfatih9465/channels"><img src="icon/youtube.svg"
+              class="logososmed" /></a>
+        </div>
+        <div class="tiktok">
+          <a href=""><img src="icon/tiktok.svg" class="logososmed" /></a>
+        </div>
       </div>
     </div>
-    <div class="right flex">
-      <div class="facebook">
-        <a href="https://www.facebook.com/sdiucahayaalfatih"><img src="icon/facebook.svg" class="logososmed" /></a>
+    <!--Navbar Navigasi Menu-->
+    <div class="header stuck">
+      <a href="index.html" class="logo"><img src="sdiulogo/logoddiu1.png" alt="image" height="55px"></a>
+      <input class="toogle" type="checkbox" id="menu-bar" onclick="toggleMenu()" />
+      <div class="menutoogle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="messenger">
-        <a href=""><img src="icon/messenger.svg" class="logososmed" /></a>
-      </div>
-      <div class="instragram">
-        <a href="https://www.instagram.com/sdiucahayaalfatih/?hl=id">
-          <img src="icon/instagram.svg" class="logososmed" /></a>
-      </div>
-      <div class="youtube">
-        <a href="https://www.youtube.com/@sdiucahayaalfatih9465/channels"><img src="icon/youtube.svg"
-            class="logososmed" /></a>
-      </div>
-      <div class="tiktok">
-        <a href=""><img src="icon/tiktok.svg" class="logososmed" /></a>
-      </div>
+      <nav class="navbar" id="navbar">
+        <button class="close-navbtn" onclick="closeNavbar()"><i class="fas fa-times"></i></button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Profil Sekolah</a>
+            <ul class="submenu">
+              <li><a href="profilsekolah.html">Profil Sekolah</a></li>
+              <li><a href="visi-misi.html">Visi Misi & Tujuan</a></li>
+              <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
+              <li><a href="fasilitas.html">Fasilitas</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Program Sekolah</a>
+            <ul class="submenu">
+              <li><a href="programsekolah.html">Program Sekolah</a></li>
+              <li><a href="kurikulum.html">Kurikulum</a></li>
+              <li><a href="agendakegiatan.html">Agenda Kegiatan</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Akademik</a>
+            <ul class="submenu">
+              <li><a href="kaldik.html">Kalender Akademik</a></li>
+              <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
+              <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Prestasi</a></li>
+          <li>
+            <a href="index.html">Berita</a>
+            <ul class="submenu">
+              <li><a href="pengumuman.html">Pengumuman</a></li>
+              <li><a href="#">Galery</a></li>
+              <li><a href="#id-berita-pengumuman">Artikel/Berita</a></li>
+            </ul>
+          </li>
+  
+          <li><a href="contacus.html">Contac Us</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
-
-  <!--Navbar Navigasi Menu-->
-  <div class="header">
-    <a href="sambutan.html" class="logo"><img src="sdiulogo/logoddiu1.png" alt="image" height="55px" /></a>
-    <input class="toogle" type="checkbox" id="menu-bar" onclick="toggleMenu()" />
-    <div class="menutoogle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="#">Profil Sekolah</a>
-          <ul>
-            <li><a href="profilsekolah.html">Profil Sekolah</a></li>
-
-            <li><a href="visi-misi.html">Visi Misi & Tujuan</a></li>
-            <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
-            <li><a href="fasilitas.html">Fasilitas</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Program Sekolah</a>
-          <ul>
-            <li><a href="programsekolah.html">Program Sekolah</a></li>
-            <li><a href="kurikulum.html">Kurikulum</a></li>
-            <li><a href="agendakegiatan.html">Agenda Kegiatan</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Akademik</a>
-          <ul>
-            <li><a href="kaldik.html">Kalender Akademik</a></li>
-            <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
-            <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Prestasi</a></li>
-        <li>
-          <a href="#">Berita</a>
-          <ul>
-            <li><a href="pengumuman.html">Pengumuman</a></li>
-            <li><a href="#">Galery</a></li>
-            <li><a href="index.html">Artikel/Berita</a></li>
-          </ul>
-        </li>
-
-        <li><a href="contacus.html">Contac Us</a></li>
-      </ul>
-    </nav>
-  </div>
-
   <!--Slide-->
   <div id="navbar-slider" class="slider">
     <div class="mysliderr fade" style="display: block">
@@ -234,6 +234,8 @@
     </script>
     <script src="json/scripstyle2.js"></script>
     <script src="json/jsfile.js"></script>
+    <script src="json/hamburgermenu.js"></script>
+    
 </body>
 
 </html>

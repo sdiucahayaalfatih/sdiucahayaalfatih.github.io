@@ -72,17 +72,6 @@ window.addEventListener("scroll", function () {
     floatElement.style.display = "block";
   }
 });
-// hamburger menu
-// Ubah fungsi toggleMenu() agar sesuai dengan aturan tampilan navbar Anda
-function toggleMenu() {
-  const menuToggle = document.getElementById("menu-bar");
-  const navbar = document.querySelector(".navbar");
-
-  menuToggle.addEventListener("click", function () {
-    navbar.classList.toggle("active");
-  });
-}
-
 function togglePindahKelas() {
   var statuspendaftaran = document.getElementById("statuspendaftaran");
   var pindahkelas1 = document.querySelector(".pindahkelas1");
