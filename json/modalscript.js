@@ -29,6 +29,6 @@ function closeModal() {
 }
 
 // Tampilkan modal saat halaman dimuat
-window.onload = function() {
+window.onload = function () {
   document.getElementById("modalContainer").style.display = "block";
 };

@@ -25,3 +25,59 @@ const closeNavButton = document.querySelector(".close-navbtn");
 closeNavButton.addEventListener("click", function () {
   closeNavbar();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const submenuItems = document.querySelectorAll(".has-submenu");
+
+  submenuItems.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      const submenu = item.querySelector(".submenu");
+
+      if (submenu) {
+        const isActive = submenu.classList.contains("active");
+        closeSubmenus();
+
+        if (!isActive) {
+          closeActiveMenus();
+          item.classList.add("active");
+          submenu.classList.add("active");
+          event.preventDefault(); // Menghentikan perilaku default hanya saat membuka submenu
+        } else {
+          item.classList.remove("active");
+          submenu.classList.remove("active");
+        }
+      }
+    });
+  });
+
+  document.addEventListener("click", function (event) {
+    const isClickInside = document
+      .getElementById("navbar")
+      .contains(event.target);
+    if (!isClickInside) {
+      closeSubmenus();
+    }
+  });
+
+  function closeSubmenus() {
+    submenuItems.forEach((item) => {
+      item.classList.remove("active");
+      const submenu = item.querySelector(".submenu");
+      if (submenu) {
+        submenu.classList.remove("active");
+      }
+    });
+  }
+
+  function closeActiveMenus() {
+    submenuItems.forEach((item) => {
+      if (item.classList.contains("active")) {
+        item.classList.remove("active");
+        const submenu = item.querySelector(".submenu");
+        if (submenu) {
+          submenu.classList.remove("active");
+        }
+      }
+    });
+  }
+});

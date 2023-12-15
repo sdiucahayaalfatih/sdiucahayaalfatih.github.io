@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Infinite Card Slider JavaScript | CodingNepal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style4.css" />
+    <link rel="stylesheet" href="css/navigasi.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/style11.css" />
+    <!-- Fontawesome Link for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <script src="json/scriptslide.js" defer></script>
+  </head>
+  <body>
+    <!--Navbar Paling Atas-->
+    <div id="navbar-one" class="navbar-one flex">
+      <div class="left flex">
+        <div class="email">
+          <a href="mailto:sdiucahayaalfatih@gmail.com"
+            ><img src="icon/email.svg" class="logososmed" />
+            <span>sdiucahayaalfatih@gmail.com</span></a
+          >
+        </div>
+        <div class="call">
+          <a
+            href="https://api.whatsapp.com/send/?phone=6287817850418&text&type=phone_number&app_absent=0"
+            ><img src="icon/telp.svg" class="logososmed" />
+            <span>+62878-1785-0418</span></a
+          >
+        </div>
+      </div>
+      <div class="right flex">
+        <div class="facebook">
+          <a href="https://www.facebook.com/sdiucahayaalfatih"
+            ><img src="icon/facebook.svg" class="logososmed"
+          /></a>
+        </div>
+        <div class="messenger">
+          <a href="https://www.facebook.com/sdiucahayaalfatih"
+            ><img src="icon/messenger.svg" class="logososmed"
+          /></a>
+        </div>
+        <div class="instragram">
+          <a href="https://www.instagram.com/sdiucahayaalfatih/?hl=id">
+            <img src="icon/instagram.svg" class="logososmed"
+          /></a>
+        </div>
+        <div class="youtube">
+          <a href="https://www.youtube.com/@sdiucahayaalfatih9465/channels"
+            ><img src="icon/youtube.svg" class="logososmed"
+          /></a>
+        </div>
+        <div class="tiktok">
+          <a href=""><img src="icon/tiktok.svg" class="logososmed" /></a>
+        </div>
+      </div>
+    </div>
+    <!--Navbar Navigasi Menu-->
+    <div class="header stuck">
+      <a href="index.html" class="logo"
+        ><img src="sdiulogo/logoddiu1.png" alt="image" height="55px"
+      /></a>
+      <input
+        class="toogle"
+        type="checkbox"
+        id="menu-bar"
+        onclick="toggleMenu()"
+      />
+      <div class="menutoogle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar" id="navbar">
+        <button class="close-navbtn" onclick="closeNavbar()">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="has-submenu">
+            <a href="#">Profil Sekolah<span class="arrow"></span></a>
+            <ul class="submenu">
+              <li><a href="profilsekolah.html">Profil Sekolah</a></li>
+              <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
+              <li><a href="visi-misi.html">Visi Misi & Tujuan</a></li>
+              <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
+              <li><a href="fasilitas.html">Fasilitas</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <a href="#">Program Sekolah<span class="arrow"></span></a>
+            <ul class="submenu">
+              <li><a href="programsekolah.html">Program Sekolah</a></li>
+              <li><a href="kurikulum.html">Kurikulum</a></li>
+              <li><a href="agendakegiatan.html">Agenda Kegiatan</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <a href="#">Akademik<span class="arrow"></span></a>
+            <ul class="submenu">
+              <li><a href="kaldik.html">Kalender Akademik</a></li>
+              <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
+              <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Prestasi</a></li>
+          <li class="has-submenu">
+            <a href="#">Berita<span class="arrow"></span></a>
+            <ul class="submenu">
+              <li><a href="pengumuman.html">Pengumuman</a></li>
+              <li><a href="#id-berita-pengumuman">Artikel/Berita</a></li>
+            </ul>
+          </li>
+          <li><a href="contacus.html">Contac Us</a></li>
+        </ul>
+        <div id="copyright">
+          <p>
+            <img
+              src="sdiulogo/LOGOBOTTOM.png"
+              alt="small-icon"
+              height="20px"
+              style="vertical-align: middle; margin-left: 5px"
+            />Copyright SDIUCAF 2023
+          </p>
+        </div>
+      </nav>
+    </div>
+
+    <div class="profil-sekolah-banner" id="strukturorganisasi">
+      <div class="profilsekolah-judul">
+        <h1>Galery</h1>
+      </div>
+      <ul class="menu-profilsekolah">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <p>></p>
+        </li>
+        <li><a>Galery</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <!-- Ikon Galeri menggunakan Font Awesome -->
+      <div class="icon">
+        <i class="fas fa-images"></i>
+      </div>
+      <!-- Tulisan -->
+      <div class="text">Galeri SDIU Cahaya Al-Fatih</div>
+    </div>
+    <div class="penjelasan">
+      <p>TEACHER SDIUCAF</p>
+    </div>
+    <div class="containerbodyin">
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0049.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0050.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0051.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0052.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0053.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0054.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0055.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0056.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0057.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0058.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0059.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0060.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0061.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0062.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0063.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0065.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0066.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0067.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0068.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0069.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0070.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+          <li class="card">
+            <div class="img">
+              <img
+                src="images/Galery/IMG-20231215-WA0072.jpg"
+                alt="img"
+                draggable="false"
+              />
+            </div>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+    <!--
+    <div class="penjelasan">
+      <p>Berikut ini kegiatan SDIU Cahaya Al-Fatih:</p>
+    </div>
+    <div class="gallery">
+      <div class="photo-group">
+        <h2>Reading Times</h2>
+        <div class="photos">
+          <div class="photo">
+            <img src="images/Reading Time/IMG_3785.JPG" alt="Foto Pertama 1" />
+          </div>
+          <div class="photo">
+            <img src="images/Reading Time/IMG_3795.JPG" alt="Foto Pertama 2" />
+          </div>
+          <div class="photo">
+            <img src="images/Reading Time/IMG_3798.JPG" alt="Foto Pertama 2" />
+          </div>
+          </div>
+      </div>
+      <div class="photo-group">
+        <h2>PHBN & PHBI</h2>
+        <div class="photos">
+          <div class="photo">
+            <img src="images/Muharam/IMG_2944.JPG" alt="Foto Kedua 1" />
+          </div>
+          <div class="photo">
+            <img src="images/Muharam/IMG_2946.JPG" alt="Foto Kedua 2" />
+          </div>
+          <div class="photo">
+            <img src="images/Muharam/IMG_2948.JPG" alt="Foto Kedua 2" />
+          </div>
+          Tambahkan lebih banyak foto sesuai kebutuhan untuk Judul Foto Kedua 
+        </div>
+      </div>
+      <div class="photo-group">
+        <h2>kENAIKAN KELAS</h2>
+        <div class="photos">
+          <div class="photo">
+            <img src="images/Kenaikan Kelas/IMG_3877.JPG" alt="Foto Ketiga 1" />
+          </div>
+          <div class="photo">
+            <img src="images/Kenaikan Kelas/IMG_3900.JPG" alt="Foto Ketiga 2" />
+          </div>
+          <div class="photo">
+            <img src="images/Kenaikan Kelas/IMG_3905.JPG" alt="Foto Ketiga 2" />
+          </div>
+           Tambahkan lebih banyak foto sesuai kebutuhan untuk Judul Foto Ketiga
+        </div>
+      </div>
+      </div>
+    -->
+    <footer>
+      <div class="content-footer">
+        <div class="top-footer">
+          <div class="logo-details">
+            <span class="my-logo">SDIU Cahaya Al-Fatih</span>
+            <p>
+              Palurahan, Kec. Kaduhejo, Kab. Pandeglang Banten Kode Pos 42252
+            </p>
+          </div>
+          <div class="media-icons">
+            <a href="https://www.facebook.com/sdiucahayaalfatih"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.facebook.com/sdiucahayaalfatih"
+              ><i class="fab fa-facebook-messenger"></i
+            ></a>
+            <a href="https://www.instagram.com/sdiucahayaalfatih/?hl=id"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@sdiucahayaalfatih9465/channels"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+        <div class="link-boxes">
+          <ul class="box">
+            <li class="link_name">Profil Sekolah</li>
+            <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
+            <li><a href="visi-misi.html"> Visi Misi & Tujuan</a></li>
+            <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
+            <li><a href="fasilitas.html">Fasilitas</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Program Sekolah</li>
+            <li><a href="programsekolah.html">Program Sekolah</a></li>
+            <li><a href="profilsekolah.html">Profil Sekolah</a></li>
+            <li><a href="kurikulum.html">Kurikulum</a></li>
+            <li><a href="agendakegiatan.html">Agenda Kegiatann</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Akademik</li>
+            <li><a href="kaldik.html">Kalender Akademik</a></li>
+            <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
+            <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
+          </ul>
+          <ul class="box">
+            <li class="link_name">Berita</li>
+            <li><a href="pengumuman.html">Pengumuman</a></li>
+            <li><a href="index.html">Artikel/Berita</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text"
+            >Copyright © 2023 <a href="#">SDIU CAF</a>All rights reserved</span
+          >
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="json/hamburgermenu.js"></script>
+</html>

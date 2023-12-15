@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="css/navigasi.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/style13.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald&display=swap" rel="stylesheet">
+  
   </head>
   <body>
       <!--Navbar Paling Atas-->
@@ -60,8 +62,8 @@
       <button class="close-navbtn" onclick="closeNavbar()"><i class="fas fa-times"></i></button>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="#">Profil Sekolah</a>
+        <li class="has-submenu">
+          <a href="#">Profil Sekolah<span class="arrow"></span></a>
           <ul class="submenu">
             <li><a href="profilsekolah.html">Profil Sekolah</a></li>
             <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
@@ -70,16 +72,16 @@
             <li><a href="fasilitas.html">Fasilitas</a></li>
           </ul>
         </li>
-        <li>
-          <a href="#">Program Sekolah</a>
+        <li class="has-submenu">
+          <a href="#">Program Sekolah<span class="arrow"></span></a>
           <ul class="submenu">
             <li><a href="programsekolah.html">Program Sekolah</a></li>
             <li><a href="kurikulum.html">Kurikulum</a></li>
             <li><a href="agendakegiatan.html">Agenda Kegiatan</a></li>
           </ul>
         </li>
-        <li>
-          <a href="#">Akademik</a>
+        <li class="has-submenu">
+          <a href="#">Akademik<span class="arrow"></span></a>
           <ul class="submenu">
             <li><a href="kaldik.html">Kalender Akademik</a></li>
             <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
@@ -87,18 +89,21 @@
           </ul>
         </li>
         <li><a href="#">Prestasi</a></li>
-        <li>
-          <a href="index.html">Berita</a>
+        <li class="has-submenu">
+          <a href="#">Berita<span class="arrow"></span></a>
           <ul class="submenu">
-            <li><a href="#">Galery</a></li>
-            <li><a href="#id-berita-pengumuman">Artikel/Berita</a></li>
+            <li><a href="GaleryFoto.html">Galery</a></li>
+            <li><a href="index.html">Artikel/Berita</a></li>
           </ul>
         </li>
-
         <li><a href="contacus.html">Contac Us</a></li>
       </ul>
+      <div id="copyright">
+        <p> <img src="sdiulogo/LOGOBOTTOM.png" alt="small-icon" height="20px" style="vertical-align: middle; margin-left: 5px;">Copyright SDIUCAF 2023</p>
+      </div>
     </nav>
-  </div>
+  </div>  
+
     <div class="container-data">
       <div class="container-judul">
         <h1 class="statuspendaftaran">Pengumuman Penerimaan Siswa Baru</h1>
@@ -183,7 +188,7 @@
           </ul>
           <ul class="box">
             <li class="link_name">Berita</li>
-            <li><a href="#">Galeri</a></li>
+            <li><a href="GaleryFoto.html">Galeri</a></li>
             <li><a href="index.html">Artikel/Berita</a></li>
           </ul>
         </div>
