@@ -127,26 +127,12 @@
   border-radius: 5px;
 }
 
-.isi1 {
-  padding: 5px;
-  margin: 5px;
-  line-height: 20px;
-  font-size: 1.4em;
-}
-
 .isi-kontent2 h1 {
   background-color: #0077b5;
   text-align: center;
   color: white;
   padding: 10px;
   border-radius: 5px;
-}
-
-.isi2 {
-  padding: 5px;
-  margin: 5px;
-  line-height: 20px;
-  font-size: 1.4em;
 }
 
 .banner1-profil {
@@ -166,12 +152,29 @@
 }
 
 .isi3 {
-  padding: 15px 17px;
+  margin: 20px 20px;
   font-size: 1.6rem;
   text-align: justify;
 }
-
+.gambar-tight img {
+  max-width: 550px; /* Atur lebar maksimal gambar */
+  height: auto;
+  display: block; /* Membuat gambar berada di tengah */
+  margin: 0 auto; /* Menengahkan gambar */
+}
+figcaption {
+  clear: both; /* Menjaga keterangan agar tidak berada di sebelah kiri atau kanan gambar */
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
 @media (max-width: 768px) {
+  .gambar-tight img {
+    max-width: 100%;
+    float: none;
+    margin-right: 0;
+  }
   .isi3 {
     font-size: 1.5rem;
   }
