@@ -24,7 +24,7 @@
 }
 
 .profilsekolah-judul h1 {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 .menu-profilsekolah {
@@ -39,7 +39,7 @@
 
 .menu-profilsekolah li {
   margin: 0 10px;
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .menu-profilsekolah a {
@@ -169,13 +169,26 @@ figcaption {
   color: #333;
   margin-top: 5px;
 }
+@media (max-width: 900px) {
+  .profil-sekolah {
+    padding: 0;
+  }
+  .profilsekolah-judul h1 {
+    font-size: 2.3em;
+  }
+
+  .menu-profilsekolah li {
+    font-size: 1.2em;
+  }
+}
+
 @media (max-width: 768px) {
   .gambar-tight img {
     max-width: 100%;
     float: none;
     margin-right: 0;
   }
-  .isi3 {
+  .isi3 ol {
     font-size: 1.5rem;
   }
 
@@ -202,7 +215,18 @@ figcaption {
     /* Sesuaikan ukuran yang diinginkan */
   }
 }
+@media (max-width: 600px) {
+  .profilsekolah-judul h1 {
+    font-size: 2.2em;
+  }
 
+  .menu-profilsekolah li {
+    font-size: 1.1em;
+  }
+  .isi3 ol {
+    font-size: 1.2rem;
+  }
+}
 @media (max-width: 480px) {
   .email span {
     display: none;
@@ -210,5 +234,15 @@ figcaption {
 
   .call span {
     display: none;
+  }
+  .profilsekolah-judul h1 {
+    font-size: 2em;
+  }
+
+  .menu-profilsekolah li {
+    font-size: 1em;
+  }
+  .isi3 ol {
+    font-size: 1rem;
   }
 }
