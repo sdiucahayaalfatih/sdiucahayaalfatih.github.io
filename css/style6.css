@@ -69,10 +69,17 @@
   .menu-profilsekolah li {
     font-size: 1.1em;
   }
-  .visi19,
-  .misi19,
-  .tujuan19 {
-    font-size: 1em;
+  .visi21 {
+    font-size: 1.5rem;
+  }
+  .misi21 {
+    font-size: 1.5rem;
+  }
+  .tujua21 {
+    font-size: 1.5rem;
+  }
+  .visi-judul1 {
+    font-size: 1.7rem;
   }
 }
 
@@ -84,16 +91,24 @@
   .menu-profilsekolah li {
     font-size: 1em;
   }
-  .visi19,
-  .misi19,
-  .tujuan19 {
-    font-size: 0.5em;
+  .visi21 {
+    font-size: 1.2rem;
+  }
+  .misi21 {
+    font-size: 1.2rem;
+  }
+  .tujuan21 {
+    font-size: 1.2rem;
+  }
+  .visi-judul1 {
+    font-size: 1.4rem;
   }
 }
 
 /*Menu Tentang Saya*/
 .visi-judul1 {
-  font-size: 1.4em;
+  color: #3498db;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -102,7 +117,6 @@
 
 .visi-judul1 span {
   color: #3498db;
-  font-size: 30px;
 }
 
 #visi-judul {
