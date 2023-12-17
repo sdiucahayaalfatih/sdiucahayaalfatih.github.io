@@ -1,65 +1,49 @@
-const myslider = document.querySelectorAll(".mysliderr"),
-  dot = document.querySelectorAll(".dot");
-let counter = 1;
-slidefun(counter);
+let slider = document.querySelector(".slider .list");
+let items = document.querySelectorAll(".slider .list .item");
+let next = document.getElementById("next-link");
+let prev = document.getElementById("prev-link");
+let dots = document.querySelectorAll(".slider .dots li");
 
-let timer = setInterval(autoSlide, 8000);
-function autoSlide() {
-  counter += 1;
-  slidefun(counter);
-}
-function plusSlides(n) {
-  counter += n;
-  slidefun(counter);
-  resetTimer();
-}
-function currentSlide(n) {
-  counter = n;
-  slidefun(counter);
-  resetTimer();
-}
-function resetTimer() {
-  clearInterval(timer);
-  timer = setInterval(autoSlide, 8000);
-}
+let lengthItems = items.length - 1;
+let active = 0;
 
-function slidefun(n) {
-  let i;
-  for (i = 0; i < myslider.length; i++) {
-    myslider[i].style.display = "none";
-  }
-  for (i = 0; i < dot.length; i++) {
-    dot[i].className = dot[i].className.replace(" active", "");
-  }
-  if (n > myslider.length) {
-    counter = 1;
-  }
-  if (n < 1) {
-    counter = myslider.length;
-  }
-  myslider[counter - 1].style.display = "block";
-  dot[counter - 1].className += " active";
+next.onclick = function (event) {
+  event.preventDefault();
+  active = active + 1 <= lengthItems ? active + 1 : 0;
+  reloadSlider();
+};
+
+prev.onclick = function (event) {
+  event.preventDefault();
+  active = active - 1 >= 0 ? active - 1 : lengthItems;
+  reloadSlider();
+};
+let refreshInterval = setInterval(() => {
+  next.click();
+}, 6000);
+function reloadSlider() {
+  slider.style.left = -items[active].offsetLeft + "px";
+  //
+  let last_active_dot = document.querySelector(".slider .dots li.active");
+  last_active_dot.classList.remove("active");
+  dots[active].classList.add("active");
+
+  clearInterval(refreshInterval);
+  refreshInterval = setInterval(() => {
+    next.click();
+  }, 6000);
 }
 
-const slider = document.getElementById("navbar-slider");
-let touchStartX = 0;
-let touchEndX = 0;
-
-slider.addEventListener("touchstart", function (event) {
-  touchStartX = event.touches[0].clientX;
+dots.forEach((li, key) => {
+  li.addEventListener("click", () => {
+    active = key;
+    reloadSlider();
+  });
 });
+window.onresize = function (event) {
+  reloadSlider();
+};
 
-slider.addEventListener("touchmove", function (event) {
-  touchEndX = event.touches[0].clientX;
-});
-
-slider.addEventListener("touchend", function () {
-  if (touchStartX - touchEndX > 50) {
-    plusSlides(1); // Geser slide ke kanan
-  } else if (touchEndX - touchStartX > 50) {
-    plusSlides(-1); // Geser slide ke kiri
-  }
-});
 window.addEventListener("scroll", function () {
   var floatElement = document.querySelector(".float");
   var windowHeight = window.innerHeight;
