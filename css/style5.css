@@ -2,7 +2,10 @@
   background-color: #e8f6ff;
   /* Ubah warna sesuai keinginan Anda */
 }
-
+.input-terisi2 {
+  background-color: #e8f6ff;
+  /* Ubah warna sesuai keinginan Anda */
+}
 #map {
   width: 100%;
   height: 400px;
@@ -200,7 +203,9 @@
   background: rgb(230, 230, 230);
   font-family: "Poppins", sans-serif;
 }
-
+input[type="text"] {
+  text-transform: uppercase;
+}
 .body {
   position: relative;
   max-width: 700px;
@@ -455,6 +460,7 @@
   border: none;
   color: #707070;
   font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .form .input-box button {
@@ -521,9 +527,22 @@
   cursor: pointer;
   transition: all 0.2s ease;
   background-size: 200% auto;
-  animation: gradientAnimation 2s ease infinite;
+  background: linear-gradient(to right, rgb(0, 255, 0), rgb(123, 136, 4));
+  animation: gradientAnimasi 2s ease infinite;
 }
+@keyframes gradientAnimasi {
+  0% {
+    background-position: 0% center;
+  }
 
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
+}
 .submit2::after {
   content: "LOADING";
   animation: loadingAnimation 2s linear infinite;
@@ -707,6 +726,18 @@
 }
 
 .required26 {
+  color: red;
+}
+.required30 {
+  color: red;
+}
+.required31 {
+  color: red;
+}
+.required32 {
+  color: red;
+}
+.required33 {
   color: red;
 }
 

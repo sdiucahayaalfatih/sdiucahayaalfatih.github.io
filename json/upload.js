@@ -49,3 +49,88 @@ function chatLangsungAdministrasi() {
   window.open("https://wa.me/6281293524242", "_blank"); // Mengarahkan ke WhatsApp dengan nomor tertentu
   // Atau Anda dapat menggunakan metode lain untuk mengirim pesan atau melakukan tindakan tertentu
 }
+
+function togglePindahKelas() {
+  var statuspendaftaran = document.getElementById("statuspendaftaran");
+  var pindahkelas1 = document.querySelector(".pindahkelas1");
+
+  if (statuspendaftaran.value === "Siswa Mutasi") {
+    pindahkelas1.style.display = "block";
+  } else {
+    pindahkelas1.style.display = "none";
+  }
+}
+
+const inputTanggalLahir = document.getElementById("tglsiswa");
+const inputUmur = document.getElementById("umurs");
+
+inputTanggalLahir.addEventListener("change", function () {
+  const tanggalLahir = new Date(this.value);
+  const hariIni = new Date();
+
+  let tahun = hariIni.getFullYear() - tanggalLahir.getFullYear();
+  let bulan = hariIni.getMonth() - tanggalLahir.getMonth();
+  let hari = hariIni.getDate() - tanggalLahir.getDate();
+
+  if (bulan < 0 || (bulan === 0 && hari < 0)) {
+    tahun--;
+    bulan = 12 + bulan;
+  }
+
+  if (hari < 0) {
+    const bulanKemarin = new Date(hariIni.getFullYear(), hariIni.getMonth(), 0);
+    hari = bulanKemarin.getDate() + hari;
+    bulan--;
+  }
+
+  inputUmur.value = `${tahun} tahun, ${bulan} bulan, ${hari} hari`;
+});
+
+function populateSelectElement(url, selectElement, dataKey, valueKey) {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      var options = `<option>--Pilih--</option>`;
+      data.forEach((element) => {
+        options += `<option value="${element[valueKey]}" data-id="${element[dataKey]}">${element[valueKey]}</option>`;
+      });
+      selectElement.innerHTML = options;
+    });
+}
+
+const provinsiSelect = document.getElementById("provsiswa");
+const kotaSelect = document.getElementById("kotsiswa");
+const kecamatanSelect = document.getElementById("kecsiswa");
+const kelurahanSelect = document.getElementById("kelsiswa");
+
+provinsiSelect.addEventListener("change", (e) => {
+  const selectedProvinsi = e.target.value;
+  const provinsiId = e.target.options[e.target.selectedIndex].dataset.id;
+  const kotaUrl = `https://kanglerian.github.io/api-wilayah-indonesia/api/regencies/${provinsiId}.json`;
+
+  populateSelectElement(kotaUrl, kotaSelect, "id", "name");
+});
+
+kotaSelect.addEventListener("change", (e) => {
+  const selectedKota = e.target.value;
+  const kotaId = e.target.options[e.target.selectedIndex].dataset.id;
+  const kecamatanUrl = `https://kanglerian.github.io/api-wilayah-indonesia/api/districts/${kotaId}.json`;
+
+  populateSelectElement(kecamatanUrl, kecamatanSelect, "id", "name");
+});
+
+kecamatanSelect.addEventListener("change", (e) => {
+  const selectedKecamatan = e.target.value;
+  const kecamatanId = e.target.options[e.target.selectedIndex].dataset.id;
+  const kelurahanUrl = `https://kanglerian.github.io/api-wilayah-indonesia/api/villages/${kecamatanId}.json`;
+
+  populateSelectElement(kelurahanUrl, kelurahanSelect, "id", "name");
+});
+
+// Populate Provinsi
+populateSelectElement(
+  "https://kanglerian.github.io/api-wilayah-indonesia/api/provinces.json",
+  provinsiSelect,
+  "id",
+  "name"
+);
