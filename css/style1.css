@@ -694,9 +694,6 @@ i#next {
   .slider .list .item .txt p {
     font-size: 22px;
   }
-  .modal-wrapper {
-    max-width: 90%;
-  }
 }
 
 @media screen and (max-width: 600px) {
