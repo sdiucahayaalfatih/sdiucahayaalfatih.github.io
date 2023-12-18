@@ -19,25 +19,18 @@
 </head>
 
 <body>
-  <div class="modal-container" id="modalContainer">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <div class="slide-container">
-        <div class="mySlides fade">
-          <img class="image25" src="images/slider/Slide2.png" style="width: 100%" />
+  <div class="bacground-wrapper">
+    <div class="modal-wrapper">
+      <span class="close-button" id="close">&times;</span>
+      <i class="fa-solid fa-arrow-left button" id="prev"></i>
+      <div class="image-container">
+        <div class="slide-image">
+          <img src="images/slider/Slide1.jpg" alt="" />
+          <img src="images/slider/Slide2.png" alt="" />
+          <img src="images/slider/Slide3.png" alt="" />
+          <img src="images/slider/Slide4.png" alt="" />
         </div>
-
-        <div class="mySlides fade">
-          <img class="image25" src="images/slider/Slide3.png" style="width: 100%" />
-        </div>
-
-        <div class="mySlides fade">
-          <img class="image25" src="images/slider/Slide4.png" style="width: 100%" />
-        </div>s
-
-        <!-- Tombol navigasi -->
-        <a class="preview" onclick="minSlides(-1)">&#10094;</a>
-        <a class="nexto" onclick="minSlides(1)">&#10095;</a>
+        <i class="fa-solid fa-arrow-right button" id="next"></i>
       </div>
     </div>
   </div>

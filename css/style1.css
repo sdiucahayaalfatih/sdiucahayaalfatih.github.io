@@ -1,6 +1,24 @@
-/* CSS dasar untuk Popup Gambar */
-.modal-container {
-  display: none;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+.bacground-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   z-index: 9999;
   left: 0;
@@ -10,83 +28,82 @@
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
 }
-
-.modal-content {
-  position: relative;
-  margin: 0 auto;
+.modal-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  max-width: 650px;
+  width: 100%;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Menentukan z-index agar elemen modal berada di atas elemen lain */
+}
+.modal-wrapper i.button {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding: 20px;
+  height: 36px;
+  width: 36px;
+  background-color: #343f4f;
+  border-radius: 50%;
   text-align: center;
-  max-width: 800px;
-}
-
-.close-btn {
-  position: absolute;
-  z-index: 9999;
-  top: 20px;
-  right: 20px;
-  font-size: 25px;
+  line-height: 36px;
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s linear;
+  z-index: 100;
   cursor: pointer;
-  color: black;
-  padding: 10px;
-  transition: 0.6s ease;
 }
-
-.close-btn:hover {
-  background-color: black;
-  color: white;
+i.button:active {
+  transform: scale(0.94) translateY(-50%);
 }
-
-/* Untuk slide gambar Modal*/
-.slide-container {
-  position: relative;
+i#prev {
+  left: 25px;
 }
-
-.mySlides {
-  display: none;
+i#next {
+  right: 25px;
 }
-
-.imge25 {
-  vertical-align: middle;
+.image-container {
+  height: 320px;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
 }
-
-.preview,
-.nexto {
-  cursor: pointer;
+.image-container .slide-image {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+.slide-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 18px;
+  border: 10px solid #fff;
+  object-fit: cover;
+}
+.close-button {
   position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  background-color: blue;
+  width: 30px;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.preview {
-  left: 0;
-  border-radius: 3px 0 0 3px;
-  background-color: white;
+.close-button:hover {
+  color: #ffffff;
+  background-color: red;
 }
-
-.nexto {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-  background-color: white;
-}
-
-.preview:hover,
-.nexto:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-}
-
-/*Slide Preview*/
-
 /*Decoration of Slide*/
 .visi {
   background-color: #3498db;
@@ -431,10 +448,6 @@
 }
 /*ukuran layar handphone*/
 @media (max-width: 480px) {
-  .modal-content {
-    top: 220px;
-  }
-
   .visi h1 {
     font-size: 18px;
   }
@@ -680,6 +693,9 @@
 
   .slider .list .item .txt p {
     font-size: 22px;
+  }
+  .modal-wrapper {
+    max-width: 90%;
   }
 }
 
