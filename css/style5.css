@@ -832,7 +832,7 @@ input[type="text"] {
   color: red;
   font-size: 12px;
 }
-select:disabled {
+.alamat-coy:disabled {
   color: #999; /* Warna teks saat disabled */
   background-color: #f5f5f5; /* Warna latar belakang saat disabled */
   /* Atau gunakan warna atau gaya lain yang diinginkan */
