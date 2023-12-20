@@ -102,6 +102,10 @@ const provinsiSelect = document.getElementById("provsiswa");
 const kotaSelect = document.getElementById("kotsiswa");
 const kecamatanSelect = document.getElementById("kecsiswa");
 const kelurahanSelect = document.getElementById("kelsiswa");
+// Menonaktifkan kolom-kolom yang tidak bisa diisi pada awalnya
+kotaSelect.disabled = true;
+kecamatanSelect.disabled = true;
+kelurahanSelect.disabled = true;
 
 provinsiSelect.addEventListener("change", (e) => {
   const selectedProvinsi = e.target.value;
@@ -109,6 +113,15 @@ provinsiSelect.addEventListener("change", (e) => {
   const kotaUrl = `https://kanglerian.github.io/api-wilayah-indonesia/api/regencies/${provinsiId}.json`;
 
   populateSelectElement(kotaUrl, kotaSelect, "id", "name");
+  // Mengaktifkan kolom Kabupaten/Kota setelah Provinsi dipilih
+  kotaSelect.disabled = false;
+  // Menonaktifkan kolom Kecamatan dan Kelurahan ketika Provinsi dipilih ulang
+  kecamatanSelect.disabled = true;
+  kelurahanSelect.disabled = true;
+
+  // Mengosongkan pilihan di kolom Kecamatan dan Kelurahan
+  kecamatanSelect.innerHTML = '<option value="">--Pilih--</option>';
+  kelurahanSelect.innerHTML = '<option value="">--Pilih--</option>';
 });
 
 kotaSelect.addEventListener("change", (e) => {
@@ -117,6 +130,14 @@ kotaSelect.addEventListener("change", (e) => {
   const kecamatanUrl = `https://kanglerian.github.io/api-wilayah-indonesia/api/districts/${kotaId}.json`;
 
   populateSelectElement(kecamatanUrl, kecamatanSelect, "id", "name");
+
+  // Mengaktifkan kolom Kecamatan setelah Kabupaten/Kota dipilih
+  kecamatanSelect.disabled = false;
+  // Menonaktifkan kolom Kelurahan ketika Kabupaten dipilih ulang
+  kelurahanSelect.disabled = true;
+
+  // Mengosongkan pilihan di kolom Kelurahan
+  kelurahanSelect.innerHTML = '<option value="">--Pilih--</option>';
 });
 
 kecamatanSelect.addEventListener("change", (e) => {
@@ -125,6 +146,9 @@ kecamatanSelect.addEventListener("change", (e) => {
   const kelurahanUrl = `https://kanglerian.github.io/api-wilayah-indonesia/api/villages/${kecamatanId}.json`;
 
   populateSelectElement(kelurahanUrl, kelurahanSelect, "id", "name");
+
+  // Mengaktifkan kolom Kelurahan setelah Kecamatan dipilih
+  kelurahanSelect.disabled = false;
 });
 
 // Populate Provinsi

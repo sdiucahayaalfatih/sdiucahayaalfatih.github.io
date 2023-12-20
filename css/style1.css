@@ -1,20 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  box-sizing: border-box;
-  outline: none;
-  text-decoration: none;
-}
-
-html {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-body {
-  min-height: 100vh;
-}
+/*Slide Popup*/
 .bacground-wrapper {
   display: flex;
   align-items: center;
@@ -40,7 +24,7 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Menentukan z-index agar elemen modal berada di atas elemen lain */
+  z-index: 1000;
 }
 .modal-wrapper i.button {
   position: absolute;
@@ -99,11 +83,11 @@ i#next {
   border-radius: 5px;
   text-align: center;
 }
-
 .close-button:hover {
   color: #ffffff;
   background-color: red;
 }
+
 /*Decoration of Slide*/
 .visi {
   background-color: #3498db;
@@ -130,9 +114,6 @@ i#next {
   color: white;
   font-size: 15px;
 }
-
-/*Dekorasi Text pada Slider*/
-
 /*Menu Tentang Saya*/
 .about-me {
   font-size: 14px;

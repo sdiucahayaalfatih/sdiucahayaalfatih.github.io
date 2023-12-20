@@ -191,8 +191,22 @@ body {
   font-size: 14px;
   color: #555;
 }
+#sosial-media-logo {
+  display: none;
+}
 /*Breake Point Event*/
 @media (max-width: 980px) {
+  #sosial-media-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0px;
+  }
+  #sosial-media-logo a {
+    margin: 0 5px;
+  }
   #copyright {
     display: block;
     font-weight: bold;
