@@ -2,7 +2,7 @@ let slider = document.querySelector(".slider .list");
 let items = document.querySelectorAll(".slider .list .item");
 let next = document.getElementById("next-link");
 let prev = document.getElementById("prev-link");
-let dots = document.querySelectorAll(".slider .dots li");
+let dots = document.querySelectorAll(".slider .dots .dot-item"); // Menggunakan class dot-item
 
 let lengthItems = items.length - 1;
 let active = 0;
@@ -21,10 +21,13 @@ prev.onclick = function (event) {
 let refreshInterval = setInterval(() => {
   next.click();
 }, 6000);
+
 function reloadSlider() {
   slider.style.left = -items[active].offsetLeft + "px";
   //
-  let last_active_dot = document.querySelector(".slider .dots li.active");
+  let last_active_dot = document.querySelector(
+    ".slider .dots .dot-item.active"
+  );
   last_active_dot.classList.remove("active");
   dots[active].classList.add("active");
 
@@ -34,12 +37,13 @@ function reloadSlider() {
   }, 6000);
 }
 
-dots.forEach((li, key) => {
-  li.addEventListener("click", () => {
+dots.forEach((dot, key) => {
+  dot.addEventListener("click", () => {
     active = key;
     reloadSlider();
   });
 });
+
 window.onresize = function (event) {
   reloadSlider();
 };

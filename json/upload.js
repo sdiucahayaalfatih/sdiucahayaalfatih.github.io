@@ -49,7 +49,7 @@ function chatLangsungAdministrasi() {
   window.open("https://wa.me/6281293524242", "_blank"); // Mengarahkan ke WhatsApp dengan nomor tertentu
   // Atau Anda dapat menggunakan metode lain untuk mengirim pesan atau melakukan tindakan tertentu
 }
-
+// pindah kelas
 function togglePindahKelas() {
   var statuspendaftaran = document.getElementById("statuspendaftaran");
   var pindahkelas1 = document.querySelector(".pindahkelas1");

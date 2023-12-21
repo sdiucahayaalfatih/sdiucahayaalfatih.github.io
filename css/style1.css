@@ -592,7 +592,7 @@ i#next {
   display: flex;
   justify-content: center;
 }
-.slider .dots li {
+.slider .dots .dot-item {
   list-style: none;
   width: 10px;
   height: 10px;
@@ -601,7 +601,8 @@ i#next {
   border-radius: 20px;
   transition: 0.5s;
 }
-.slider .dots li.active {
+
+.slider .dots .dot-item.active {
   width: 30px;
 }
 .slider .buttons a.slider-button {
@@ -678,14 +679,17 @@ i#next {
 }
 
 @media screen and (max-width: 600px) {
+  .slider .buttons {
+    top: 30%;
+  }
   .slider {
     height: 250px;
   }
   .slider .list .item .txt h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .slider .list .item .txt p {
-    font-size: 16px;
+    font-size: 14px;
   }
 }

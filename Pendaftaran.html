@@ -95,7 +95,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li class="has-submenu">
-          <a href="#">Profil Sekolah<span class="arrow"></span></a>
+          <a>Profil Sekolah<span class="arrow"></span></a>
           <ul class="submenu">
             <li><a href="profilsekolah.html">Profil Sekolah</a></li>
             <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
@@ -105,7 +105,7 @@
           </ul>
         </li>
         <li class="has-submenu">
-          <a href="#">Program Sekolah<span class="arrow"></span></a>
+          <a>Program Sekolah<span class="arrow"></span></a>
           <ul class="submenu">
             <li><a href="programsekolah.html">Program Sekolah</a></li>
             <li><a href="kurikulum.html">Kurikulum</a></li>
@@ -113,7 +113,7 @@
           </ul>
         </li>
         <li class="has-submenu">
-          <a href="#">Akademik<span class="arrow"></span></a>
+          <a>Akademik<span class="arrow"></span></a>
           <ul class="submenu">
             <li><a href="kaldik.html">Kalender Akademik</a></li>
             <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
@@ -122,7 +122,7 @@
         </li>
         <li><a href="#">Prestasi</a></li>
         <li class="has-submenu">
-          <a href="#">Berita<span class="arrow"></span></a>
+          <a>Berita<span class="arrow"></span></a>
           <ul class="submenu">
             <li><a href="pengumuman.html">Pengumuman</a></li>
             <li><a href="GaleryFoto.html">Galery</a></li>
@@ -173,8 +173,8 @@
               <div class="select-box" autocomplete="off" required>
                 <select id="statuspendaftaran" name="statuspendaftaran2" onchange="togglePindahKelas()">
                   <option value="">---Pilih Jenis Pendaftaran---</option>
-                  <option value="SISWA BARU">SISWA BARU</option>
-                  <option value="SISWA MUTASI">SISWA MUTASI</option>
+                  <option value="Siswa Baru">Siswa Baru</option>
+                  <option value="Siswa Mutasi">Siswa Mutasi</option>
                 </select>
               </div>
             </div>
@@ -185,12 +185,12 @@
               <div class="select-box" autocomplete="off" required>
                 <select id="pilihkelas" name="pilihkelas2">
                   <option value="">---Pilih Kelas---</option>
-                  <option value="KELAS 1">KELAS 1</option>
-                  <option value="KELAS 2">KELAS 2</option>
-                  <option value="KELAS 3">KELAS 3</option>
-                  <option value="KELAS 4">KELAS 4</option>
-                  <option value="KELAS 5">KELAS 5</option>
-                  <option value="KELAS 6">KELAS 6</option>
+                  <option value="Kelas 1">Kelas 1</option>
+                  <option value="Kelas 2">kelas 2</option>
+                  <option value="Kelas 3">Kelas 3</option>
+                  <option value="Kelas 4">kelas 4</option>
+                  <option value="Kelas 5">Kelas 5</option>
+                  <option value="Kelas 6">Kelas6</option>
                 </select>
               </div>
             </div>
@@ -211,11 +211,11 @@
             <div class="gender-option" oninput="toggleRequiredIndicator8(event)" autocomplete="off">
               <div class="gender">
                 <input type="radio" id="check-male" name="gender" value="laki-laki" />
-                <label for="check-male">LAKI-LAKI</label>
+                <label for="check-male">Laki-laki</label>
               </div>
               <div class="gender">
                 <input type="radio" id="check-female" name="gender" value="Perempuan" />
-                <label for="check-female">PEREMPUAN</label>
+                <label for="check-female">Perempuan</label>
               </div>
             </div>
           </div>
@@ -239,13 +239,13 @@
               <div class="select-box" oninput="toggleRequiredIndicator2(event)" autocomplete="off" required>
                 <select id="agama" name="agama">
                   <option value="">--Pilih Agama--</option>
-                  <option value="ISLAM">ISLAM</option>
-                  <option value="KRISTEN">KRISTEN</option>
-                  <option value="KATOLIK">KATOLIK</option>
-                  <option value="HINDU">HINDU</option>
-                  <option value="BUDHA">BUDHA</option>
-                  <option value="KONGHUCU">KONGHUCU</option>
-                  <option value="LAINNYA">LAINNYA</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Kristen">Kristen</option>
+                  <option value="Katholik">Katholik</option>
+                  <option value="Hindu">Hindu</option>
+                  <option value="Budha">Budha</option>
+                  <option value="Konghucu">Konghucu</option>
+                  <option value="Lainnya">Lainnya</option>
                 </select>
               </div>
             </div>
@@ -262,10 +262,19 @@
           </div>
           <div class="input-box">
             <label>Status Anak</label><span class="required4">*</span>
-            <input type="text" id="statusanak" name="statusanak" oninput="toggleRequiredIndicator4(event)"
-              autocomplete="off" placeholder="Anak Kandung / Anak Angkat / dsb" required />
+            <div class="column">
+              <div class="select-box" oninput="toggleRequiredIndicator4(event)" autocomplete="off" required>
+                <select id="stsanak" name="statusanak">
+                  <option value="">--Pilih Status Anak--</option>
+                  <option value="Anak Kandung">Anak Kandung</option>
+                  <option value="Anak Tiri">Anak Tiri</option>
+                  <option value="Anak Asuh">Anak Asuh</option>
+                  <option value="Keponakan">Keponakan</option>
+                  <option value="Cucu">Cucu</option>
+                </select>
+              </div>
+            </div>
           </div>
-
           <div class="input-box">
             <label>No. Kartu Keluarga</label><span class="required5">*</span>
             <input type="number" id="nokk" name="nokk" maxlength="16" placeholder="Nomor KK" autocomplete="off"
