@@ -60,30 +60,41 @@ function togglePindahKelas() {
     pindahkelas1.style.display = "none";
   }
 }
-
 const inputTanggalLahir = document.getElementById("tglsiswa");
 const inputUmur = document.getElementById("umurs");
 
 inputTanggalLahir.addEventListener("change", function () {
   const tanggalLahir = new Date(this.value);
-  const hariIni = new Date();
+  const batasTanggal = new Date("2024-07-01"); // Batas tanggal yang diinginkan
 
-  let tahun = hariIni.getFullYear() - tanggalLahir.getFullYear();
-  let bulan = hariIni.getMonth() - tanggalLahir.getMonth();
-  let hari = hariIni.getDate() - tanggalLahir.getDate();
+  let umur;
+  if (tanggalLahir.getTime() > batasTanggal.getTime()) {
+    umur = "Belum lahir atau tanggal setelah batas tanggal";
+  } else {
+    const hariIni = new Date();
+    let tahun = hariIni.getFullYear() - tanggalLahir.getFullYear();
+    let bulan = hariIni.getMonth() - tanggalLahir.getMonth();
+    let hari = hariIni.getDate() - tanggalLahir.getDate();
 
-  if (bulan < 0 || (bulan === 0 && hari < 0)) {
-    tahun--;
-    bulan = 12 + bulan;
+    if (bulan < 0 || (bulan === 0 && hari < 0)) {
+      tahun--;
+      bulan = 12 + bulan;
+    }
+
+    if (hari < 0) {
+      const bulanKemarin = new Date(
+        hariIni.getFullYear(),
+        hariIni.getMonth(),
+        0
+      );
+      hari = bulanKemarin.getDate() + hari;
+      bulan--;
+    }
+
+    umur = `${tahun} tahun, ${bulan} bulan, ${hari} hari`;
   }
 
-  if (hari < 0) {
-    const bulanKemarin = new Date(hariIni.getFullYear(), hariIni.getMonth(), 0);
-    hari = bulanKemarin.getDate() + hari;
-    bulan--;
-  }
-
-  inputUmur.value = `${tahun} tahun, ${bulan} bulan, ${hari} hari`;
+  inputUmur.value = umur;
 });
 
 function populateSelectElement(url, selectElement, dataKey, valueKey) {

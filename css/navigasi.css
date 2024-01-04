@@ -115,6 +115,11 @@ body {
   font-family: FontAwesome;
   margin-left: 5px;
 }
+.navbar ul li a:hover {
+  background-color: #0b5297;
+  cursor: pointer;
+  color: white;
+}
 
 /* Perubahan panah ke atas saat submenu ditampilkan */
 .has-submenu.active .arrow::after {
