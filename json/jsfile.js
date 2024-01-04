@@ -63,6 +63,39 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// fungsi untuk sentuhan
+let touchStartX = 0;
+let touchEndX = 0;
+
+slider.addEventListener("touchstart", function (event) {
+  touchStartX = event.touches[0].clientX;
+});
+
+slider.addEventListener("touchmove", function (event) {
+  // Menghentikan default action agar geser halaman tidak terjadi
+  event.preventDefault();
+});
+
+slider.addEventListener("touchend", function (event) {
+  touchEndX = event.changedTouches[0].clientX;
+  handleGesture();
+});
+
+function handleGesture() {
+  const difference = touchStartX - touchEndX;
+  if (Math.abs(difference) > 50) {
+    // Mengatur threshold untuk dianggap sebagai geser
+    if (difference > 0) {
+      // Geser ke kiri
+      active = active + 1 <= lengthItems ? active + 1 : 0;
+    } else {
+      // Geser ke kanan
+      active = active - 1 >= 0 ? active - 1 : lengthItems;
+    }
+    reloadSlider();
+  }
+}
+
 // Fungsi untuk melakukan scroll ke atas ketika tombol "Scroll to Top" diklik
 document
   .querySelector(".scroll-to-top")
