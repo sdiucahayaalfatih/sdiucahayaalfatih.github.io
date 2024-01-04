@@ -81,3 +81,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+window.addEventListener("scroll", function () {
+  var scrollButton = document.querySelector(".scroll-to-top");
+  var scrollPosition = window.pageYOffset;
+  var documentHeight = document.documentElement.scrollHeight;
+  var windowHeight = window.innerHeight;
+
+  // Menampilkan tombol ketika scroll mencapai setengah tinggi halaman
+  if (scrollPosition > documentHeight * 0.5) {
+    scrollButton.style.display = "block";
+  } else {
+    scrollButton.style.display = "none";
+  }
+});
+
+// Fungsi untuk melakukan scroll ke atas ketika tombol "Scroll to Top" diklik
+document
+  .querySelector(".scroll-to-top")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });

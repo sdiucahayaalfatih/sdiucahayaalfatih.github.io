@@ -843,6 +843,17 @@
   border-radius: 20px;
   width: 200px;
   text-align: center;
+  animation-name: floatAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes floatAnimation {
+  0% {
+    bottom: -60px; /* Mulai dari luar layar ke atas */
+  }
+  100% {
+    bottom: 20px; /* Turun ke posisi yang diinginkan */
+  }
 }
 .countdown {
   display: flex;
@@ -853,21 +864,13 @@
   margin: 0 5px; /* Jarak antara teks */
   font-size: 12px; /* Ukuran font untuk angka countdown */
 }
-@keyframes slideIn {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
 @keyframes sinkOut {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
+    display: none;
     transform: translateY(50%);
   }
 }

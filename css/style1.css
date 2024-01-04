@@ -451,7 +451,6 @@ i#next {
 }
 
 /*WHATSAPP POP UP*/
-
 .float {
   position: fixed;
   width: 60px;
@@ -465,6 +464,38 @@ i#next {
   font-size: 30px;
   box-shadow: 2px 2px 3px #3a3a3a;
   z-index: 99;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: floatAnimationUp;
+  transition: background-color 0.3s, color 0.3s; /* Menambahkan transisi */
+}
+
+@keyframes floatAnimationUp {
+  0% {
+    transform: translateY(100px);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float.end-of-page {
+  animation-name: floatAnimationDown;
+}
+
+@keyframes floatAnimationDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
 }
 
 .my-float {
@@ -475,7 +506,6 @@ i#next {
   color: #25d366;
   background-color: white;
 }
-
 .animatedi.infinitei {
   animation-iteration-count: infinite;
 }
@@ -517,6 +547,37 @@ i#next {
   100% {
     transform: scaleX(1);
   }
+}
+
+/* Gaya untuk tombol scroll-to-top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25b0d3;
+  color: #fff;
+  width: 40px; /* Lebar dan tinggi yang sama untuk membuat bulatan */
+  height: 40px;
+  border-radius: 50%; /* Membuat background menjadi lingkaran */
+  text-align: center; /* Untuk mengatur ikon ke tengah */
+  line-height: 40px; /* Untuk mengatur ikon ke tengah */
+  text-decoration: none;
+  display: none;
+  z-index: 999;
+  animation-name: anim1;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes anim1 {
+  0% {
+    right: -40px; /* Mulai dari luar layar ke atas */
+  }
+  100% {
+    right: 20px; /* Turun ke posisi yang diinginkan */
+  }
+}
+.scroll-to-top:hover {
+  background-color: #128c7e;
 }
 
 .full-screen-video {

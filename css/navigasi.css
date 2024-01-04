@@ -303,3 +303,34 @@ body {
     display: none;
   }
 }
+
+/* Gaya untuk tombol scroll-to-top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25b0d3;
+  color: #fff;
+  width: 40px; /* Lebar dan tinggi yang sama untuk membuat bulatan */
+  height: 40px;
+  border-radius: 50%; /* Membuat background menjadi lingkaran */
+  text-align: center; /* Untuk mengatur ikon ke tengah */
+  line-height: 40px; /* Untuk mengatur ikon ke tengah */
+  text-decoration: none;
+  display: none;
+  z-index: 999;
+  animation-name: anim1;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes anim1 {
+  0% {
+    right: -40px; /* Mulai dari luar layar ke atas */
+  }
+  100% {
+    right: 20px; /* Turun ke posisi yang diinginkan */
+  }
+}
+.scroll-to-top:hover {
+  background-color: #128c7e;
+}

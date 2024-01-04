@@ -47,16 +47,29 @@ dots.forEach((dot, key) => {
 window.onresize = function (event) {
   reloadSlider();
 };
-
 window.addEventListener("scroll", function () {
   var floatElement = document.querySelector(".float");
+  var scrollToTopBtn = document.querySelector(".scroll-to-top");
   var windowHeight = window.innerHeight;
   var documentHeight = document.documentElement.scrollHeight;
   var scrollPosition = window.pageYOffset;
 
   if (scrollPosition + windowHeight >= documentHeight) {
-    floatElement.style.display = "none";
+    floatElement.classList.add("end-of-page");
+    scrollToTopBtn.style.display = "block";
   } else {
-    floatElement.style.display = "block";
+    floatElement.classList.remove("end-of-page");
+    scrollToTopBtn.style.display = "none";
   }
 });
+
+// Fungsi untuk melakukan scroll ke atas ketika tombol "Scroll to Top" diklik
+document
+  .querySelector(".scroll-to-top")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
