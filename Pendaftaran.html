@@ -925,7 +925,57 @@
       </div>
     </section>
   </div>
+  <div class="container-timer">
+    <div class="judul-timer">
+      <h1>Penutupan Pendaftaran PPDB</h1>
+    </div>
+    <div class="countdown" id="countdown">
+      <p class="hari-day">Hari</p>
+      <p class="jam-clock">Jam</p>
+      <p class="menit-minuter">Menit</p>
+      <p class="detik-second">detik</p>
+    </div>
+  </div>
+  <script>
+    // Tanggal target
+    const targetDate = new Date("2024-01-15T00:00:00").getTime();
 
+    // Memperbarui timer setiap detik
+    const timer = setInterval(function () {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      // Perhitungan waktu
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Menampilkan hasil dalam elemen dengan class yang sesuai
+      document.querySelector(".hari-day").innerHTML = `${days} Hari`;
+      document.querySelector(".jam-clock").innerHTML = `${hours} Jam`;
+      document.querySelector(".menit-minuter").innerHTML = `${minutes} Menit`;
+      document.querySelector(".detik-second").innerHTML = `${seconds} Detik`;
+
+      // Jika waktu habis, hentikan timer
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML =
+          "Pendaftaran PPDB Telah Berakhir!";
+      }
+    }, 1000); // Memperbarui setiap detik (1000 ms)
+    window.onload = function () {
+        const containerTimer = document.querySelector(".container-timer");
+        containerTimer.classList.add("animate-slide-in");
+
+        setTimeout(function () {
+          containerTimer.classList.remove("animate-slide-in");
+          containerTimer.classList.add("animate-sink-out");
+        }, 10000); // Setelah 10 detik, kelas animasi sinkOut diterapkan
+      };
+  </script>
   <footer>
     <div class="content-footer">
       <div class="top-footer">

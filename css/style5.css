@@ -829,3 +829,54 @@
   width: 100%;
   height: 400px;
 }
+
+.container-timer {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: fixed;
+  bottom: 20px; /* Meletakkan elemen di bagian bawah */
+  right: 10px; /* Meletakkan elemen di bagian kanan */
+  color: #ffffff;
+  font-size: 10px;
+  z-index: 99;
+  background-color: rgb(0, 102, 255);
+  border-radius: 20px;
+  width: 200px;
+  text-align: center;
+}
+.countdown {
+  display: flex;
+  justify-content: center;
+  font-size: 8px; /* Ukuran font untuk countdown */
+}
+.countdown p {
+  margin: 0 5px; /* Jarak antara teks */
+  font-size: 12px; /* Ukuran font untuk angka countdown */
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes sinkOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+}
+
+/* Menambahkan kelas baru untuk animasi */
+.animate-slide-in {
+  animation: slideIn 1s ease forwards;
+}
+
+.animate-sink-out {
+  animation: sinkOut 1s ease forwards 10s;
+}
