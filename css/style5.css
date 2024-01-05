@@ -829,10 +829,8 @@
   width: 100%;
   height: 400px;
 }
-
 .container-timer {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   position: fixed;
   bottom: 20px; /* Meletakkan elemen di bagian bawah */
   right: 10px; /* Meletakkan elemen di bagian kanan */
@@ -840,8 +838,9 @@
   font-size: 10px;
   z-index: 99;
   background-color: rgb(0, 102, 255);
-  border-radius: 20px;
+  border-radius: 10px;
   width: 200px;
+  height: 100px;
   text-align: center;
   animation-name: floatAnimation;
   animation-duration: 1s;
@@ -858,11 +857,17 @@
 .countdown {
   display: flex;
   justify-content: center;
-  font-size: 8px; /* Ukuran font untuk countdown */
+  background-color: rgb(255, 255, 255);
+  color: black;
+  height: 40px;
+  margin: 5px;
+  border-radius: 5px;
 }
 .countdown p {
-  margin: 0 5px; /* Jarak antara teks */
-  font-size: 12px; /* Ukuran font untuk angka countdown */
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin: 15px 3px; /* Jarak antara teks */
+  font-size: 10px; /* Ukuran font untuk angka countdown */
 }
 @keyframes sinkOut {
   from {
@@ -882,4 +887,37 @@
 
 .animate-sink-out {
   animation: sinkOut 1s ease forwards 10s;
+}
+.closed-timer {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: rgb(17, 17, 17);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+}
+.closed-timer:hover {
+  background-color: red;
+}
+/* Tambahkan class baru untuk animasi penutupan timer */
+.animate-close {
+  animation: closeAnimation 0.5s forwards;
+}
+@keyframes closeAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
 }

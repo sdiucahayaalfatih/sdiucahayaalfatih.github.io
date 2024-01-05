@@ -80,7 +80,6 @@
     font-size: 1em;
   }
 }
-
 .profil-sekolah {
   background-color: #eaeaea;
   display: flex;
@@ -104,6 +103,10 @@
   width: 80%;
   height: 50%;
   border-radius: 10px;
+}
+
+.foto-sekolah a {
+  display: inline-block;
 }
 
 .icon-logo {

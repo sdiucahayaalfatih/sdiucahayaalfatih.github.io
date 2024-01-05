@@ -926,6 +926,7 @@
     </section>
   </div>
   <div class="container-timer">
+    <button class="closed-timer" onclick="closeTimer()">X</button>
     <div class="judul-timer">
       <h1>Penutupan Pendaftaran PPDB</h1>
     </div>
@@ -937,43 +938,49 @@
     </div>
   </div>
   <script>
-    // Tanggal target
-    const targetDate = new Date("2024-01-15T00:00:00").getTime();
+   
+      // Tambahkan fungsi untuk menutup timer
+      function closeTimer() {
+        const containerTimer = document.querySelector(".container-timer");
+        containerTimer.classList.add("animate-close"); // Tambahkan class animate-close untuk animasi
 
-    // Memperbarui timer setiap detik
-    const timer = setInterval(function () {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      // Perhitungan waktu
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      // Menampilkan hasil dalam elemen dengan class yang sesuai
-      document.querySelector(".hari-day").innerHTML = `${days} Hari`;
-      document.querySelector(".jam-clock").innerHTML = `${hours} Jam`;
-      document.querySelector(".menit-minuter").innerHTML = `${minutes} Menit`;
-      document.querySelector(".detik-second").innerHTML = `${seconds} Detik`;
-
-      // Jika waktu habis, hentikan timer
-      if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById("countdown").innerHTML =
-          "Pendaftaran PPDB Telah Berakhir!";
+        setTimeout(function () {
+          containerTimer.style.display = "none";
+        }, 500); // Tunggu hingga animasi selesai sebelum menyembunyikan timer
       }
-    }, 1000); // Memperbarui setiap detik (1000 ms)
-    window.onload = function () {
+      // Tambahkan fungsi untuk memperbarui countdown (Anda tetap menggunakan fungsi ini)
+      const targetDate = new Date("2024-01-15T00:00:00").getTime();
+      const timer = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.querySelector(".hari-day").innerHTML = `${days} Hari`;
+        document.querySelector(".jam-clock").innerHTML = `${hours} Jam`;
+        document.querySelector(".menit-minuter").innerHTML = `${minutes} Menit`;
+        document.querySelector(".detik-second").innerHTML = `${seconds} Detik`;
+
+        if (distance < 0) {
+          clearInterval(timer);
+          document.getElementById("countdown").innerHTML =
+            "Waktu telah berakhir!";
+        }
+      }, 1000);
+
+      window.onload = function () {
         const containerTimer = document.querySelector(".container-timer");
         containerTimer.classList.add("animate-slide-in");
 
         setTimeout(function () {
           containerTimer.classList.remove("animate-slide-in");
           containerTimer.classList.add("animate-sink-out");
-        }, 10000); // Setelah 10 detik, kelas animasi sinkOut diterapkan
+        }, 10000);
       };
   </script>
     <a href="#" class="scroll-to-top" style="display: none">
