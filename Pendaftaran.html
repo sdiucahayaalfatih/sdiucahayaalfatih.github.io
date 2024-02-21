@@ -529,7 +529,15 @@
             <div class="nonikayah-down" id="nonikayah-warning">
               <span>Please enter a 16-digit number.</span>
             </div>
-
+            <div class="input-box">
+              <label>No. Kartu Keluarga</label><span class="required5">*</span>
+              <input type="number" id="nokk" name="nokk" maxlength="16" placeholder="Nomor KK" autocomplete="off"
+                oninput="toggleRequiredIndicator5(event);limitTo16Digits1(event)" required />
+            </div>
+            <div class="nokksiswa-down" id="nokksiswa-warning">
+              <span>Please enter a 16-digit number.</span>
+            </div>
+  
             <div class="input-box">
               <label>Pendidikan Ayah</label><span class="required19">*</span>
               <div class="column">
