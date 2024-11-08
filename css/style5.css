@@ -854,6 +854,9 @@
     bottom: 20px; /* Turun ke posisi yang diinginkan */
   }
 }
+.judul-timer h1{
+font-size: 12px;
+}
 .countdown {
   display: flex;
   justify-content: center;

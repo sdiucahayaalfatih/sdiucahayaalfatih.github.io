@@ -2,7 +2,7 @@
 var tahunAjaranInput = document.getElementById("tahunajaran");
 
 // Mendapatkan tahun saat ini
-var tahunSekarang = new Date().getFullYear();
+var tahunSekarang = new Date().getFullYear() + 1;
 
 // Mendapatkan tahun yang akan datang
 var tahunYangAkanDatang = tahunSekarang + 1;

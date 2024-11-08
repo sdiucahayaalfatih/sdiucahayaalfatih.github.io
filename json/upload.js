@@ -42,11 +42,11 @@ function closeModal() {
 }
 
 function kirimBuktiPembayaran() {
-  window.open("https://wa.me/6281293524242", "_blank"); // Mengarahkan ke WhatsApp dengan nomor tertentu
+  window.open("https://wa.me/6288212428738", "_blank"); // Mengarahkan ke WhatsApp dengan nomor tertentu
 }
 
 function chatLangsungAdministrasi() {
-  window.open("https://wa.me/6281293524242", "_blank"); // Mengarahkan ke WhatsApp dengan nomor tertentu
+  window.open("https://wa.me/6288212428738", "_blank"); // Mengarahkan ke WhatsApp dengan nomor tertentu
   // Atau Anda dapat menggunakan metode lain untuk mengirim pesan atau melakukan tindakan tertentu
 }
 // pindah kelas
@@ -65,7 +65,7 @@ const inputUmur = document.getElementById("umurs");
 
 inputTanggalLahir.addEventListener("change", function () {
   const tanggalLahir = new Date(this.value);
-  const batasTanggal = new Date("2024-07-01"); // Tanggal batas yang diinginkan
+  const batasTanggal = new Date("2026-07-01"); // Tanggal batas yang diinginkan
 
   let umur;
   if (tanggalLahir.getTime() > batasTanggal.getTime()) {
