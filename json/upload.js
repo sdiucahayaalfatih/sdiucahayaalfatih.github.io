@@ -65,7 +65,7 @@ const inputUmur = document.getElementById("umurs");
 
 inputTanggalLahir.addEventListener("change", function () {
   const tanggalLahir = new Date(this.value);
-  const batasTanggal = new Date("2026-07-01"); // Tanggal batas yang diinginkan
+  const batasTanggal = new Date("2025-07-01"); // Tanggal batas yang diinginkan
 
   let umur;
   if (tanggalLahir.getTime() > batasTanggal.getTime()) {
