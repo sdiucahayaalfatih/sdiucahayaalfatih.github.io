@@ -748,6 +748,7 @@
 
 .noniksiswa-down {
   color: red;
+  font-size: 12px;
 }
 
 #nonikayah-warning1 {
@@ -755,10 +756,13 @@
   font-size: 12px;
 }
 
-.nonikayah-down {
+.nonikayah-down1 {
   color: red;
 }
-
+#nonikayah-warning {
+  color: red;
+  font-size: 12px;
+}
 #nikibu-warning {
   color: red;
   font-size: 12px;
