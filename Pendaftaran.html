@@ -233,7 +233,7 @@
             <label>Umur</label>
             <input type="text" id="umurs" name="umursiswa" placeholder="Umur di isi secara otomatis" readonly/>
           </div>
-          <div class="nonikayah-down" id="nonikayah-warning">
+          <div class="nonikayah-down1" id="nonikayah-warning">
             <span>Umur dihitung sampai tanggal 1 Juli 2025.</span>
           </div>
           <div class="input-box">
@@ -281,9 +281,9 @@
           <div class="input-box">
             <label>No. Kartu Keluarga</label><span class="required5">*</span>
             <input type="number" id="nokk" name="nokk" maxlength="16" placeholder="Nomor KK" autocomplete="off"
-              oninput="toggleRequiredIndicator5(event);limitTo16Digits1(event)" required />
+              oninput="toggleRequiredIndicator101(event);limitTo16Digits101(event)" required />
           </div>
-          <div class="nokksiswa-down" id="nokksiswa-warning">
+          <div class="nokksiswa-down" id="nokksiswa-warning12">
             <span>Please enter a 16-digit number.</span>
           </div>
 
@@ -602,14 +602,14 @@
                 <div class="select-box">
                   <select id="penghasilanayah" name="penghasilanayah">
                     <option value="">---Pilih penghasilan Ayah---</option>
-                    <option value="500000">&lt;500.000</option>
-                    <option value="10000000">500.000 - 1.000.000</option>
-                    <option value="2000000">1.000.000 - 2.500.000</option>
-                    <option value="2000000">2.500.000 - 5.000.000</option>
-                    <option value="10000000">5.000.000 - 10.000.000</option>
-                    <option value="15000000">10.000.000 - 15.000.000</option>
-                    <option value="20000000">15.000.000 - 25.000.000</option>
-                    <option value="25000000">&gt;25.000.000</option>
+                    <option value="&lt;Rp. 500.000">&lt;500.000</option>
+                    <option value="Rp. 500.001 - Rp. 1.000.000">500.000 - 1.000.000</option>
+                    <option value="Rp. 1.000.001 - Rp. 2.500.000">1.000.000 - 2.500.000</option>
+                    <option value="Rp. 2.500.001 - Rp. 5.000.000">2.500.000 - 5.000.000</option>
+                    <option value="Rp. 5.000.001 - Rp. 10.000.000">5.000.000 - 10.000.000</option>
+                    <option value="Rp. 10.000.001 - Rp. 15.000.000">10.000.000 - 15.000.000</option>
+                    <option value="Rp. 15.000.001 - Rp. 25.000.000">15.000.000 - 25.000.000</option>
+                    <option value="&gt;Rp. 25.000.000">&gt;25.000.000</option>
                   </select>
                 </div>
               </div>
@@ -732,14 +732,14 @@
                 <div class="select-box">
                   <select id="penghasilanibu" name="penghasilanibu">
                     <option value="">---Pilih penghasilan ibu---</option>
-                    <option value="500000">&lt;500.000</option>
-                    <option value="10000000">500.000 - 1.000.000</option>
-                    <option value="2000000">1.000.000 - 2.500.000</option>
-                    <option value="2000000">2.500.000 - 5.000.000</option>
-                    <option value="10000000">5.000.000 - 10.000.000</option>
-                    <option value="15000000">10.000.000 - 15.000.000</option>
-                    <option value="20000000">15.000.000 - 25.000.000</option>
-                    <option value="25000000">&gt;25.000.000</option>
+                    <option value="&lt;Rp. 500.000">&lt;500.000</option>
+                    <option value="Rp. 500.001 - Rp. 1.000.000">500.000 - 1.000.000</option>
+                    <option value="Rp. 1.000.001 - Rp. 2.500.000">1.000.000 - 2.500.000</option>
+                    <option value="Rp. 2.500.001 - Rp. 5.000.000">2.500.000 - 5.000.000</option>
+                    <option value="Rp. 5.000.001 - Rp. 10.000.000">5.000.000 - 10.000.000</option>
+                    <option value="Rp. 10.000.001 - Rp. 15.000.000">10.000.000 - 15.000.000</option>
+                    <option value="Rp. 15.000.001 - Rp. 25.000.000">15.000.000 - 25.000.000</option>
+                    <option value="&gt;Rp. 25.000.000">&gt;25.000.000</option>
                   </select>
                 </div>
               </div>
@@ -901,14 +901,14 @@
                   <div class="select-data-wali">
                     <select id="penghasilanwali" name="penghasilanwali">
                       <option value="">--Pilih penghasilan Wali---</option>
-                      <option value="500000">&lt;500.000</option>
-                      <option value="10000000">500.000 - 1.000.000</option>
-                      <option value="2000000">1.000.000 - 2.500.000</option>
-                      <option value="2000000">2.500.000 - 5.000.000</option>
-                      <option value="10000000">5.000.000 - 10.000.000</option>
-                      <option value="15000000">10.000.000 - 15.000.000</option>
-                      <option value="20000000">15.000.000 - 25.000.000</option>
-                      <option value="25000000">&gt;25.000.000</option>
+                      <option value="&lt;Rp. 500.000">&lt;500.000</option>
+                      <option value="Rp. 500.001 - Rp. 1.000.000">500.000 - 1.000.000</option>
+                      <option value="Rp. 1.000.001 - Rp. 2.500.000">1.000.000 - 2.500.000</option>
+                      <option value="Rp. 2.500.001 - Rp. 5.000.000">2.500.000 - 5.000.000</option>
+                      <option value="Rp. 5.000.001 - Rp. 10.000.000">5.000.000 - 10.000.000</option>
+                      <option value="Rp. 10.000.001 - Rp. 15.000.000">10.000.000 - 15.000.000</option>
+                      <option value="Rp. 15.000.001 - Rp. 25.000.000">15.000.000 - 25.000.000</option>
+                      <option value="&gt;Rp. 25.000.000">&gt;25.000.000</option>
                     </select>
                   </div>
                 </div>

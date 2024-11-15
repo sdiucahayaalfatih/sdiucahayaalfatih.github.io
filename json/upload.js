@@ -95,34 +95,48 @@ inputTanggalLahir.addEventListener("change", function () {
 
   inputUmur.value = umur;
 });
-
-function populateSelectElement(url, selectElement, dataKey, valueKey) {
+// Fungsi untuk mempopulasikan data ke dalam select box
+function populateSelectElement(url, selectElement, dataKey, valueKey) { 
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      var options = `<option>--Pilih--</option>`;
+      // Urutkan data berdasarkan nama wilayah (valueKey)
+      data.sort((a, b) => {
+        if (a[valueKey].toLowerCase() < b[valueKey].toLowerCase()) return -1;
+        if (a[valueKey].toLowerCase() > b[valueKey].toLowerCase()) return 1;
+        return 0;
+      });
+
+      // Mulai membangun opsi dropdown
+      let options = `<option value="">--Pilih--</option>`;
       data.forEach((element) => {
         options += `<option value="${element[valueKey]}" data-id="${element[dataKey]}">${element[valueKey]}</option>`;
       });
+
+      // Populasi opsi ke dalam select
       selectElement.innerHTML = options;
-    });
+    })
+    .catch((error) => console.error('Error populating select:', error));
 }
 
 const provinsiSelect = document.getElementById("provsiswa");
 const kotaSelect = document.getElementById("kotsiswa");
 const kecamatanSelect = document.getElementById("kecsiswa");
 const kelurahanSelect = document.getElementById("kelsiswa");
+
 // Menonaktifkan kolom-kolom yang tidak bisa diisi pada awalnya
 kotaSelect.disabled = true;
 kecamatanSelect.disabled = true;
 kelurahanSelect.disabled = true;
 
+// Event listener untuk Provinsi
 provinsiSelect.addEventListener("change", (e) => {
   const selectedProvinsi = e.target.value;
   const provinsiId = e.target.options[e.target.selectedIndex].dataset.id;
   const kotaUrl = `https://kanglerian.github.io/api-wilayah-indonesia/api/regencies/${provinsiId}.json`;
 
   populateSelectElement(kotaUrl, kotaSelect, "id", "name");
+
   // Mengaktifkan kolom Kabupaten/Kota setelah Provinsi dipilih
   kotaSelect.disabled = false;
   // Menonaktifkan kolom Kecamatan dan Kelurahan ketika Provinsi dipilih ulang
@@ -134,6 +148,7 @@ provinsiSelect.addEventListener("change", (e) => {
   kelurahanSelect.innerHTML = '<option value="">--Pilih--</option>';
 });
 
+// Event listener untuk Kabupaten/Kota
 kotaSelect.addEventListener("change", (e) => {
   const selectedKota = e.target.value;
   const kotaId = e.target.options[e.target.selectedIndex].dataset.id;
@@ -150,6 +165,7 @@ kotaSelect.addEventListener("change", (e) => {
   kelurahanSelect.innerHTML = '<option value="">--Pilih--</option>';
 });
 
+// Event listener untuk Kecamatan
 kecamatanSelect.addEventListener("change", (e) => {
   const selectedKecamatan = e.target.value;
   const kecamatanId = e.target.options[e.target.selectedIndex].dataset.id;

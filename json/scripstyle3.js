@@ -40,38 +40,6 @@ function toggleRequiredIndicator4(event) {
   }
 }
 
-function toggleRequiredIndicator5(event) {
-  var input = event.target;
-  var requiredIndicator = document.querySelector(".required5");
-
-  if (input.value.trim() === "") {
-    requiredIndicator.style.visibility = "visible";
-  } else {
-    requiredIndicator.style.visibility = "hidden";
-  }
-}
-function limitTo16Digits1(event) {
-  var input = event.target;
-  var value = input.value;
-
-  // Menghapus karakter selain angka
-  var digitsOnly = value.replace(/\D/g, "");
-
-  // Memotong menjadi 16 digit
-  var truncatedValue = digitsOnly.slice(0, 16);
-
-  // Mengatur nilai input
-  input.value = truncatedValue;
-
-  // Menampilkan pemberitahuan jika jumlah digit kurang dari 16
-  var warningMessage = document.getElementById("nokksiswa-warning");
-  if (truncatedValue.length < 16) {
-    warningMessage.style.display = "block";
-  } else {
-    warningMessage.style.display = "none";
-  }
-}
-
 function toggleRequiredIndicator6(event) {
   var input = event.target;
   var requiredIndicator = document.querySelector(".required6");
@@ -542,7 +510,7 @@ function limitTo16Digits101(event) {
   input.value = truncatedValue;
 
   // Menampilkan pemberitahuan jika jumlah digit kurang dari 16
-  var warningMessage = document.getElementById("nokksiswa-warning1");
+  var warningMessage = document.getElementById("nokksiswa-warning12");
   if (truncatedValue.length < 16) {
     warningMessage.style.display = "block";
   } else {
