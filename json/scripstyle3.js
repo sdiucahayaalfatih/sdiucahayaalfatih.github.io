@@ -90,16 +90,50 @@ function toggleRequiredIndicator11(event) {
     requiredIndicator.style.visibility = "hidden";
   }
 }
+function formatRT_RW(event) {
+  var input = event.target;
+
+  // Menghapus semua karakter selain angka dan tanda '/'
+  var formattedValue = input.value.replace(/[^\d\/]/g, '');
+
+  // Memastikan format "000 / 000" dengan batasan 3 digit per bagian
+  var parts = formattedValue.split('/');
+  if (parts.length > 2) {
+    parts = [parts[0], parts.slice(1).join('')]; // Memastikan hanya dua bagian yang ada
+  }
+  
+  // Format bagian pertama dan kedua agar memiliki maksimal 3 digit
+  parts[0] = parts[0].substring(0, 3); // Batasi bagian pertama sampai 3 digit
+  parts[1] = parts[1] ? parts[1].substring(0, 3) : ''; // Batasi bagian kedua sampai 3 digit jika ada
+
+  // Gabungkan bagian dengan format "000 / 000"
+  input.value = parts.join(' / ');
+
+  // Cek jika input sudah terisi dan sembunyikan indikator required jika perlu
+  toggleRequiredIndicator12(event);
+}
+
 function toggleRequiredIndicator12(event) {
   var input = event.target;
   var requiredIndicator = document.querySelector(".required12");
 
-  if (input.value.trim() === "") {
-    requiredIndicator.style.visibility = "visible";
+  if (input.value.trim() === "" || !/^(\d{1,3}) \/ (\d{1,3})$/.test(input.value)) {
+    requiredIndicator.style.visibility = "visible"; // Tampilkan jika kosong atau format salah
   } else {
-    requiredIndicator.style.visibility = "hidden";
+    requiredIndicator.style.visibility = "hidden"; // Sembunyikan jika input valid
   }
 }
+
+function validateRT_RW(event) {
+  var input = event.target;
+  var requiredIndicator = document.querySelector(".required12");
+
+  // Validasi jika formatnya sesuai dengan "000 / 000"
+  if (!/^(\d{1,3}) \/ (\d{1,3})$/.test(input.value)) {
+    requiredIndicator.style.visibility = "visible"; // Tampilkan jika format salah
+  }
+}
+
 function toggleRequiredIndicator13(event) {
   var input = event.target;
   var requiredIndicator = document.querySelector(".required13");

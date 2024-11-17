@@ -21,26 +21,32 @@
 
 <body>
   <!--Pop Up Terkirim-->
-  <div id="myModal" class="modal">
-    <div class="modal-box">
-      <button class="close-btn" onclick="closeModal()">&times;</button>
-      <i class="fa-regular fa-circle-check"></i>
-      <h2>Terimakasih Telah Melakukan Pendaftaran!</h2>
-      <h3>Silahkan untuk Melakukan Pembayaran Online / Offline</h3>
-      <h3>untuk diproses lebih lanjut</h3>
-      <h3>Biaya Pendaftaran Sebesar Rp. 150.000,</h3>
-      <h3>Kirimkan Ke No. Rek. Administrasi Kami :</h3> 
-        <h3>6097077870 Bank BCA A.N Kokom Komariah</h3>
-       <p class="emoji">&#x1F60A;</p>
-      </h3>
-      <div class="buttons">
-        <button id="bukti-pemb" class="bukti-pemb" onclick="kirimBuktiPembayaran()">Kirim Bukti Pembayaran</button>
-      </div>
-      <div class="buttons">
-        <button id="admKam" class="adminkami" onclick="chatLangsungAdministrasi()">Chat Langsung Administrasi</button>
-      </div>
+  <!-- Pop Up Terkirim -->
+<div id="myModal" class="modal">
+  <div class="modal-box">
+    <button class="close-btn" onclick="closeModal()">&times;</button>
+    <i class="fa-regular fa-circle-check"></i>
+    <h2>Terimakasih Telah Melakukan Pendaftaran!</h2>
+    <h3>Silahkan untuk Melakukan Pembayaran Online / Offline</h3>
+    <h3>untuk diproses lebih lanjut</h3>
+    <h3>Biaya Pendaftaran Sebesar Rp. 150.000,</h3>
+    <h3>Kirimkan Ke No. Rek. Administrasi Kami :</h3>
+    <h3>6097077870 Bank BCA A.N Kokom Komariah</h3>
+    <p class="emoji">&#x1F60A;</p>
+    </h3>
+    <div class="buttons">
+      <button id="bukti-pemb" class="bukti-pemb" onclick="kirimBuktiPembayaran()">Kirim Bukti Pembayaran</button>
+    </div>
+    <div class="buttons">
+      <button id="admKam" class="adminkami" onclick="chatLangsungAdministrasi()">Chat Langsung Administrasi</button>
+    </div>
+    <div class="buttons">
+      <!-- Menambahkan fungsi onclick untuk mengarahkan ke jumlahpendaftar.html -->
+      <button id="lihat_pendaftar" class="cek-pendaftar" onclick="window.location.href='jumlahpendaftar.html'">Lihat Daftar Pendaftar</button>
     </div>
   </div>
+</div>
+
   <!--Navbar Paling Atas-->
   <div id="navbar-one" class="navbar-one flex">
     <div class="left flex">
@@ -118,6 +124,7 @@
             <li><a href="kaldik.html">Kalender Akademik</a></li>
             <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
             <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
+              <li><a href="jumlahpendaftar.html">Jumlah Pendaftar Online</a></li>
           </ul>
         </li>
         <li><a href="#">Prestasi</a></li>
@@ -448,11 +455,10 @@
             <label>Alamat/Dusun</label><span class="required11">*</span>
           <input type="text" id="alamatsiswa" name="alamatsiswa" placeholder="Kp / Jln / Komp."
             oninput="toggleRequiredIndicator11(event)" autocomplete="off" required />
-          
             <label>RT/RW</label><span class="required12">*</span>
-          <input type="text" id="rt/rw" name="rt/rw" placeholder="RT / RW"
-            oninput="toggleRequiredIndicator12(event)" autocomplete="off" required />
-        
+            <input type="text" id="rt/rw" name="rt/rw" placeholder="RT / RW" value="000 / 000" 
+                   oninput="formatRT_RW(event)" onblur="validateRT_RW(event)" autocomplete="off" required />
+              
           <label>Kode Pos</label>
           <input type="number" id="kodepos1" name="kodepost" placeholder="Kode Pos" autocomplete="off" />
         
@@ -914,12 +920,30 @@
                 </div>
               </div>
             </div>
+          <div class="name-box">
+            <label>Status Pembayaran</label>
+            <div class="column">
+              <div class="select-box" autocomplete="off">
+                <select id="sts_pemb" name="sts_pembayaran">
+                  <option value="">--Status Pendaftaran--</option>
+                  <option value="Menunggu Pembayaran">Menunggu Pembayaran</option>
+                  <option value="Sudah Bayar">Sudah Bayar</option>
+          
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input-nomor">
+            <label>Nomor Urut</label><span class="requiredNoRut">*</span> 
+            <input type="text" id="nomorurut" name="nomor" autocomplete="off" value="=ROW()-2"/> 
+          </div>
             <div class="button-submit">
               <button type="submit">DAFTAR SEKARANG</button>
             </div>
             <div class="button-submit2" style="display: none;">
               <button class="submit2"></button>
             </div>
+        
         </form>
       </div>
     </section>

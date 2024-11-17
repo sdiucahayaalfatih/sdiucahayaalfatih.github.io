@@ -1,5 +1,4 @@
-const scriptURL =
-  "https://script.google.com/macros/s/AKfycby8Tl3NvGr2vIPSadX6HS-rq5nEDPFlHq3dKJ3gqA4zQc49iIN1nbhamj6fV88RzJUz/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycby8Tl3NvGr2vIPSadX6HS-rq5nEDPFlHq3dKJ3gqA4zQc49iIN1nbhamj6fV88RzJUz/exec";
 const form = document.forms["form"];
 const buttonSubmit = document.querySelector(".button-submit button");
 const buttonSubmit2 = document.querySelector(".button-submit2 button");
@@ -8,6 +7,14 @@ const closeModalBtn = document.getElementById("closeBtn");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  // Mengatur nilai default pada sts_pembayaran
+  const stsPembayaranInput = document.getElementById("sts_pemb");
+  stsPembayaranInput.value = "Menunggu Pembayaran"; // Set default value
+
+  // Menambahkan rumus '=ROW()-2' ke input nomor yang disembunyikan
+  const nomorInput = document.getElementById("nomorurut");
+  nomorInput.value = "=ROW()-2";  // Mengatur rumus pada kolom nomor
 
   // Menampilkan tombol submit2
   buttonSubmit2.parentElement.style.display = "block";
@@ -35,6 +42,7 @@ form.addEventListener("submit", (e) => {
       buttonSubmit.parentElement.style.display = "block";
     });
 });
+
 
 function closeModal() {
   var modal = document.getElementById("myModal");

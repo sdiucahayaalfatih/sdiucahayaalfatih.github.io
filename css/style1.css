@@ -1,4 +1,40 @@
-/*Slide Popup*/
+/* New modal content styles */
+.modal-content {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  background-color: #fff;
+
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.modal-content p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #555;
+}
+
+.daftar-button {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.daftar-button:hover {
+  background-color: #45a049;
+}
+
+/* Slide Popup */
 .bacground-wrapper {
   display: flex;
   align-items: center;
@@ -12,12 +48,14 @@
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
 }
+
 .modal-wrapper {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  flex-direction: column; /* Ensures content is stacked vertically */
   max-width: 650px;
   width: 100%;
   background: #fff;
@@ -25,7 +63,9 @@
   justify-content: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  border-radius: 5px;
 }
+
 .modal-wrapper i.button {
   position: absolute;
   top: 50%;
@@ -42,27 +82,33 @@
   z-index: 100;
   cursor: pointer;
 }
+
 i.button:active {
   transform: scale(0.94) translateY(-50%);
 }
+
 i#prev {
   left: 25px;
 }
+
 i#next {
   right: 25px;
 }
+
 .image-container {
   height: 320px;
   max-width: 500px;
   width: 100%;
   overflow: hidden;
 }
+
 .image-container .slide-image {
   display: flex;
   height: 100%;
   width: 100%;
   transition: all 0.4s ease;
 }
+
 .slide-image img {
   height: 100%;
   width: 100%;
@@ -70,6 +116,7 @@ i#next {
   border: 10px solid #fff;
   object-fit: cover;
 }
+
 .close-button {
   position: absolute;
   top: 10px;
@@ -83,6 +130,7 @@ i#next {
   border-radius: 5px;
   text-align: center;
 }
+
 .close-button:hover {
   color: #ffffff;
   background-color: red;

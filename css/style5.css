@@ -939,3 +939,9 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
+.name-box{
+  display: none;
+}
+.input-nomor {
+  display: none; /* Menyembunyikan elemen input */
+}
