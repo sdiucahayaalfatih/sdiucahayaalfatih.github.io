@@ -174,6 +174,26 @@ function toggleRequiredIndicator16(event) {
     requiredIndicator.style.visibility = "hidden";
   }
 }
+function toggleRequiredIndicatorAyah(event) {
+  var input = event.target;
+  var requiredIndicator = document.querySelector(".requiredAyah");
+
+  if (input.value.trim() === "") {
+    requiredIndicator.style.visibility = "visible";
+  } else {
+    requiredIndicator.style.visibility = "hidden";
+  }
+}
+function toggleRequiredIndicatorIbu(event) {
+  var input = event.target;
+  var requiredIndicator = document.querySelector(".requiredIbu");
+
+  if (input.value.trim() === "") {
+    requiredIndicator.style.visibility = "visible";
+  } else {
+    requiredIndicator.style.visibility = "hidden";
+  }
+}
 function toggleRequiredIndicator17(event) {
   var input = event.target;
   var requiredIndicator = document.querySelector(".required17");

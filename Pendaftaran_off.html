@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<!-- Coding by CodingLab || www.codinglabweb.com -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Multi Step Progress</title>
-    <link rel="website icon" type="png" href="sdiulogo/LOGOBOTTOM.png">
-    <link rel="stylesheet" href="css/navigasi.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/style5.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
-    <link rel="stylesheet" href="styleregist.css" />
-    <script src="scriptregist.js" defer></script>
-  </head>
-  <body>
-     <!-- Pop Up Terkirim -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visi Misi & Tujuan</title>
+  <link rel="website icon" type="png" href="sdiulogo/LOGOBOTTOM.png">
+  <link rel="stylesheet" href="css/navigasi.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/style5.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+
+<body>
+  <!--Pop Up Terkirim-->
+  <!-- Pop Up Terkirim -->
 <div id="myModal" class="modal">
   <div class="modal-box">
     <button class="close-btn" onclick="closeModal()">&times;</button>
@@ -46,6 +46,7 @@
     </div>
   </div>
 </div>
+
   <!--Navbar Paling Atas-->
   <div id="navbar-one" class="navbar-one flex">
     <div class="left flex">
@@ -155,29 +156,17 @@
       <li><a>Pendaftaran Online</a></li>
     </ul>
   </div>
-  <div class="body-pendaftaran">
-    <div class="container-step">
-      <div class="steps">
-        <span class="circle active-c">1</span>
-        <span class="circle">2</span>
-        <span class="circle">3</span>
-        <span class="circle">4</span>
-        <span class="circle">5</span>
-        <div class="progress-bar">
-          <span class="indicator-step"></span>
-        </div>
-      </div>
-    </div>
-  </div>
+
+  <!--Menu Pendaftaran Online-->
   <div class="formulir-p">
     <section class="body">
       <div class="container">
+        <header>Formulir Pendaftaran Calon Peserta Didik</header>
+        <header>SDIU CAHAYA AL-FATIH</header>
+        <div class="identiti-student">
+          <h1>1. Identitas Calon Peserta Didik</h1>
+        </div>
         <form action="#" class="form" name="form">
-        <div class="step-form" data-step="1">
-          <!-- Konten untuk Identitas Calon Peserta Didik -->
-          <div class="identiti-student">
-            <h1>1. Identitas Calon Peserta Didik</h1>
-          </div>
           <div class="input-box">
             <label>Tahun Ajaran Sekolah</label><span class="">*</span>
             <input type="text" id="tahunajaran" name="tahunajaranbaru" readonly />
@@ -213,6 +202,7 @@
               </div>
             </div>
           </div>
+
           <div class="input-box">
             <label>Nama Lengkap Peserta Didik</label><span class="required1">*</span>
             <input type="text" id="namalengkap" name="namalengkap" placeholder="Nama Lengkap"
@@ -358,7 +348,6 @@
                 </div>
               </div>
             </div>
-          </div>
 
             <div class="questions-box1">
               <h3>Apakah Peserta Didik Memiliki Kartu KIP?</h3>
@@ -373,15 +362,13 @@
                 </div>
               </div>
             </div>
-        </div>
-        <div class="step-form" data-step="2" style="display: none;">
-          <!-- Konten untuk Keterangan Tempat Tinggal -->
-          <div class="identiti-student">
+
+            <div class="identiti-student">
               <h1>
                 2. Keterangan Tempat Tinggal Peserta Didik (Isi Sesuai Kartu KK)
               </h1>
-          </div>
-          <div class="input-box">
+            </div>
+            <div class="input-box">
               <label>Tempat Tinggal Peserta Didik</label>
               <div class="column">
                 <div class="select-box" autocomplete="off">
@@ -397,8 +384,8 @@
                   </select>
                 </div>
               </div>
-          </div>
-          <div class="input-box">
+            </div>
+            <div class="input-box">
               <label>Jenis Transportasi</label>
               <div class="column">
                 <div class="select-box" autocomplete="off">
@@ -423,7 +410,8 @@
                   </select>
                 </div>
               </div>
-          </div>  
+            </div>
+            
           <div class="input-box">
             <label>Provinsi</label><span class="required30">*</span>
             <div class="column">
@@ -464,395 +452,100 @@
               </div>
             </div>
           </div>
-          <div class="input-box">
             <label>Alamat/Dusun</label><span class="required11">*</span>
-            <input type="text" id="alamatsiswa" name="alamatsiswa" placeholder="Kp / Jln / Komp."
-              oninput="toggleRequiredIndicator11(event)" autocomplete="off" required />
-          </div>
-          <div class="input-box">
+          <input type="text" id="alamatsiswa" name="alamatsiswa" placeholder="Kp / Jln / Komp."
+            oninput="toggleRequiredIndicator11(event)" autocomplete="off" required />
             <label>RT/RW</label><span class="required12">*</span>
             <input type="text" id="rt/rw" name="rt/rw" placeholder="RT / RW" value="000 / 000" 
-                   oninput="formatRT_RW(event)" onblur="validateRT_RW(event)" autocomplete="off" required /> 
-          </div>
-          <div class="input-box">
-            <label>Kode Pos</label>
+                   oninput="formatRT_RW(event)" onblur="validateRT_RW(event)" autocomplete="off" required />
+              
+          <label>Kode Pos</label>
           <input type="number" id="kodepos1" name="kodepost" placeholder="Kode Pos" autocomplete="off" />
+        
           </div>
-        </div>
-        <div class="step-form" data-step="3" style="display: none;">
-          <!-- Konten untuk Alamat Sekolah -->
-          <div class="identiti-student">
-            <h1>3. Alamat Sekolah Asal TK/RA/KB/SD</h1>
-          </div>
-          <div class="input-box">
-            <label>Nama Sekolah</label>
-            <input type="text" id="namasekolahasal" name="namasekolahasal" placeholder="Nama Sekolah Asal" oninput=""
-              autocomplete="off" />
-          </div>
-          <div class="input-box">
-            <label>Provinsi Sekolah Asal</label>
-            <input type="text" id="provinsisekolah" name="provinsisekolah" placeholder="Provinsi Sekolah Asal"
-              oninput="" autocomplete="off" />
-          </div>
-          <div class="input-box">
-            <label>Kabupaten/Kota Sekolah Asal</label>
-            <input type="text" id="kabsekolahasal" name="kabsekolahasal" placeholder="Kabupaten Sekolah Asal"
-              oninput="" autocomplete="off" />
-          </div>
-          <div class="input-box">
-            <label>Kecamatan Sekolah Asal</label>
-            <input type="text" id="kecsekolahasal" name="kecsekolahasal" placeholder="Kecamatan Sekolah Asal"
-              oninput="" autocomplete="off" />
-          </div>
-          <div class="alamatsekolah-down" id="alamatsekolah-warning">
-            <span>Note : Jika Tidak Pernah Sekolah Maka berikan tanda (-) </span>
-          </div>
-        </div>
-        <div class="step-form" data-step="4" style="display: none;">
-          <!-- Konten untuk Data Ayah -->
-          <div class="identiti-student">
-            <h1>4. Data Ayah</h1>
-          </div>
-          <div class="input-box">
-            <label>Nama Ayah</label><span class="required16">*</span>
-            <input type="text" id="namaayah" name="namaayah" placeholder="Name Father"
-              oninput="toggleRequiredIndicator16(event)" autocomplete="off" required />
-          </div>
-          <div class="input-box">
-            <label>Tempat Lahir Lahir</label><span class="requiredAyah">*</span>
-            <input type="text" id="tempatlahirayah" name="tempat_ayah" placeholder="Tempat Lahir Ayah" oninput="toggleRequiredIndicatorAyah(event)" autocomplete="off" required/>
-          </div>
-          <div class="input-box">
-            <label>Tanggal Lahir Ayah</label><span class="required17">*</span>
-            <input type="date" id="ttlayah" name="ttlayah" placeholder="Name Father"
-              oninput="toggleRequiredIndicator17(event)" autocomplete="off" required />
-          </div>
-          <div class="input-box">
-            <label>NIK Ayah</label><span class="required18">*</span>
-            <input type="number" id="nikayah" name="nikayah" placeholder="Number NIK" pattern="\d{16}"
-              oninput="toggleRequiredIndicator100(event);limitTo16Digits100(event)" autocomplete="off" required />
-          </div>
-          <div class="nonikayah-down" id="nonikayah-warning1">
-            <span>Please enter a 16-digit number.</span>
-          </div>
-          <div class="input-box">
-            <label>Pendidikan Ayah</label><span class="required19">*</span>
-            <div class="column">
-              <div class="select-box">
-                <select id="pendidikanayah" name="pendidikanayah" oninput="toggleRequiredIndicator19(event)"
-                  autocomplete="off">
-                  <option value="">---Pilih Pendidikan ayah---</option>
-                  <option value="Tidak Bekerja">Tidak Sekolah</option>
-                  <option value="Paud">PAUD</option>
-                  <option value="TK">TK / Sederajat</option>
-                  <option value="SD">SD / Sederajat</option>
-                  <option value="Putus SD">Putus SD</option>
-                  <option value="SMP">SMP / Sederajat</option>
-                  <option value="SMA">SMA / Sederajat</option>
-                  <option value="D1">D1</option>
-                  <option value="D2">D2</option>
-                  <option value="D3">D3</option>
-                  <option value="D4">D4</option>
-                  <option value="S1">S1</option>
-                  <option value="S2">S2</option>
-                  <option value="S2 Terapan">S2 Terapan</option>
-                  <option value="S3">S3</option>
-                  <option value="S3 Terapan">S3 Terapan</option>
-                  <option value="SP1">SP 1</option>
-                  <option value="SP2">SP 2</option>
-                  <option value="PaketA">Paket A</option>
-                  <option value="PaketB">Paket B</option>
-                  <option value="PaketC">Paket C</option>
-                  <option value="Profesi">Profesi</option>
-                  <option value="Informal">Informal</option>
-                  <option value="Non Formal">Non Formal</option>
-                  <option value="Lainnya">Lainnya</option>
-                </select>
+            <div class="input-box">
+              <label for="lintang">Lintang:</label>
+              <input type="text" id="lintang" name="lintang" readonly />
+            </div>
+            <div class="input-box">
+              <label for="bujur">Bujur:</label>
+              <input type="text" id="bujur" name="bujur" readonly />
+            </div>
+            <div class="input-box">
+              <button type="button" onclick="openMap()">
+                Cari Alamatmu Sekarang!!
+              </button>
+              <button type="button" onclick="closeMap()" style="display: none">
+                Tutup Peta
+              </button>
+            </div>
+            <div class="input-box" id="closealamat" style="display: none">
+              <label for="alamat">Alamat:</label>
+              <input type="text" id="alamat" name="alamat" placeholder="Ketikan Nama Kota" autocomplete="off" />
+              <button type="button" onclick="searchAddress()">Cari</button>
+              <div class="maps-down" id="maps-warning">
+                <span>Note : Silahkan Untuk Menggeser Peta/Menyesuaikan alamat</span>
               </div>
             </div>
-          </div>
-          <div class="input-box">
-            <label>Pekerjaan Ayah</label><span class="required21">*</span>
-            <div class="column">
-              <div class="select-box">
-                <select id="pekerjaanayah" name="pekerjaanayah" oninput="toggleRequiredIndicator21(event)"
-                  autocomplete="off">
-                  <option value="">---Pilih pekerjaan Ayah---</option>
-                  <option value="Tidak Bekerja">Tidak Bekerja</option>
-                  <option value="Nelayan">Nelayan</option>
-                  <option value="Petani">Petani</option>
-                  <option value="Peternakan">Peternakan</option>
-                  <option value="PNS/TNI/Polri">PNS/TNI/Polri</option>
-                  <option value="Karyawan Swasta">Karyawan Swasta</option>
-                  <option value="Pedagang Kecil">Pedagang Kecil</option>
-                  <option value="Pedagang Besar">Pedagang Besar</option>
-                  <option value="Wiraswasta">Wiraswasta</option>
-                  <option value="Wirausaha">Wirausaha</option>
-                  <option value="Buruh">Buruh</option>
-                  <option value="Tenaga Kerja TKI">
-                    Tenaga Kerja Indonesia
-                  </option>
-                  <option value="Karyawan BUMN">Karyawan BUMN</option>
-                  <option value="Tidak dapat diterapkan">
-                    Tidak dapat diterapkan
-                  </option>
-                  <option value="Sudah Meninggal">Sudah Meninggal</option>
-                  <option value="Lainnya">Lainnya</option>
-                </select>
-              </div>
+            <div id="map" style="display: none; width: 100%; height: 400px"></div>
+            <div class="identiti-student">
+              <h1>3. Alamat Sekolah Asal TK/RA/KB/SD</h1>
             </div>
-          </div>
-          <div class="input-box penghasilanayah">
-            <label>Penghasilan Ayah</label>
-            <div class="column">
-              <div class="select-box">
-                <select id="penghasilanayah" name="penghasilanayah">
-                  <option value="">---Pilih penghasilan Ayah---</option>
-                  <option value="&lt;Rp. 500.000">&lt;500.000</option>
-                  <option value="Rp. 500.001 - Rp. 1.000.000">500.000 - 1.000.000</option>
-                  <option value="Rp. 1.000.001 - Rp. 2.500.000">1.000.000 - 2.500.000</option>
-                  <option value="Rp. 2.500.001 - Rp. 5.000.000">2.500.000 - 5.000.000</option>
-                  <option value="Rp. 5.000.001 - Rp. 10.000.000">5.000.000 - 10.000.000</option>
-                  <option value="Rp. 10.000.001 - Rp. 15.000.000">10.000.000 - 15.000.000</option>
-                  <option value="Rp. 15.000.001 - Rp. 25.000.000">15.000.000 - 25.000.000</option>
-                  <option value="&gt;Rp. 25.000.000">&gt;25.000.000</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="input-box">
-            <label>Berkebutuhan Khusus</label>
-            <div class="column">
-              <div class="select-box" autocomplete="off">
-                <select id="berkebutuhanayah" name="abkayah">
-                  <option value="">---Pilih Berkebutuhan Khusus---</option>
-                  <option value="Tidak Ada">Tidak Ada</option>
-                  <option value="Netra">Netra</option>
-                  <option value="Runggu">Runggu</option>
-                  <option value="Grahita Ringan">Grahita Ringan</option>
-                  <option value="Grahita Sedang">Grahita Sedang</option>
-                  <option value="Daksa Ringan">Daksa Ringan</option>
-                  <option value="Daksa Sedang">Daksa Sedang</option>
-                  <option value="Laras">Laras</option>
-                  <option value="Wicara">Wicara</option>
-                  <option value="Hyperaktif">Hyperaktif</option>
-                  <option value="Cerdas Istimewa">Cerdas Istimewa</option>
-                  <option value="Bakat Istimewa">Bakat Istimewa</option>
-                  <option value="Kesulitan Belajar">Kesulitan Belajar</option>
-                  <option value="Indigo">Indigo</option>
-                  <option value="Down Syndrom">Down Syndrom</option>
-                  <option value="Autis">Autis</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="step-form" data-step="5" style="display: none;">
-           <!-- Konten untuk Data Ibu -->
-          <div class="input-box">
-            <h1>5. Data Ibu</h1>
-            <label>Nama Ibu</label><span class="required22">*</span>
-            <input type="text" id="namaibu" name="namaibu" placeholder="Name Ibu"
-              oninput="toggleRequiredIndicator22(event)" autocomplete="off" required />
-          </div>
-          <div class="input-box">
-            <label>Tempat Lahir Ibu</label><span class="requiredIbu">*</span>
-            <input type="text" id="tempatlahiribu" oninput="toggleRequiredIndicatorIbu(event)" name="tempat_ibu" placeholder="Tempat Lahir Ibu" autocomplete="off" />
-          </div>
-          <div class="input-box">
-            <label>Tanggal Lahir Ibu</label><span class="required23">*</span>
-            <input type="date" id="tempatibu" name="tempat_ibu" placeholder="Tempat Lahir Ibu"
-              oninput="toggleRequiredIndicator23(event)" autocomplete="off" required />
-          </div>
-          <div class="input-box">
-            <label>NIK Ibu</label>
-            <input type="number" id="nikibu" name="nikibu" placeholder="Number NIK" maxlength="16"
-              oninput="limitTo16Digits(event)" autocomplete="off" required />
-          </div>
-          <div class="nikibu-down" id="nikibu-warning">
-            <span>Please enter a 16-digit number NIK.</span>
-          </div>
-          <div class="input-box">
-            <label>Pendidikan Ibu</label><span class="required25">*</span>
-            <div class="column">
-              <div class="select-box">
-                <select id="pendidikanibu" name="pendidikanibu" oninput="toggleRequiredIndicator25(event)"
-                  autocomplete="off">
-                  <option value="">---Pilih Pendidikan ibu---</option>
-                  <option value="Tidak Bekerja">Tidak Sekolah</option>
-                  <option value="Paud">PAUD</option>
-                  <option value="TK">TK / Sederajat</option>
-                  <option value="SD">SD / Sederajat</option>
-                  <option value="Putus SD">Putus SD</option>
-                  <option value="SMP">SMP / Sederajat</option>
-                  <option value="SMA">SMA / Sederajat</option>
-                  <option value="D1">D1</option>
-                  <option value="D2">D2</option>
-                  <option value="D3">D3</option>
-                  <option value="D4">D4</option>
-                  <option value="S1">S1</option>
-                  <option value="S2">S2</option>
-                  <option value="S2 Terapan">S2 Terapan</option>
-                  <option value="S3">S3</option>
-                  <option value="S3 Terapan">S3 Terapan</option>
-                  <option value="SP1">SP 1</option>
-                  <option value="SP2">SP 2</option>
-                  <option value="PaketA">Paket A</option>
-                  <option value="PaketB">Paket B</option>
-                  <option value="PaketC">Paket C</option>
-                  <option value="Profesi">Profesi</option>
-                  <option value="Informal">Informal</option>
-                  <option value="Non Formal">Non Formal</option>
-                  <option value="Lainnya">Lainnya</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="input-box">
-            <label>Pekerjaan Ibu</label><span class="required26">*</span>
-            <div class="column">
-              <div class="select-box">
-                <select id="pekerjaanibu" name="pekerjaanibu" oninput="toggleRequiredIndicator26(event)"
-                  autocomplete="off">
-                  <option value="">---Pilih pekerjaan ibu---</option>
-                  <option value="Tidak Bekerja">Tidak Bekerja</option>
-                  <option value="Nelayan">Nelayan</option>
-                  <option value="Petani">Petani</option>
-                  <option value="Peternakan">Peternakan</option>
-                  <option value="PNS/TNI/Polri">PNS/TNI/Polri</option>
-                  <option value="Karyawan Swasta">Karyawan Swasta</option>
-                  <option value="Pedagang Kecil">Pedagang Kecil</option>
-                  <option value="Pedagang Besar">Pedagang Besar</option>
-                  <option value="Wiraswasta">Wiraswasta</option>
-                  <option value="Wirausaha">Wirausaha</option>
-                  <option value="Buruh">Buruh</option>
-                  <option value="Tenaga Kerja TKI">
-                    Tenaga Kerja Indonesia
-                  </option>
-                  <option value="Karyawan BUMN">Karyawan BUMN</option>
-                  <option value="Tidak dapat diterapkan">
-                    Tidak dapat diterapkan
-                  </option>
-                  <option value="Sudah Meninggal">Sudah Meninggal</option>
-                  <option value="Lainnya">Lainnya</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="input-box penghasilanibu">
-            <label>Penghasilan Ibu</label>
-            <div class="column">
-              <div class="select-box">
-                <select id="penghasilanibu" name="penghasilanibu">
-                  <option value="">---Pilih penghasilan ibu---</option>
-                  <option value="&lt;Rp. 500.000">&lt;500.000</option>
-                  <option value="Rp. 500.001 - Rp. 1.000.000">500.000 - 1.000.000</option>
-                  <option value="Rp. 1.000.001 - Rp. 2.500.000">1.000.000 - 2.500.000</option>
-                  <option value="Rp. 2.500.001 - Rp. 5.000.000">2.500.000 - 5.000.000</option>
-                  <option value="Rp. 5.000.001 - Rp. 10.000.000">5.000.000 - 10.000.000</option>
-                  <option value="Rp. 10.000.001 - Rp. 15.000.000">10.000.000 - 15.000.000</option>
-                  <option value="Rp. 15.000.001 - Rp. 25.000.000">15.000.000 - 25.000.000</option>
-                  <option value="&gt;Rp. 25.000.000">&gt;25.000.000</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="input-box">
-            <label>Berkebutuhan Khusus</label>
-            <div class="column">
-              <div class="select-box" autocomplete="off">
-                <select id="berkebutuhanibu" name="abkibu">
-                  <option value="">---Pilih Berkebutuhan Khusus---</option>
-                  <option value="Tidak Ada">Tidak Ada</option>
-                  <option value="Netra">Netra</option>
-                  <option value="Runggu">Runggu</option>
-                  <option value="Grahita Ringan">Grahita Ringan</option>
-                  <option value="Grahita Sedang">Grahita Sedang</option>
-                  <option value="Daksa Ringan">Daksa Ringan</option>
-                  <option value="Daksa Sedang">Daksa Sedang</option>
-                  <option value="Laras">Laras</option>
-                  <option value="Wicara">Wicara</option>
-                  <option value="Hyperaktif">Hyperaktif</option>
-                  <option value="Cerdas Istimewa">Cerdas Istimewa</option>
-                  <option value="Bakat Istimewa">Bakat Istimewa</option>
-                  <option value="Kesulitan Belajar">Kesulitan Belajar</option>
-                  <option value="Indigo">Indigo</option>
-                  <option value="Down Syndrom">Down Syndrom</option>
-                  <option value="Autis">Autis</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="input-box">
-            <label>Email Aktif</label>
-            <input type="email" id="emailisi" name="emailinput" placeholder="Masukan Alamat Email"
-              autocomplete="off" />
-          </div>
-          <div class="input-box">
-            <label>Nomor Telp. Rumah</label>
-            <input type="number" id="nohtelprumah" name="notelprumah" placeholder="Masukan Nomor Telp."
-              autocomplete="off" />
-          </div>
-          <div class="input-box">
-            <label>Nomor Hp Aktif</label><span class="required24">*</span>
-            <input type="number" id="nohpinput" name="nohpinput" placeholder="Masukan Nomor HP"
-              oninput="toggleRequiredIndicator24(event)" autocomplete="off" required />
-          </div>
-          <div class="notelp-down" id="notelp-warning">
-            <span>Catatan : Untuk informasi selanjutnya, pastikan nomor yang di
-              inputkan aktif dan mudah di hubungi</span>
-          </div>
-
-          <div class="data-wali-opsi">
-            <label>Apakah Anak Memiliki Wali?</label>
-            <div class="questions-option3">
-              <div class="question3">
-                <input type="radio" id="check-questionya3" name="question3" onclick="toggleDataWali(true)"
-                  value="ya" />
-                <label for="check-questionya3">Ya</label>
-              </div>
-              <div class="question3">
-                <input type="radio" id="check-questiontidak3" name="question3" onclick="toggleDataWali(false)"
-                  value="tidak" />
-                <label for="check-questiontidak3">Tidak</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="data-wali" id="data-wali" style="display: none">
-            <h1>5. Data Wali</h1>
-            <div class="input-data-wali">
-              <label>Nama Wali</label>
-              <input type="text" id="namawali" name="namawali" placeholder="Nama Wali" autocomplete="off" />
-            </div>
-            <div class="input-data-wali">
-              <label>Tempat Lahir</label>
-              <input type="text" id="tempatlahirwali" name="tempat_wali" placeholder="Tempat Lahir Wali" autocomplete="off" />
-            </div>
-            <div class="input-data-wali">
-              <label>Tanggal Lahir Wali</label>
-              <input type="date" id="tempatwali" name="tempatwali" placeholder="Tempat Lahir Wali"
+            <div class="input-box">
+              <label>Nama Sekolah</label>
+              <input type="text" id="namasekolahasal" name="namasekolahasal" placeholder="Nama Sekolah Asal" oninput=""
                 autocomplete="off" />
             </div>
-            <div class="input-data-wali">
-              <label>NIK Wali</label>
-              <input type="number" id="nikwali" name="nikwali" placeholder="NIK Wali" maxlength="16"
-                oninput="limitTo16Digits4(event)" autocomplete="off" />
+            <div class="input-box">
+              <label>Provinsi Sekolah Asal</label>
+              <input type="text" id="provinsisekolah" name="provinsisekolah" placeholder="Provinsi Sekolah Asal"
+                oninput="" autocomplete="off" />
             </div>
-            <div class="nikwali-down" id="nikwali-warning">
+            <div class="input-box">
+              <label>Kabupaten/Kota Sekolah Asal</label>
+              <input type="text" id="kabsekolahasal" name="kabsekolahasal" placeholder="Kabupaten Sekolah Asal"
+                oninput="" autocomplete="off" />
+            </div>
+            <div class="input-box">
+              <label>Kecamatan Sekolah Asal</label>
+              <input type="text" id="kecsekolahasal" name="kecsekolahasal" placeholder="Kecamatan Sekolah Asal"
+                oninput="" autocomplete="off" />
+            </div>
+            <div class="alamatsekolah-down" id="alamatsekolah-warning">
+              <span>Note : Jika Tidak Pernah Sekolah Maka berikan tanda (-) </span>
+            </div>
+            <div class="identiti-student">
+              <h1>4. Data Ayah</h1>
+            </div>
+            <div class="input-box">
+              <label>Nama Ayah</label><span class="required16">*</span>
+              <input type="text" id="namaayah" name="namaayah" placeholder="Name Father"
+                oninput="toggleRequiredIndicator16(event)" autocomplete="off" required />
+            </div>
+            <div class="input-box">
+              <label>Tempat Lahir Lahir</label><span class="requiredAyah">*</span>
+              <input type="text" id="tempatlahirayah" name="tempat_ayah" placeholder="Tempat Lahir Ayah" oninput="toggleRequiredIndicatorAyah(event)" autocomplete="off" required/>
+            </div>
+            <div class="input-box">
+              <label>Tanggal Lahir Ayah</label><span class="required17">*</span>
+              <input type="date" id="ttlayah" name="ttlayah" placeholder="Name Father"
+                oninput="toggleRequiredIndicator17(event)" autocomplete="off" required />
+            </div>
+            <div class="input-box">
+              <label>NIK Ayah</label><span class="required18">*</span>
+              <input type="number" id="nikayah" name="nikayah" placeholder="Number NIK" pattern="\d{16}"
+                oninput="toggleRequiredIndicator100(event);limitTo16Digits100(event)" autocomplete="off" required />
+            </div>
+            <div class="nonikayah-down" id="nonikayah-warning1">
               <span>Please enter a 16-digit number.</span>
             </div>
-            <div class="input-data-wali">
-              <label>Nomor Hp Wali</label>
-              <input type="number" id="nohpwali" name="nohpwali" placeholder="Enter phone number"
-                autocomplete="off" />
-            </div>
-            <div class="input-data-wali">
-              <label>Pendidikan Wali</label>
-              <div class="column-data-wali">
-                <div class="select-data-wali">
-                  <select id="pendidikanwali" name="pendidikanwali" autocomplete="off">
-                    <option value="">---Pilih Pendidikan Wali---</option>
+            <div class="input-box">
+              <label>Pendidikan Ayah</label><span class="required19">*</span>
+              <div class="column">
+                <div class="select-box">
+                  <select id="pendidikanayah" name="pendidikanayah" oninput="toggleRequiredIndicator19(event)"
+                    autocomplete="off">
+                    <option value="">---Pilih Pendidikan ayah---</option>
                     <option value="Tidak Bekerja">Tidak Sekolah</option>
                     <option value="Paud">PAUD</option>
                     <option value="TK">TK / Sederajat</option>
@@ -882,12 +575,13 @@
                 </div>
               </div>
             </div>
-            <div class="input-data-wali">
-              <label>Pekerjaan Wali</label>
-              <div class="column-data-wali">
-                <div class="select-data-wali">
-                  <select id="pekerjaanwali" name="pekerjaanwali" autocomplete="off">
-                    <option value="">---Pilih pekerjaan Wali---</option>
+            <div class="input-box">
+              <label>Pekerjaan Ayah</label><span class="required21">*</span>
+              <div class="column">
+                <div class="select-box">
+                  <select id="pekerjaanayah" name="pekerjaanayah" oninput="toggleRequiredIndicator21(event)"
+                    autocomplete="off">
+                    <option value="">---Pilih pekerjaan Ayah---</option>
                     <option value="Tidak Bekerja">Tidak Bekerja</option>
                     <option value="Nelayan">Nelayan</option>
                     <option value="Petani">Petani</option>
@@ -912,12 +606,12 @@
                 </div>
               </div>
             </div>
-            <div class="input-data-wali penghasilanwali">
-              <label>Penghasilan Wali</label>
-              <div class="column-data-wali">
-                <div class="select-data-wali">
-                  <select id="penghasilanwali" name="penghasilanwali">
-                    <option value="">--Pilih penghasilan Wali---</option>
+            <div class="input-box penghasilanayah">
+              <label>Penghasilan Ayah</label>
+              <div class="column">
+                <div class="select-box">
+                  <select id="penghasilanayah" name="penghasilanayah">
+                    <option value="">---Pilih penghasilan Ayah---</option>
                     <option value="&lt;Rp. 500.000">&lt;500.000</option>
                     <option value="Rp. 500.001 - Rp. 1.000.000">500.000 - 1.000.000</option>
                     <option value="Rp. 1.000.001 - Rp. 2.500.000">1.000.000 - 2.500.000</option>
@@ -930,41 +624,342 @@
                 </div>
               </div>
             </div>
-          </div>
-        <div class="name-box">
-          <label>Status Pembayaran</label>
-          <div class="column">
-            <div class="select-box" autocomplete="off">
-              <select id="sts_pemb" name="sts_pembayaran">
-                <option value="">--Status Pendaftaran--</option>
-                <option value="Menunggu Pembayaran">Menunggu Pembayaran</option>
-                <option value="Sudah Bayar">Sudah Bayar</option>
-        
-              </select>
+            <div class="input-box">
+              <label>Berkebutuhan Khusus</label>
+              <div class="column">
+                <div class="select-box" autocomplete="off">
+                  <select id="berkebutuhanayah" name="abkayah">
+                    <option value="">---Pilih Berkebutuhan Khusus---</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                    <option value="Netra">Netra</option>
+                    <option value="Runggu">Runggu</option>
+                    <option value="Grahita Ringan">Grahita Ringan</option>
+                    <option value="Grahita Sedang">Grahita Sedang</option>
+                    <option value="Daksa Ringan">Daksa Ringan</option>
+                    <option value="Daksa Sedang">Daksa Sedang</option>
+                    <option value="Laras">Laras</option>
+                    <option value="Wicara">Wicara</option>
+                    <option value="Hyperaktif">Hyperaktif</option>
+                    <option value="Cerdas Istimewa">Cerdas Istimewa</option>
+                    <option value="Bakat Istimewa">Bakat Istimewa</option>
+                    <option value="Kesulitan Belajar">Kesulitan Belajar</option>
+                    <option value="Indigo">Indigo</option>
+                    <option value="Down Syndrom">Down Syndrom</option>
+                    <option value="Autis">Autis</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="input-box">
+              <h1>5. Data Ibu</h1>
+              <label>Nama Ibu</label><span class="required22">*</span>
+              <input type="text" id="namaibu" name="namaibu" placeholder="Name Ibu"
+                oninput="toggleRequiredIndicator22(event)" autocomplete="off" required />
+            </div>
+            <div class="input-box">
+              <label>Tempat Lahir Ibu</label><span class="requiredIbu">*</span>
+              <input type="text" id="tempatlahiribu" oninput="toggleRequiredIndicatorIbu(event)" name="tempat_ibu" placeholder="Tempat Lahir Ibu" autocomplete="off" />
+            </div>
+            <div class="input-box">
+              <label>Tanggal Lahir Ibu</label><span class="required23">*</span>
+              <input type="date" id="tempatibu" name="tempatibu" placeholder="Tempat Lahir Ibu"
+                oninput="toggleRequiredIndicator23(event)" autocomplete="off" required />
+            </div>
+            <div class="input-box">
+              <label>NIK Ibu</label>
+              <input type="number" id="nikibu" name="nikibu" placeholder="Number NIK" maxlength="16"
+                oninput="limitTo16Digits(event)" autocomplete="off" required />
+            </div>
+            <div class="nikibu-down" id="nikibu-warning">
+              <span>Please enter a 16-digit number NIK.</span>
+            </div>
+            <div class="input-box">
+              <label>Pendidikan Ibu</label><span class="required25">*</span>
+              <div class="column">
+                <div class="select-box">
+                  <select id="pendidikanibu" name="pendidikanibu" oninput="toggleRequiredIndicator25(event)"
+                    autocomplete="off">
+                    <option value="">---Pilih Pendidikan ibu---</option>
+                    <option value="Tidak Bekerja">Tidak Sekolah</option>
+                    <option value="Paud">PAUD</option>
+                    <option value="TK">TK / Sederajat</option>
+                    <option value="SD">SD / Sederajat</option>
+                    <option value="Putus SD">Putus SD</option>
+                    <option value="SMP">SMP / Sederajat</option>
+                    <option value="SMA">SMA / Sederajat</option>
+                    <option value="D1">D1</option>
+                    <option value="D2">D2</option>
+                    <option value="D3">D3</option>
+                    <option value="D4">D4</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                    <option value="S2 Terapan">S2 Terapan</option>
+                    <option value="S3">S3</option>
+                    <option value="S3 Terapan">S3 Terapan</option>
+                    <option value="SP1">SP 1</option>
+                    <option value="SP2">SP 2</option>
+                    <option value="PaketA">Paket A</option>
+                    <option value="PaketB">Paket B</option>
+                    <option value="PaketC">Paket C</option>
+                    <option value="Profesi">Profesi</option>
+                    <option value="Informal">Informal</option>
+                    <option value="Non Formal">Non Formal</option>
+                    <option value="Lainnya">Lainnya</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="input-box">
+              <label>Pekerjaan Ibu</label><span class="required26">*</span>
+              <div class="column">
+                <div class="select-box">
+                  <select id="pekerjaanibu" name="pekerjaanibu" oninput="toggleRequiredIndicator26(event)"
+                    autocomplete="off">
+                    <option value="">---Pilih pekerjaan ibu---</option>
+                    <option value="Tidak Bekerja">Tidak Bekerja</option>
+                    <option value="Nelayan">Nelayan</option>
+                    <option value="Petani">Petani</option>
+                    <option value="Peternakan">Peternakan</option>
+                    <option value="PNS/TNI/Polri">PNS/TNI/Polri</option>
+                    <option value="Karyawan Swasta">Karyawan Swasta</option>
+                    <option value="Pedagang Kecil">Pedagang Kecil</option>
+                    <option value="Pedagang Besar">Pedagang Besar</option>
+                    <option value="Wiraswasta">Wiraswasta</option>
+                    <option value="Wirausaha">Wirausaha</option>
+                    <option value="Buruh">Buruh</option>
+                    <option value="Tenaga Kerja TKI">
+                      Tenaga Kerja Indonesia
+                    </option>
+                    <option value="Karyawan BUMN">Karyawan BUMN</option>
+                    <option value="Tidak dapat diterapkan">
+                      Tidak dapat diterapkan
+                    </option>
+                    <option value="Sudah Meninggal">Sudah Meninggal</option>
+                    <option value="Lainnya">Lainnya</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="input-box penghasilanibu">
+              <label>Penghasilan Ibu</label>
+              <div class="column">
+                <div class="select-box">
+                  <select id="penghasilanibu" name="penghasilanibu">
+                    <option value="">---Pilih penghasilan ibu---</option>
+                    <option value="&lt;Rp. 500.000">&lt;500.000</option>
+                    <option value="Rp. 500.001 - Rp. 1.000.000">500.000 - 1.000.000</option>
+                    <option value="Rp. 1.000.001 - Rp. 2.500.000">1.000.000 - 2.500.000</option>
+                    <option value="Rp. 2.500.001 - Rp. 5.000.000">2.500.000 - 5.000.000</option>
+                    <option value="Rp. 5.000.001 - Rp. 10.000.000">5.000.000 - 10.000.000</option>
+                    <option value="Rp. 10.000.001 - Rp. 15.000.000">10.000.000 - 15.000.000</option>
+                    <option value="Rp. 15.000.001 - Rp. 25.000.000">15.000.000 - 25.000.000</option>
+                    <option value="&gt;Rp. 25.000.000">&gt;25.000.000</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="input-box">
+              <label>Berkebutuhan Khusus</label>
+              <div class="column">
+                <div class="select-box" autocomplete="off">
+                  <select id="berkebutuhanibu" name="abkibu">
+                    <option value="">---Pilih Berkebutuhan Khusus---</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                    <option value="Netra">Netra</option>
+                    <option value="Runggu">Runggu</option>
+                    <option value="Grahita Ringan">Grahita Ringan</option>
+                    <option value="Grahita Sedang">Grahita Sedang</option>
+                    <option value="Daksa Ringan">Daksa Ringan</option>
+                    <option value="Daksa Sedang">Daksa Sedang</option>
+                    <option value="Laras">Laras</option>
+                    <option value="Wicara">Wicara</option>
+                    <option value="Hyperaktif">Hyperaktif</option>
+                    <option value="Cerdas Istimewa">Cerdas Istimewa</option>
+                    <option value="Bakat Istimewa">Bakat Istimewa</option>
+                    <option value="Kesulitan Belajar">Kesulitan Belajar</option>
+                    <option value="Indigo">Indigo</option>
+                    <option value="Down Syndrom">Down Syndrom</option>
+                    <option value="Autis">Autis</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="input-box">
+              <label>Email Aktif</label>
+              <input type="email" id="emailisi" name="emailinput" placeholder="Masukan Alamat Email"
+                autocomplete="off" />
+            </div>
+            <div class="input-box">
+              <label>Nomor Telp. Rumah</label>
+              <input type="number" id="nohtelprumah" name="notelprumah" placeholder="Masukan Nomor Telp."
+                autocomplete="off" />
+            </div>
+            <div class="input-box">
+              <label>Nomor Hp Aktif</label><span class="required24">*</span>
+              <input type="number" id="nohpinput" name="nohpinput" placeholder="Masukan Nomor HP"
+                oninput="toggleRequiredIndicator24(event)" autocomplete="off" required />
+            </div>
+            <div class="notelp-down" id="notelp-warning">
+              <span>Catatan : Untuk informasi selanjutnya, pastikan nomor yang di
+                inputkan aktif dan mudah di hubungi</span>
+            </div>
+
+            <div class="data-wali-opsi">
+              <label>Apakah Anak Memiliki Wali?</label>
+              <div class="questions-option3">
+                <div class="question3">
+                  <input type="radio" id="check-questionya3" name="question3" onclick="toggleDataWali(true)"
+                    value="ya" />
+                  <label for="check-questionya3">Ya</label>
+                </div>
+                <div class="question3">
+                  <input type="radio" id="check-questiontidak3" name="question3" onclick="toggleDataWali(false)"
+                    value="tidak" />
+                  <label for="check-questiontidak3">Tidak</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="data-wali" id="data-wali" style="display: none">
+              <h1>5. Data Wali</h1>
+              <div class="input-data-wali">
+                <label>Nama Wali</label>
+                <input type="text" id="namawali" name="namawali" placeholder="Nama Wali" autocomplete="off" />
+              </div>
+              <div class="input-data-wali">
+                <label>Tempat Lahir</label>
+                <input type="text" id="tempatlahirwali" name="tempat_wali" placeholder="Tempat Lahir Wali" autocomplete="off" />
+              </div>
+              <div class="input-data-wali">
+                <label>Tanggal Lahir Wali</label>
+                <input type="date" id="tempatwali" name="tempatwali" placeholder="Tempat Lahir Wali"
+                  autocomplete="off" />
+              </div>
+              <div class="input-data-wali">
+                <label>NIK Wali</label>
+                <input type="number" id="nikwali" name="nikwali" placeholder="NIK Wali" maxlength="16"
+                  oninput="limitTo16Digits4(event)" autocomplete="off" />
+              </div>
+              <div class="nikwali-down" id="nikwali-warning">
+                <span>Please enter a 16-digit number.</span>
+              </div>
+              <div class="input-data-wali">
+                <label>Nomor Hp Wali</label>
+                <input type="number" id="nohpwali" name="nohpwali" placeholder="Enter phone number"
+                  autocomplete="off" />
+              </div>
+              <div class="input-data-wali">
+                <label>Pendidikan Wali</label>
+                <div class="column-data-wali">
+                  <div class="select-data-wali">
+                    <select id="pendidikanwali" name="pendidikanwali" autocomplete="off">
+                      <option value="">---Pilih Pendidikan Wali---</option>
+                      <option value="Tidak Bekerja">Tidak Sekolah</option>
+                      <option value="Paud">PAUD</option>
+                      <option value="TK">TK / Sederajat</option>
+                      <option value="SD">SD / Sederajat</option>
+                      <option value="Putus SD">Putus SD</option>
+                      <option value="SMP">SMP / Sederajat</option>
+                      <option value="SMA">SMA / Sederajat</option>
+                      <option value="D1">D1</option>
+                      <option value="D2">D2</option>
+                      <option value="D3">D3</option>
+                      <option value="D4">D4</option>
+                      <option value="S1">S1</option>
+                      <option value="S2">S2</option>
+                      <option value="S2 Terapan">S2 Terapan</option>
+                      <option value="S3">S3</option>
+                      <option value="S3 Terapan">S3 Terapan</option>
+                      <option value="SP1">SP 1</option>
+                      <option value="SP2">SP 2</option>
+                      <option value="PaketA">Paket A</option>
+                      <option value="PaketB">Paket B</option>
+                      <option value="PaketC">Paket C</option>
+                      <option value="Profesi">Profesi</option>
+                      <option value="Informal">Informal</option>
+                      <option value="Non Formal">Non Formal</option>
+                      <option value="Lainnya">Lainnya</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-data-wali">
+                <label>Pekerjaan Wali</label>
+                <div class="column-data-wali">
+                  <div class="select-data-wali">
+                    <select id="pekerjaanwali" name="pekerjaanwali" autocomplete="off">
+                      <option value="">---Pilih pekerjaan Wali---</option>
+                      <option value="Tidak Bekerja">Tidak Bekerja</option>
+                      <option value="Nelayan">Nelayan</option>
+                      <option value="Petani">Petani</option>
+                      <option value="Peternakan">Peternakan</option>
+                      <option value="PNS/TNI/Polri">PNS/TNI/Polri</option>
+                      <option value="Karyawan Swasta">Karyawan Swasta</option>
+                      <option value="Pedagang Kecil">Pedagang Kecil</option>
+                      <option value="Pedagang Besar">Pedagang Besar</option>
+                      <option value="Wiraswasta">Wiraswasta</option>
+                      <option value="Wirausaha">Wirausaha</option>
+                      <option value="Buruh">Buruh</option>
+                      <option value="Tenaga Kerja TKI">
+                        Tenaga Kerja Indonesia
+                      </option>
+                      <option value="Karyawan BUMN">Karyawan BUMN</option>
+                      <option value="Tidak dapat diterapkan">
+                        Tidak dapat diterapkan
+                      </option>
+                      <option value="Sudah Meninggal">Sudah Meninggal</option>
+                      <option value="Lainnya">Lainnya</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-data-wali penghasilanwali">
+                <label>Penghasilan Wali</label>
+                <div class="column-data-wali">
+                  <div class="select-data-wali">
+                    <select id="penghasilanwali" name="penghasilanwali">
+                      <option value="">--Pilih penghasilan Wali---</option>
+                      <option value="&lt;Rp. 500.000">&lt;500.000</option>
+                      <option value="Rp. 500.001 - Rp. 1.000.000">500.000 - 1.000.000</option>
+                      <option value="Rp. 1.000.001 - Rp. 2.500.000">1.000.000 - 2.500.000</option>
+                      <option value="Rp. 2.500.001 - Rp. 5.000.000">2.500.000 - 5.000.000</option>
+                      <option value="Rp. 5.000.001 - Rp. 10.000.000">5.000.000 - 10.000.000</option>
+                      <option value="Rp. 10.000.001 - Rp. 15.000.000">10.000.000 - 15.000.000</option>
+                      <option value="Rp. 15.000.001 - Rp. 25.000.000">15.000.000 - 25.000.000</option>
+                      <option value="&gt;Rp. 25.000.000">&gt;25.000.000</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="name-box">
+            <label>Status Pembayaran</label>
+            <div class="column">
+              <div class="select-box" autocomplete="off">
+                <select id="sts_pemb" name="sts_pembayaran">
+                  <option value="">--Status Pendaftaran--</option>
+                  <option value="Menunggu Pembayaran">Menunggu Pembayaran</option>
+                  <option value="Sudah Bayar">Sudah Bayar</option>
+          
+                </select>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="input-nomor">
-          <label>Nomor Urut</label><span class="requiredNoRut">*</span> 
-          <input type="text" id="nomorurut" name="nomor" autocomplete="off" value="=ROW()-2"/> 
-        </div>
-          <div class="button-submit">
-            <button type="submit">DAFTAR SEKARANG</button>
+          <div class="input-nomor">
+            <label>Nomor Urut</label><span class="requiredNoRut">*</span> 
+            <input type="text" id="nomorurut" name="nomor" autocomplete="off" value="=ROW()-2"/> 
           </div>
-          <div class="button-submit2" style="display: none;">
-            <button class="submit2"></button>
-          </div>
-        </div>
-      </form>
+            <div class="button-submit">
+              <button type="submit">DAFTAR SEKARANG</button>
+            </div>
+            <div class="button-submit2" style="display: none;">
+              <button class="submit2"></button>
+            </div>
+        
+        </form>
       </div>
     </section>
   </div>
-  <div class="body-buttons">
-  <div class="buttons-previews">
-    <button id="prevew-pendaftaran" disabled>Prev</button>
-    <button id="next-pendaftaran">Next</button>
-  </div>
-</div>
   <div class="container-timer">
     <button class="closed-timer" onclick="closeTimer()">X</button>
     <div class="judul-timer">
@@ -978,6 +973,55 @@
       <p class="detik-second">detik</p>
     </div>
   </div>
+  <script>
+   
+      // Tambahkan fungsi untuk menutup timer
+      function closeTimer() {
+        const containerTimer = document.querySelector(".container-timer");
+        containerTimer.classList.add("animate-close"); // Tambahkan class animate-close untuk animasi
+
+        setTimeout(function () {
+          containerTimer.style.display = "none";
+        }, 500); // Tunggu hingga animasi selesai sebelum menyembunyikan timer
+      }
+      // Tambahkan fungsi untuk memperbarui countdown (Anda tetap menggunakan fungsi ini)
+      const targetDate = new Date("2025-02-15T00:00:00").getTime();
+      const timer = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.querySelector(".hari-day").innerHTML = `${days} Hari`;
+        document.querySelector(".jam-clock").innerHTML = `${hours} Jam`;
+        document.querySelector(".menit-minuter").innerHTML = `${minutes} Menit`;
+        document.querySelector(".detik-second").innerHTML = `${seconds} Detik`;
+
+        if (distance < 0) {
+          clearInterval(timer);
+          document.getElementById("countdown").innerHTML =
+            "Waktu telah berakhir!";
+        }
+      }, 1000);
+
+      window.onload = function () {
+        const containerTimer = document.querySelector(".container-timer");
+        containerTimer.classList.add("animate-slide-in");
+
+        setTimeout(function () {
+          containerTimer.classList.remove("animate-slide-in");
+          containerTimer.classList.add("animate-sink-out");
+        }, 10000);
+      };
+  </script>
+    <a href="#" class="scroll-to-top" style="display: none">
+      <i class="fa fa-arrow-up"></i
+    ></a>
   <footer>
     <div class="content-footer">
       <div class="top-footer">
@@ -1032,53 +1076,7 @@
       </div>
     </div>
   </footer>
-  <script>
-   
-      // Tambahkan fungsi untuk menutup timer
-      function closeTimer() {
-        const containerTimer = document.querySelector(".container-timer");
-        containerTimer.classList.add("animate-close"); // Tambahkan class animate-close untuk animasi
 
-        setTimeout(function () {
-          containerTimer.style.display = "none";
-        }, 500); // Tunggu hingga animasi selesai sebelum menyembunyikan timer
-      }
-      // Tambahkan fungsi untuk memperbarui countdown (Anda tetap menggunakan fungsi ini)
-      const targetDate = new Date("2025-02-15T00:00:00").getTime();
-      const timer = setInterval(function () {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.querySelector(".hari-day").innerHTML = `${days} Hari`;
-        document.querySelector(".jam-clock").innerHTML = `${hours} Jam`;
-        document.querySelector(".menit-minuter").innerHTML = `${minutes} Menit`;
-        document.querySelector(".detik-second").innerHTML = `${seconds} Detik`;
-
-        if (distance < 0) {
-          clearInterval(timer);
-          document.getElementById("countdown").innerHTML =
-            "Waktu telah berakhir!";
-        }
-      }, 1000);
-
-      window.onload = function () {
-        const containerTimer = document.querySelector(".container-timer");
-        containerTimer.classList.add("animate-slide-in");
-
-        setTimeout(function () {
-          containerTimer.classList.remove("animate-slide-in");
-          containerTimer.classList.add("animate-sink-out");
-        }, 10000);
-      };
-  </script>
-  </body>
   <script src="https://unpkg.com/feather-icons" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <!--Kumpulan Scrip-->
@@ -1095,4 +1093,6 @@
   <script src="json/upload.js"></script>
   <script src="json/colorchange.js"></script>
   <script src="json/tahunajaran.js"></script>
+</body>
+
 </html>
