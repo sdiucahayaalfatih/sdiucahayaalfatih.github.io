@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Day</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="website icon" type="png" href="sdiulogo/LOGOBOTTOM.png">
+    <link rel="stylesheet" href="css/navigasi.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    .li-tex ul {
+        padding-left: 20px;
+    }
+    .body-article {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    height: 100%; /* Menjaga tinggi container sesuai dengan tinggi yang lebih besar */
+}
+
+.article-content {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 600px; /* Atur tinggi minimum untuk artikel */
+    overflow: auto;
+}
+
+.sidebar {
+    flex: 1;
+    background: linear-gradient(135deg, #0073e6, #00bcd4);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    height: 100%; /* Pastikan sidebar memiliki tinggi yang sama */
+}
+
+
+.article-meta {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.share-icons {
+    margin-top: 20px;
+}
+
+.share-icons span {
+    font-weight: bold;
+}
+
+.share-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+}
+
+.share-icon:hover {
+    color: #0073e6;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+.recent-articles {
+    padding: 0;
+    margin-top: 15px;
+}
+
+.recent-article-item {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.recent-article-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.recent-article-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.recent-article-content {
+    flex: 1;
+}
+
+.recent-article-title {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.recent-article-title:hover {
+    color: #d1e8ff;
+}
+
+.recent-article-excerpt {
+    color: #f0f0f0;
+    font-size: 0.9em;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Membatasi pada 2 baris */
+    -webkit-box-orient: vertical;
+}
+.search-form {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    font-size: 0.9em;
+}
+
+.search-button {
+    background-color: #fff;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    color: #0073e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button:hover {
+    background-color: #e0e0e0;
+}
+.navigation-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Memberikan jarak antara tombol */
+    margin-top: 10px;
+}
+
+#prevButton, #nextButton {
+    padding: 8px 16px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#prevButton:hover, #nextButton:hover {
+    background-color: #005bb5;
+}
+button:disabled {
+    cursor: not-allowed; /* Menampilkan cursor "not-allowed" saat tombol dinonaktifkan */
+    opacity: 0.5; /* Memberikan efek transparansi agar terlihat dinonaktifkan */
+}
+ /* Komentar Form Styles */
+ .comments-section {
+        margin-top: 40px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .comments-section h3 {
+        font-size: 1.3em;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .comment-form textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        resize: vertical;
+    }
+
+    .comment-form button {
+        padding: 10px 20px;
+        background-color: #0073e6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background 0.3s;
+    }
+
+    .comment-form button:hover {
+        background-color: #005bb5;
+    }
+
+    /* Komentar Form Styles */
+.comments-section {
+    margin-top: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for comment input form */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    resize: none; /* Mematikan resize */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.comment-form textarea:focus {
+    border-color: #0073e6;
+    box-shadow: 0 0 8px rgba(0, 115, 230, 0.4);
+    outline: none;
+}
+
+.comment-form button {
+    padding: 12px 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    align-self: flex-end;
+}
+
+.comment-form button:hover {
+    background-color: #005bb5;
+}
+
+.comment-form button:active {
+    transform: scale(0.98);
+}
+/* Mengubah layout sidebar dan konten utama pada perangkat kecil */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Menjadikan kolom vertikal pada layar kecil */
+    }
+
+    .sidebar {
+        flex: none;
+        margin-top: 20px;
+    }
+
+    .article-content {
+        flex: none;
+    }
+}
+/* Responsif untuk perangkat kecil */
+@media (max-width: 576px) {
+    .comment-form textarea {
+        font-size: 0.9em;
+    }
+
+    .comment-form button {
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
+
+    .share-icons span {
+        font-size: 1em;
+    }
+
+    .share-icon {
+        margin-right: 8px;
+        font-size: 1em;
+    }
+}
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const articles = document.querySelectorAll('.recent-article-item');
+        let currentIndex = 0;
+        const maxVisibleArticles = 5;
+
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+
+        // Fungsi untuk memperbarui visibilitas artikel
+        function updateVisibility() {
+            articles.forEach((article, index) => {
+                // Menampilkan artikel dalam rentang currentIndex hingga currentIndex + maxVisibleArticles
+                if (index >= currentIndex && index < currentIndex + maxVisibleArticles) {
+                    article.style.display = 'flex';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+
+            // Menonaktifkan tombol Prev jika berada di awal
+            if (currentIndex === 0) {
+                prevButton.disabled = true;
+            } else {
+                prevButton.disabled = false;
+            }
+
+            // Menonaktifkan tombol Next jika berada di akhir
+            if (currentIndex + maxVisibleArticles >= articles.length) {
+                nextButton.disabled = true;
+            } else {
+                nextButton.disabled = false;
+            }
+        }
+
+        // Event listener untuk tombol Prev
+        prevButton.addEventListener('click', function() {
+            if (currentIndex > 0) {
+                currentIndex -= maxVisibleArticles; // Pindah mundur 5 artikel
+                updateVisibility();
+            }
+        });
+
+        // Event listener untuk tombol Next
+        nextButton.addEventListener('click', function() {
+            if (currentIndex + maxVisibleArticles < articles.length) {
+                currentIndex += maxVisibleArticles; // Pindah maju 5 artikel
+                updateVisibility();
+            }
+        });
+
+        // Menampilkan artikel pertama saat halaman dimuat
+        updateVisibility();
+    });
+</script>
+<body>
+        <!--Navbar Paling Atas-->
+  <div id="navbar-one" class="navbar-one flex">
+    <div class="left flex">
+      <div class="email">
+        <a href="mailto:sdiucahayaalfatih@gmail.com"><img src="icon/email.svg" class="logososmed" />
+          <span>sdiucahayaalfatih@gmail.com</span></a>
+      </div>
+      <div class="call">
+        <a href="https://api.whatsapp.com/send/?phone=6288212428738&text&type=phone_number&app_absent=0"><img
+            src="icon/telp.svg" class="logososmed" />
+          <span>+62882-1242-8738</span></a>
+      </div>
+    </div>
+    <div class="right flex">
+      <div class="facebook">
+        <a href="https://www.facebook.com/sdiucahayaalfatih"><img src="icon/facebook.svg" class="logososmed" /></a>
+      </div>
+      <div class="messenger">
+        <a href="https://www.facebook.com/sdiucahayaalfatih"><img src="icon/messenger.svg" class="logososmed" /></a>
+      </div>
+      <div class="instragram">
+        <a href="https://www.instagram.com/sdiucahayaalfatih/?hl=id">
+          <img src="icon/instagram.svg" class="logososmed" /></a>
+      </div>
+      <div class="youtube">
+        <a href="https://www.youtube.com/@sdiucahayaalfatih9465?sub_confirmation=1"><img src="icon/youtube.svg"
+            class="logososmed" /></a>
+      </div>
+      <div class="tiktok">
+        <a href=""><img src="icon/tiktok.svg" class="logososmed" /></a>
+      </div>
+    </div>
+  </div>
+  <!--Navbar Navigasi Menu-->
+  <div class="header stuck">
+    <a href="index.html" class="logo"><img src="sdiulogo/logoddiu1.png" alt="image" height="55px"></a>
+    <input class="toogle" type="checkbox" id="menu-bar" onclick="toggleMenu()" />
+    <div class="menutoogle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navbar" id="navbar">
+      <div id="sosial-media-logo">
+        <a href="https://www.facebook.com/sdiucahayaalfatih"><img src="icon/facebook.svg" class="logososmed" /></a>
+        <a href="https://www.facebook.com/sdiucahayaalfatih"><img src="icon/messenger.svg" class="logososmed" /></a>
+        <a href="https://www.instagram.com/sdiucahayaalfatih/?hl=id"><img src="icon/instagram.svg" class="logososmed" /></a>
+        <a href="https://www.youtube.com/@sdiucahayaalfatih9465?sub_confirmation=1"><img src="icon/youtube.svg" class="logososmed" /></a>
+        <a href=""><img src="icon/tiktok.svg" class="logososmed" /></a>
+      </div>
+      <button class="close-navbtn" onclick="closeNavbar()"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="has-submenu">
+          <a>Profil Sekolah<span class="arrow"></span></a>
+          <ul class="submenu">
+            <li><a href="profilsekolah.html">Profil Sekolah</a></li>
+            <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
+            <li><a href="visi-misi.html">Visi Misi & Tujuan</a></li>
+            <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
+            <li><a href="fasilitas.html">Fasilitas</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a>Program Sekolah<span class="arrow"></span></a>
+          <ul class="submenu">
+            <li><a href="programsekolah.html">Program Sekolah</a></li>
+            <li><a href="kurikulum.html">Kurikulum</a></li>
+            <li><a href="agendakegiatan.html">Agenda Kegiatan</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a>Akademik<span class="arrow"></span></a>
+          <ul class="submenu">
+            <li><a href="kaldik.html">Kalender Akademik</a></li>
+            <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
+            <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
+              <li><a href="jumlahpendaftar.html">Jumlah Pendaftar Online</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Prestasi</a></li>
+        <li class="has-submenu">
+          <a>Berita<span class="arrow"></span></a>
+          <ul class="submenu">
+            <li><a href="pengumuman.html">Pengumuman</a></li>
+            <li><a href="GaleryFoto.html">Galery</a></li>
+            <li><a href="index.html">Artikel/Berita</a></li>
+          </ul>
+        </li>
+        <li><a href="contacus.html">Contac Us</a></li>
+      </ul>
+      <div id="copyright">
+        <p> <img src="sdiulogo/LOGOBOTTOM.png" alt="small-icon" height="20px" style="vertical-align: middle; margin-left: 5px;">Copyright SDIUCAF 2023</p>
+      </div>
+    </nav>
+  </div>  
+    <div class="body-article">
+    <div class="container">
+        <main class="article-content">
+            <h1>Market Day 2024</h1>
+            <div class="article-meta">
+                <span class="author">Ditulis oleh: <strong>Admin</strong></span>
+                <span class="publish-date">| Diterbitkan: 18 November 2024 | pukul : 21:15 WIB</span>
+            </div>
+            <img src="images_artikel/WhatsApp Image 2024-11-18 at 21.12.35.jpeg" alt="Gambar Artikel" class="article-image">
+            <p class="article-text">
+                <p>SD Islam Unggulan Cahaya Al-Fatih sukses menyelenggarakan acara <span class="highlight">Market Day</span> yang meriah pada Sabtu, 9 November 2024. Acara ini merupakan bagian dari perayaan milad ke-5 SDIU Cahaya Al-Fatih dan diikuti dengan antusias oleh sebanyak 180 peserta dari berbagai <em>Raudhatul Athfal</em> (RA) di sekitar wilayah Pandeglang.</p>
+
+                <p>Perayaan ini berlangsung penuh semangat dan keceriaan, mengundang kehadiran para tokoh masyarakat, perwakilan dari Dinas Pendidikan Kabupaten Pandeglang, serta Direktur Operasional SDIU Cahaya Al-Fatih. Kegiatan Market Day dirancang untuk memberikan pengalaman belajar interaktif dan menyenangkan bagi siswa, sekaligus memperkenalkan budaya berwirausaha sejak dini.</p>
+        
+                <h2>Rangkaian Acara</h2>
+                <p>Acara ini dimeriahkan oleh berbagai perlombaan dan pertunjukan yang menarik, antara lain:</p>
+                <div class="li-tex">
+                <ul>
+                    <li><strong>Perlombaan Tahfidz:</strong> Menampilkan hafalan Al-Qur'an dari siswa-siswa berbakat, menunjukkan ketekunan dan dedikasi mereka dalam menghafal Al-Qur'an.</li>
+                    <li><strong>Lomba Tari Kreasi:</strong> Para siswa menampilkan tarian-tarian tradisional dan modern yang dikombinasikan dengan gerakan kreatif, memperlihatkan kreativitas dan kerja sama tim.</li>
+                    <li><strong>Perlombaan Mewarnai:</strong> Diikuti oleh anak-anak RA, lomba ini mengasah imajinasi dan keterampilan seni mereka dalam menghasilkan karya yang penuh warna dan keindahan.</li>
+                </ul>
+            </div>
+                <h2>Kehadiran dan Partisipasi</h2>
+                <img src="images_artikel/WhatsApp Image 2024-11-18 at 21.12.37.jpeg" alt="Gambar Artikel" class="article-image">
+                <p>Kemeriahan acara semakin terasa dengan kehadiran para tokoh penting di Pandeglang. Mereka memberikan dukungan dan apresiasi atas inisiatif SDIU Cahaya Al-Fatih dalam mengadakan kegiatan edukatif dan inspiratif seperti ini. Pihak Dinas Pendidikan Kabupaten Pandeglang, dalam sambutannya, menyampaikan harapan agar kegiatan serupa dapat menjadi contoh bagi sekolah-sekolah lain dalam membangun generasi yang cerdas dan berakhlak.</p>
+        
+                <h2>Pesan dan Harapan</h2>
+                <img src="images_artikel/WhatsApp Image 2024-11-18 at 21.12.36.jpeg" alt="Gambar Artikel" class="article-image">
+                <p>Direktur Operasional SDIU Cahaya Al-Fatih menyampaikan bahwa kegiatan Market Day ini tidak hanya menjadi ajang perayaan ulang tahun sekolah, tetapi juga sebagai upaya untuk menanamkan semangat kebersamaan dan kreativitas di kalangan siswa. "Dengan kegiatan seperti ini, kami berharap anak-anak dapat belajar pentingnya kerjasama, ketekunan, dan inovasi sejak usia dini," ujarnya.</p>
+        
+                <p>Market Day SDIU Cahaya Al-Fatih 2024 berhasil menciptakan suasana yang penuh keceriaan dan antusiasme. Para siswa, guru, dan orang tua yang hadir tampak menikmati setiap momen acara, menjadikannya pengalaman yang berkesan dan penuh inspirasi.</p>
+        
+                <p>Kami berharap SDIU Cahaya Al-Fatih terus berkembang dan menjadi institusi pendidikan yang mampu membina generasi unggul di masa mendatang. Selamat milad ke-5 SDIU Cahaya Al-Fatih!</p>
+            </p>
+            <div class="share-icons">
+                <span>Bagikan:</span>
+                <a href="#" class="share-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="share-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="share-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="share-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+            <!-- Bagian Komentar -->
+            <div class="comments-section">
+                <h3>Komentar</h3>
+                <!-- Form untuk mengirimkan komentar -->
+                <form class="comment-form" action="#" method="POST">
+                    <textarea name="comment" rows="5" placeholder="Tulis komentar Anda di sini..."></textarea>
+                    <button type="submit">Kirim Komentar</button>
+                </form>
+
+                <!-- Daftar Komentar 
+                <div class="comment-list">
+                    <div class="comment-item">
+                        <div class="comment-author">User 1</div>
+                        <p class="comment-text">Ini adalah komentar pertama. Sangat menarik artikel ini!</p>
+                    </div>
+                    <div class="comment-item">
+                        <div class="comment-author">User 2</div>
+                        <p class="comment-text">Saya setuju, ini benar-benar artikel yang bermanfaat!</p>
+                    </div>
+                </div>
+                Tambahkan lebih banyak komentar jika ada -->
+            </div>
+        </main>
+        <aside class="sidebar">
+            <h2>Artikel Terbaru</h2>
+            <form class="search-form" action="#" method="GET">
+                <input type="text" placeholder="Cari artikel..." name="search" class="search-input">
+                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+            </form>            
+            <div class="recent-articles">
+                  <!-- 
+                <div class="recent-article-item">
+                    <img src="images_artikel/WhatsApp Image 2024-11-18 at 21.12.35.jpeg" alt="Gambar Artikel 1" class="recent-article-img">
+                    <div class="recent-article-content">
+                        <a href="#" class="recent-article-title">Market Day 2024</a>
+                        <p class="recent-article-excerpt">SD Islam Unggulan Cahaya Al-Fatih sukses menyelenggarakan acara Market Day...</p>
+                    </div>
+                </div>
+              Tambahkan lebih banyak item artikel jika diperlukan -->
+            </div>
+            <div class="navigation-buttons">
+                <button id="prevButton" disabled>Prev</button>
+                <button id="nextButton">Next</button>
+            </div>
+        </aside>
+        
+    </div>
+</div>
+
+<footer>
+    <div class="content-footer">
+      <div class="top-footer">
+        <div class="logo-details">
+          <span class="my-logo">SDIU Cahaya Al-Fatih</span>
+          <p>
+            Palurahan, Kec. Kaduhejo, Kab. Pandeglang Banten Kode Pos 42252
+          </p>
+        </div>
+        <div class="media-icons">
+          <a href="https://www.facebook.com/sdiucahayaalfatih"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/@sdiucahayaalfatih9465?sub_confirmation=1"><i class="fab fa-facebook-messenger"></i></a>
+          <a href="https://www.instagram.com/sdiucahayaalfatih/?hl=id"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.youtube.com/@sdiucahayaalfatih9465?sub_confirmation=1"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Profil Sekolah</li>
+          <li><a href="sambutan.html">Sambutan Kepala Sekolah</a></li>
+          <li><a href="visi-misi.html"> Visi Misi & Tujuan</a></li>
+          <li><a href="strukturorganisasi.html">Struktur Organisasi</a></li>
+          <li><a href="fasilitas.html">Fasilitas</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Program Sekolah</li>
+          <li><a href="profilsekolah.html">Profil Sekolah</a></li>
+          <li><a href="kurikulum.html">Kurikulum</a></li>
+          <li><a href="agendakegiatan.html">Agenda Kegiatann</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Akademik</li>
+          <li><a href="kaldik.html">Kalender Akademik</a></li>
+          <li><a href="ekstrakulikuler.html">Esktrakulikuler</a></li>
+          <li><a href="Pendaftaran.html">Pendaftaran Online</a></li>
+          <li><a href="jumlahpendaftar.html">Jumlah Pendaftar Online</li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Berita</li>
+          <li><a href="pengumuman.html">Pengumuman</a></li>
+          <li><a href="GaleryFoto.html">Galeri</a></li>
+          <li><a href="index.html">Artikel/Berita</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © <span id="currentYear"></span> <a href="#">SDIU CAF</a> All rights reserved</span>
+        <span class="policy_terms">
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms & condition</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="https://unpkg.com/feather-icons" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!--Kumpulan Scrip-->
+  <script src="https://unpkg.com/feather-icons" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://unpkg.com/feather-icons" crossorigin="anonymous"></script>
+  <script>
+    feather.replace();
+  </script>
+  <script src="json/jsfile.js"></script>
+  <script src="json/hamburgermenu.js"></script>
+  <script src="json/scripstyle2.js"></script>
+  <script src="json/scripstyle3.js"></script>
+  <script src="json/upload.js"></script>
+  <script src="json/colorchange.js"></script>
+  <script src="json/tahunajaran.js"></script>
+  <script src="json/curretyear.js"></script>
+</html>
