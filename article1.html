@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Day</title>
+    <title>Market Day 2024</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="website icon" type="png" href="sdiulogo/LOGOBOTTOM.png">
     <link rel="stylesheet" href="css/navigasi.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/article_template.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,386 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald&display=swap" rel="stylesheet">
 
 </head>
-<style>
-    .li-tex ul {
-        padding-left: 20px;
-    }
-    .body-article {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
-    gap: 20px;
-    height: 100%; /* Menjaga tinggi container sesuai dengan tinggi yang lebih besar */
-}
-
-.article-content {
-    flex: 2;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-height: 600px; /* Atur tinggi minimum untuk artikel */
-    overflow: auto;
-}
-
-.sidebar {
-    flex: 1;
-    background: linear-gradient(135deg, #0073e6, #00bcd4);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    height: 100%; /* Pastikan sidebar memiliki tinggi yang sama */
-}
-
-
-.article-meta {
-    font-size: 0.9em;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.article-image {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 8px;
-}
-
-.share-icons {
-    margin-top: 20px;
-}
-
-.share-icons span {
-    font-weight: bold;
-}
-
-.share-icon {
-    margin-right: 10px;
-    font-size: 1.2em;
-    color: #333;
-    text-decoration: none;
-}
-
-.share-icon:hover {
-    color: #0073e6;
-}
-
-.sidebar h2 {
-    margin-top: 0;
-    font-size: 1.5em;
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    padding-bottom: 5px;
-}
-.recent-articles {
-    padding: 0;
-    margin-top: 15px;
-}
-
-.recent-article-item {
-    display: flex;
-    align-items: flex-start;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 8px;
-    margin-bottom: 15px;
-    padding: 10px;
-    transition: background 0.3s;
-}
-
-.recent-article-item:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.recent-article-img {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 10px;
-}
-
-.recent-article-content {
-    flex: 1;
-}
-
-.recent-article-title {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    font-size: 1em;
-}
-
-.recent-article-title:hover {
-    color: #d1e8ff;
-}
-
-.recent-article-excerpt {
-    color: #f0f0f0;
-    font-size: 0.9em;
-    margin: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* Membatasi pada 2 baris */
-    -webkit-box-orient: vertical;
-}
-.search-form {
-    display: flex;
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.search-input {
-    flex: 1;
-    border: none;
-    padding: 10px;
-    outline: none;
-    color: #fff;
-    background: transparent;
-    font-size: 0.9em;
-}
-
-.search-button {
-    background-color: #fff;
-    border: none;
-    padding: 0 15px;
-    cursor: pointer;
-    color: #0073e6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.search-button:hover {
-    background-color: #e0e0e0;
-}
-.navigation-buttons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px; /* Memberikan jarak antara tombol */
-    margin-top: 10px;
-}
-
-#prevButton, #nextButton {
-    padding: 8px 16px;
-    background-color: #0073e6;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#prevButton:hover, #nextButton:hover {
-    background-color: #005bb5;
-}
-button:disabled {
-    cursor: not-allowed; /* Menampilkan cursor "not-allowed" saat tombol dinonaktifkan */
-    opacity: 0.5; /* Memberikan efek transparansi agar terlihat dinonaktifkan */
-}
- /* Komentar Form Styles */
- .comments-section {
-        margin-top: 40px;
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .comments-section h3 {
-        font-size: 1.3em;
-        color: #333;
-        margin-bottom: 20px;
-    }
-
-    .comment-form textarea {
-        width: 100%;
-        padding: 10px;
-        font-size: 1em;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        margin-bottom: 10px;
-        resize: vertical;
-    }
-
-    .comment-form button {
-        padding: 10px 20px;
-        background-color: #0073e6;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1em;
-        transition: background 0.3s;
-    }
-
-    .comment-form button:hover {
-        background-color: #005bb5;
-    }
-
-    /* Komentar Form Styles */
-.comments-section {
-    margin-top: 40px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.comments-section h3 {
-    font-size: 1.3em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-/* Styling for comment input form */
-.comment-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.comment-form textarea {
-    width: 100%;
-    padding: 10px 0px;
-    font-size: 1em;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    margin-bottom: 15px;
-    resize: none; /* Mematikan resize */
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'Arial', sans-serif;
-}
-
-
-.comment-form textarea:focus {
-    border-color: #0073e6;
-    box-shadow: 0 0 8px rgba(0, 115, 230, 0.4);
-    outline: none;
-}
-
-.comment-form button {
-    padding: 12px 20px;
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-    align-self: flex-end;
-}
-
-.comment-form button:hover {
-    background-color: #005bb5;
-}
-
-.comment-form button:active {
-    transform: scale(0.98);
-}
-/* Mengubah layout sidebar dan konten utama pada perangkat kecil */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Menjadikan kolom vertikal pada layar kecil */
-    }
-
-    .sidebar {
-        flex: none;
-        margin-top: 20px;
-    }
-
-    .article-content {
-        flex: none;
-    }
-}
-/* Responsif untuk perangkat kecil */
-@media (max-width: 576px) {
-    .comment-form textarea {
-        font-size: 0.9em;
-    }
-
-    .comment-form button {
-        padding: 10px 18px;
-        font-size: 0.9em;
-    }
-
-    .share-icons span {
-        font-size: 1em;
-    }
-
-    .share-icon {
-        margin-right: 8px;
-        font-size: 1em;
-    }
-}
-</style>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const articles = document.querySelectorAll('.recent-article-item');
-        let currentIndex = 0;
-        const maxVisibleArticles = 5;
-
-        const prevButton = document.getElementById('prevButton');
-        const nextButton = document.getElementById('nextButton');
-
-        // Fungsi untuk memperbarui visibilitas artikel
-        function updateVisibility() {
-            articles.forEach((article, index) => {
-                // Menampilkan artikel dalam rentang currentIndex hingga currentIndex + maxVisibleArticles
-                if (index >= currentIndex && index < currentIndex + maxVisibleArticles) {
-                    article.style.display = 'flex';
-                } else {
-                    article.style.display = 'none';
-                }
-            });
-
-            // Menonaktifkan tombol Prev jika berada di awal
-            if (currentIndex === 0) {
-                prevButton.disabled = true;
-            } else {
-                prevButton.disabled = false;
-            }
-
-            // Menonaktifkan tombol Next jika berada di akhir
-            if (currentIndex + maxVisibleArticles >= articles.length) {
-                nextButton.disabled = true;
-            } else {
-                nextButton.disabled = false;
-            }
-        }
-
-        // Event listener untuk tombol Prev
-        prevButton.addEventListener('click', function() {
-            if (currentIndex > 0) {
-                currentIndex -= maxVisibleArticles; // Pindah mundur 5 artikel
-                updateVisibility();
-            }
-        });
-
-        // Event listener untuk tombol Next
-        nextButton.addEventListener('click', function() {
-            if (currentIndex + maxVisibleArticles < articles.length) {
-                currentIndex += maxVisibleArticles; // Pindah maju 5 artikel
-                updateVisibility();
-            }
-        });
-
-        // Menampilkan artikel pertama saat halaman dimuat
-        updateVisibility();
-    });
-</script>
 <body>
         <!--Navbar Paling Atas-->
   <div id="navbar-one" class="navbar-one flex">
@@ -528,20 +149,53 @@ button:disabled {
                 <p>Kami berharap SDIU Cahaya Al-Fatih terus berkembang dan menjadi institusi pendidikan yang mampu membina generasi unggul di masa mendatang. Selamat milad ke-5 SDIU Cahaya Al-Fatih!</p>
             </p>
             <div class="share-icons">
-                <span>Bagikan:</span>
-                <a href="#" class="share-icon"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="share-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="share-icon"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" class="share-icon"><i class="fas fa-envelope"></i></a>
-            </div>
+    <span>Bagikan:</span>
+    <a href="#" class="share-icon" id="share-facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="#" class="share-icon" id="share-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="share-icon" id="share-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" class="share-icon" id="share-email" target="_blank"><i class="fas fa-envelope"></i></a>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentUrl = window.location.href;
+        const pageTitle = document.title;
+        const encodedUrl = encodeURIComponent(currentUrl);
+        const encodedTitle = encodeURIComponent(pageTitle);
+
+        // Set URL untuk berbagi di Facebook
+        document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+
+        // Set URL untuk berbagi di Twitter
+        document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
+
+        // Set URL untuk berbagi di WhatsApp
+        document.getElementById('share-whatsapp').href = `https://wa.me/?text=${encodedTitle} ${encodedUrl}`;
+
+        // Set URL untuk berbagi via Email
+        document.getElementById('share-email').href = `mailto:?subject=${encodedTitle}&body=Baca artikel ini: ${currentUrl}`;
+    });
+</script>
+
             <!-- Bagian Komentar -->
             <div class="comments-section">
-                <h3>Komentar</h3>
+                <h3>Tinggalkan Jejak</h3>
+                <p>Harap Berkomentar Dengan Bijak</p>
                 <!-- Form untuk mengirimkan komentar -->
-                <form class="comment-form" action="#" method="POST">
-                    <textarea name="comment" rows="5" placeholder="Tulis komentar Anda di sini..."></textarea>
+                <form id="commentForm" class="comment-form" action="#" method="POST">
+                    <input type="text" id="username" name="nama" placeholder="Nama Anda" required>
+                    <textarea id="comment" name="isi_comment" rows="5" placeholder="Tulis komentar Anda di sini..."></textarea>
                     <button type="submit">Kirim Komentar</button>
                 </form>
+                
+<!-- Modal -->
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <div class="checkmark"></div>
+        <p>Terimakasih telah berkomentar!</p>
+    </div>
+</div>
+
 
                 <!-- Daftar Komentar 
                 <div class="comment-list">
@@ -649,12 +303,7 @@ button:disabled {
   <script>
     feather.replace();
   </script>
-  <script src="json/jsfile.js"></script>
   <script src="json/hamburgermenu.js"></script>
-  <script src="json/scripstyle2.js"></script>
-  <script src="json/scripstyle3.js"></script>
-  <script src="json/upload.js"></script>
-  <script src="json/colorchange.js"></script>
-  <script src="json/tahunajaran.js"></script>
   <script src="json/curretyear.js"></script>
+  <script src="json/function_Article.js"></script>
 </html>

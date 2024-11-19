@@ -453,26 +453,17 @@
                 style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 class="maps-design"></iframe>
             </div>
-            <form id="form"
-              action="https://script.google.com/macros/s/AKfycby8Tl3NvGr2vIPSadX6HS-rq5nEDPFlHq3dKJ3gqA4zQc49iIN1nbhamj6fV88RzJUz/exec">
-              <div class="topic">
-                <h4>Hubungi Kami</h4>
-                <p>
-                  Bila ada pertanyaan, silahkan hubungi kami diform yang telah kami sediakan, pesan anda akan kami balas
-                  sesegera mungkin pada jam kerja.
-                </p>
-              </div>
+            <form id="form" action="#">
               <div class="input-box">
                 <input name="nama" type="text" autocomplete="off" required />
                 <label>Enter your name</label>
               </div>
               <div class="input-box">
-                <input name="email" type="text" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-                  autocomplete="off" required />
+                <input name="email" type="email" autocomplete="off" required />
                 <label>Alamat email</label>
               </div>
               <div class="input-box">
-                <input name="nomorphone" type="text" autocomplete="off" required />
+                <input name="nomorphone" type="number" autocomplete="off" required />
                 <label>Nomor HP</label>
               </div>
               <div class="message-box">
@@ -487,6 +478,7 @@
                 </div>
               </div>
             </form>
+            
           </div>
         </div>
       </div>
@@ -565,7 +557,6 @@
   <!--Kumpulan Scrip-->
   <script src="https://unpkg.com/feather-icons" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <script src="jsfile.js"></script>
   <script src="https://unpkg.com/feather-icons" crossorigin="anonymous"></script>
   <script src="json/curretyear.js"></script>
   <script> feather.replace(); </script>
