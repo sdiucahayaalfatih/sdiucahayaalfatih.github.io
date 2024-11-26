@@ -5,6 +5,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+}
+.body-pendaftaran h1{
+  color: #4070f4;
+  font-size: 20px;
   padding: 10px;
 }
 .container-step {

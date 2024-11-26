@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Wilayah</title>
+</head>
+<body>
+  <div class="input-box">
+    <label>Provinsi</label><span class="required30">*</span>
+    <div class="column">
+      <div class="select-box" autocomplete="off" required>
+        <select id="provsiswa" name="provinsisiswa" onchange="loadKabupaten(this.value)">
+          <option value="">--Pilih--</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="input-box">
+    <label>Kabupaten/Kota</label><span class="required31">*</span>
+    <div class="column">
+      <div class="select-box" autocomplete="off" required>
+        <select id="kotsiswa" name="kotasiswa" onchange="loadKecamatan(this.value)" disabled>
+          <option value="">--Pilih--</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="input-box">
+    <label>Kecamatan</label><span class="required32">*</span>
+    <div class="column">
+      <div class="select-box" autocomplete="off" required>
+        <select id="kecsiswa" name="kecamatansiswa" onchange="loadKelurahan(this.value)" disabled>
+          <option value="">--Pilih--</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="input-box">
+    <label>Kelurahan</label><span class="required33">*</span>
+    <div class="column">
+      <div class="select-box" autocomplete="off" required>
+        <select id="kelsiswa" name="kelurahansiswa" onchange="setKodePos(this.value)" disabled>
+          <option value="">--Pilih--</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="input-box">
+    <label>Kode Pos</label>
+    <input type="number" id="kodepos1" name="kodepost" placeholder="Kode Pos" autocomplete="off" readonly />
+  </div>
+
+  <script>
+    const apiBase = 'https://kodepos.vercel.app';
+
+    // Load Provinsi
+    async function loadProvinsi() {
+      const response = await fetch(`${apiBase}/provinsi`);
+      const data = await response.json();
+      const provSelect = document.getElementById('provsiswa');
+      data.forEach(prov => {
+        const option = document.createElement('option');
+        option.value = prov.id;
+        option.textContent = prov.name;
+        provSelect.appendChild(option);
+      });
+    }
+
+    // Load Kabupaten
+    async function loadKabupaten(provId) {
+      if (!provId) return;
+      const response = await fetch(`${apiBase}/kabupaten/${provId}`);
+      const data = await response.json();
+      const kotSelect = document.getElementById('kotsiswa');
+      kotSelect.disabled = false;
+      kotSelect.innerHTML = '<option value="">--Pilih--</option>';
+      data.forEach(kab => {
+        const option = document.createElement('option');
+        option.value = kab.id;
+        option.textContent = kab.name;
+        kotSelect.appendChild(option);
+      });
+    }
+
+    // Load Kecamatan
+    async function loadKecamatan(kabId) {
+      if (!kabId) return;
+      const response = await fetch(`${apiBase}/kecamatan/${kabId}`);
+      const data = await response.json();
+      const kecSelect = document.getElementById('kecsiswa');
+      kecSelect.disabled = false;
+      kecSelect.innerHTML = '<option value="">--Pilih--</option>';
+      data.forEach(kec => {
+        const option = document.createElement('option');
+        option.value = kec.id;
+        option.textContent = kec.name;
+        kecSelect.appendChild(option);
+      });
+    }
+
+    // Load Kelurahan
+    async function loadKelurahan(kecId) {
+      if (!kecId) return;
+      const response = await fetch(`${apiBase}/kelurahan/${kecId}`);
+      const data = await response.json();
+      const kelSelect = document.getElementById('kelsiswa');
+      kelSelect.disabled = false;
+      kelSelect.innerHTML = '<option value="">--Pilih--</option>';
+      data.forEach(kel => {
+        const option = document.createElement('option');
+        option.value = kel.kodepos;
+        option.textContent = kel.name;
+        kelSelect.appendChild(option);
+      });
+    }
+
+    // Set Kode Pos
+    function setKodePos(kodepos) {
+      document.getElementById('kodepos1').value = kodepos;
+    }
+
+    // Initial Load
+    loadProvinsi();
+  </script>
+</body>
+</html>
