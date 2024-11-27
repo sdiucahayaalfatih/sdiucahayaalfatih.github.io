@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Market Day 2024</title>
+    <title>Kajian Kitab Kuning</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="website icon" type="png" href="sdiulogo/LOGOBOTTOM.png">
     <link rel="stylesheet" href="css/navigasi.css" />
@@ -178,26 +178,35 @@
     <a href="#" class="share-icon" id="share-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <a href="#" class="share-icon" id="share-email" target="_blank"><i class="fas fa-envelope"></i></a>
 </div>
-
+<!-- Script JavaScript untuk menyesuaikan URL berbagi -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const currentUrl = window.location.href;
-        const pageTitle = document.title;
-        const encodedUrl = encodeURIComponent(currentUrl);
-        const encodedTitle = encodeURIComponent(pageTitle);
+  document.addEventListener('DOMContentLoaded', function() {
+      const currentUrl = window.location.href;
+      const pageTitle = document.title;
+      const encodedUrl = encodeURIComponent(currentUrl);
+      const encodedTitle = encodeURIComponent(pageTitle);
 
-        // Set URL untuk berbagi di Facebook
-        document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+      // Mendapatkan gambar pertama dari artikel
+      const articleImage = document.querySelector('img'); // Asumsikan gambar pertama yang digunakan adalah gambar utama
+      const articleImageUrl = articleImage ? encodeURIComponent(articleImage.src) : '';
 
-        // Set URL untuk berbagi di Twitter
-        document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
+      // Mendapatkan setengah bagian dari isi artikel
+      const articleContent = document.querySelector('.article-content'); // Pastikan artikel ada di dalam elemen dengan class "article-content"
+      const articleText = articleContent ? articleContent.innerText.slice(0, articleContent.innerText.length / 2) : ''; // Ambil setengah isi teks
+      const encodedContent = encodeURIComponent(articleText);
 
-        // Set URL untuk berbagi di WhatsApp
-        document.getElementById('share-whatsapp').href = `https://wa.me/?text=${encodedTitle} ${encodedUrl}`;
+      // Set URL untuk berbagi di Facebook
+      document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedTitle}&image=${articleImageUrl}`;
 
-        // Set URL untuk berbagi via Email
-        document.getElementById('share-email').href = `mailto:?subject=${encodedTitle}&body=Baca artikel ini: ${currentUrl}`;
-    });
+      // Set URL untuk berbagi di Twitter
+      document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?text=${encodedTitle} ${encodedContent}&url=${encodedUrl}`;
+
+      // Set URL untuk berbagi di WhatsApp
+      document.getElementById('share-whatsapp').href = `https://wa.me/?text=${encodedTitle} ${encodedContent} ${encodedUrl}`;
+
+      // Set URL untuk berbagi via Email
+      document.getElementById('share-email').href = `mailto:?subject=${encodedTitle}&body=Baca artikel ini: ${encodedTitle} ${encodedContent} ${currentUrl}`;
+  });
 </script>
 
             <!-- Bagian Komentar -->
