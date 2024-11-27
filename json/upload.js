@@ -103,116 +103,130 @@ inputTanggalLahir.addEventListener("change", function () {
 
   inputUmur.value = umur;
 });
-// Fungsi untuk mengambil data kabupaten, provinsi, kec, kel, pos
-let kodeposData = []; // Menyimpan data dari file JSON
-  
-    // Memuat data dari kodepos.json
-    async function loadKodePosData() {
-      try {
-        const response = await fetch('json/kodepos.json'); // Path ke file kodepos.json
-        kodeposData = await response.json();
-        populateProvinces();
-      } catch (error) {
-        console.error('Gagal memuat data kodepos:', error);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  let jsonData = []; // Variabel untuk menyimpan data dari kodepos.json
+
+  // Muat data JSON
+  fetch("json/kodepos.json")
+    .then(response => response.json())
+    .then(data => {
+      jsonData = data;
+
+      // Urutkan berdasarkan provinsi
+      const provinces = [...new Set(data.map(item => item.province))].sort((a, b) => a.localeCompare(b));
+      populateDropdown("province", provinces);
+    })
+    .catch(error => console.error("Error loading JSON:", error));
+
+  // Fungsi untuk mengisi dropdown
+  function populateDropdown(id, options) {
+    const dropdown = document.getElementById(id);
+    dropdown.innerHTML = `<option value="">--Pilih--</option>`;
+
+    // Urutkan data sebelum menambahkan ke dropdown
+    options.sort((a, b) => a.localeCompare(b));
+
+    options.forEach(option => {
+      const opt = document.createElement("option");
+      opt.value = option;
+      opt.textContent = option;
+      dropdown.appendChild(opt);
+    });
+    dropdown.disabled = false; // Aktifkan dropdown
+  }
+
+  // Event listener untuk setiap dropdown
+  document.getElementById("province").addEventListener("change", function () {
+    const selectedProvince = this.value;
+    const regencies = [...new Set(jsonData
+      .filter(item => item.province === selectedProvince)
+      .map(item => item.regency))];
+    populateDropdown("regency", regencies);
+    resetDropdowns(["district", "village", "code"]);
+  });
+
+  document.getElementById("regency").addEventListener("change", function () {
+    const selectedProvince = document.getElementById("province").value;
+    const selectedRegency = this.value;
+    const districts = [...new Set(jsonData
+      .filter(item => item.province === selectedProvince && item.regency === selectedRegency)
+      .map(item => item.district))];
+    populateDropdown("district", districts);
+    resetDropdowns(["village", "code"]);
+  });
+
+  document.getElementById("district").addEventListener("change", function () {
+    const selectedProvince = document.getElementById("province").value;
+    const selectedRegency = document.getElementById("regency").value;
+    const selectedDistrict = this.value;
+    const villages = [...new Set(jsonData
+      .filter(item => item.province === selectedProvince && item.regency === selectedRegency && item.district === selectedDistrict)
+      .map(item => item.village))];
+    populateDropdown("village", villages);
+    resetDropdowns(["code"]);
+  });
+
+  document.getElementById("village").addEventListener("change", function () {
+    const selectedProvince = document.getElementById("province").value;
+    const selectedRegency = document.getElementById("regency").value;
+    const selectedDistrict = document.getElementById("district").value;
+    const selectedVillage = this.value;
+
+    // Cari data yang cocok untuk mengisi kode pos
+    const selectedData = jsonData.find(
+      item =>
+        item.province === selectedProvince &&
+        item.regency === selectedRegency &&
+        item.district === selectedDistrict &&
+        item.village === selectedVillage
+    );
+
+    document.getElementById("code").value = selectedData ? selectedData.code : "";
+  });
+
+  // Fungsi untuk mereset dropdown dan input
+  function resetDropdowns(ids) {
+    ids.forEach(id => {
+      const element = document.getElementById(id);
+      if (element.tagName === "SELECT") {
+        element.innerHTML = `<option value="">--Pilih--</option>`;
+        element.disabled = true;
+        const requiredIndicator = document.querySelector(`.required${id}`);
+        if (requiredIndicator) requiredIndicator.style.visibility = "visible"; // Reset *
+      } else if (element.tagName === "INPUT") {
+        element.value = "";
       }
-    }
-  
-    // Memuat daftar provinsi ke dropdown
-function populateProvinces() {
-  const provinsiSet = Array.from(new Set(kodeposData.map(item => item.province)));
-  provinsiSet.sort(); // Mengurutkan secara alfabetis
+    });
+  }
+});
 
-  const provSelect = document.getElementById('provsiswa');
-  provinsiSet.forEach(province => {
-    const option = document.createElement('option');
-    option.value = province;
-    option.textContent = province;
-    provSelect.appendChild(option);
-  });
+// Fungsi untuk mengelola tanda required (*)
+function toggleRequiredIndicator(selectId, requiredClass) {
+  const selectElement = document.getElementById(selectId);
+  const requiredIndicator = document.querySelector(`.${requiredClass}`);
+
+  if (selectElement.value.trim() === "") {
+    requiredIndicator.style.visibility = "visible"; // Tampilkan *
+  } else {
+    requiredIndicator.style.visibility = "hidden"; // Sembunyikan *
+  }
 }
 
-// Memuat daftar kabupaten berdasarkan provinsi
-function loadKabupaten(selectedProvince) {
-  const kabupatenSet = Array.from(
-    new Set(
-      kodeposData
-        .filter(item => item.province === selectedProvince)
-        .map(item => item.regency)
-    )
-  );
-  kabupatenSet.sort(); // Mengurutkan secara alfabetis
 
-  const kabSelect = document.getElementById('kotsiswa');
-  kabSelect.innerHTML = '<option value="">--Pilih--</option>'; // Reset options
-  document.getElementById('kecsiswa').disabled = true;
-  document.getElementById('kelsiswa').disabled = true;
+function formatPhoneNumber(event) {
+  let input = event.target;
+  let phoneNumber = input.value.replace(/[^0-9+]/g, ''); // Hapus semua karakter selain angka dan +
 
-  kabupatenSet.forEach(regency => {
-    const option = document.createElement('option');
-    option.value = regency;
-    option.textContent = regency;
-    kabSelect.appendChild(option);
-  });
+  // Jika input dimulai dengan +628, lanjutkan, jika tidak tambahkan +628
+  if (!phoneNumber.startsWith('+628')) {
+    phoneNumber = '+628' + phoneNumber.slice(3);
+  }
 
-  kabSelect.disabled = false; // Aktifkan dropdown kabupaten
+  // Gunakan regex untuk format nomor telepon sesuai +628XX-XXXX-XXXX
+  phoneNumber = phoneNumber.replace(/^(\+628\d{2})(\d{4})(\d{4})$/, '$1-$2-$3');
+
+  // Terapkan pemformatan ke input
+  input.value = phoneNumber;
 }
-
-// Memuat daftar kecamatan berdasarkan kabupaten
-function loadKecamatan(selectedRegency) {
-  const kecamatanSet = Array.from(
-    new Set(
-      kodeposData
-        .filter(item => item.regency === selectedRegency)
-        .map(item => item.district)
-    )
-  );
-  kecamatanSet.sort(); // Mengurutkan secara alfabetis
-
-  const kecSelect = document.getElementById('kecsiswa');
-  kecSelect.innerHTML = '<option value="">--Pilih--</option>'; // Reset options
-  document.getElementById('kelsiswa').disabled = true;
-
-  kecamatanSet.forEach(district => {
-    const option = document.createElement('option');
-    option.value = district;
-    option.textContent = district;
-    kecSelect.appendChild(option);
-  });
-
-  kecSelect.disabled = false; // Aktifkan dropdown kecamatan
-}
-
-// Memuat daftar kelurahan berdasarkan kecamatan
-function loadKelurahan(selectedDistrict) {
-  const kelurahanSet = Array.from(
-    new Set(
-      kodeposData
-        .filter(item => item.district === selectedDistrict)
-        .map(item => item.village)
-    )
-  );
-  kelurahanSet.sort(); // Mengurutkan secara alfabetis
-
-  const kelSelect = document.getElementById('kelsiswa');
-  kelSelect.innerHTML = '<option value="">--Pilih--</option>'; // Reset options
-
-  kelurahanSet.forEach(village => {
-    const option = document.createElement('option');
-    option.value = village;
-    option.textContent = village;
-    kelSelect.appendChild(option);
-  });
-
-  kelSelect.disabled = false; // Aktifkan dropdown kelurahan
-}
-
-  
-    // Menetapkan kode pos berdasarkan kelurahan
-    function setKodePos(selectedVillage) {
-      const kodePosInput = document.getElementById('kodepos1');
-      const match = kodeposData.find(item => item.village === selectedVillage);
-      kodePosInput.value = match ? match.code : ''; // Jika tidak ada, kosongkan
-    }
-  
-    // Panggil fungsi untuk memuat data saat halaman dimuat
-    document.addEventListener('DOMContentLoaded', loadKodePosData);

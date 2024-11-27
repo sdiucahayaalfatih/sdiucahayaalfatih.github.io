@@ -149,7 +149,7 @@
     <ul class="menu-visi">
       <li><a href="index.html">Home</a></li>
       <li>
-        <p>></p>
+        <p>&gt;</p>
       </li>
       <li><a>Pendaftaran Online</a></li>
     </ul>
@@ -180,7 +180,7 @@
             <h1>1. Identitas Calon Peserta Didik</h1>
           </div>
           <div class="input-box">
-            <label>Tahun Ajaran Sekolah</label><span class="">*</span>
+            <label for="tahunajaranbaru">Tahun Ajaran Sekolah</label>
             <input type="text" id="tahunajaran" name="tahunajaranbaru" readonly />
           </div>
           <div class="tahunajaran-down" id="tahun-warning">
@@ -428,8 +428,8 @@
           <div class="input-box">
             <label>Provinsi</label><span class="required30">*</span>
             <div class="column">
-              <div class="select-box" autocomplete="off" required>
-                <select id="provsiswa" name="provinsisiswa" onchange="loadKabupaten(this.value);toggleRequiredIndicator30(event)">
+              <div class="select-box" autocomplete="off">
+                <select id="province" name="provinsisiswa" onchange="toggleRequiredIndicator('province', 'required30')">
                   <option value="">--Pilih--</option>
                 </select>
               </div>
@@ -438,8 +438,8 @@
           <div class="input-box">
             <label>Kabupaten/Kota</label><span class="required31">*</span>
             <div class="column">
-              <div class="select-box" autocomplete="off" required>
-                <select id="kotsiswa" name="kotasiswa" onchange="loadKecamatan(this.value);toggleRequiredIndicator31(event)" disabled>
+              <div class="select-box" autocomplete="off">
+                <select id="regency" name="kotasiswa" disabled onchange="toggleRequiredIndicator('regency', 'required31')">
                   <option value="">--Pilih--</option>
                 </select>
               </div>
@@ -448,8 +448,8 @@
           <div class="input-box">
             <label>Kecamatan</label><span class="required32">*</span>
             <div class="column">
-              <div class="select-box" autocomplete="off" required>
-                <select id="kecsiswa" name="kecamatansiswa" onchange="loadKelurahan(this.value);toggleRequiredIndicator32(event)" disabled>
+              <div class="select-box" autocomplete="off">
+                <select id="district" name="kecamatansiswa" disabled onchange="toggleRequiredIndicator('district', 'required32')">
                   <option value="">--Pilih--</option>
                 </select>
               </div>
@@ -458,13 +458,15 @@
           <div class="input-box">
             <label>Kelurahan</label><span class="required33">*</span>
             <div class="column">
-              <div class="select-box" autocomplete="off" required>
-                <select id="kelsiswa" name="kelurahansiswa" onchange="setKodePos(this.value);toggleRequiredIndicator33(event)" disabled>
+              <div class="select-box" autocomplete="off">
+                <select id="village" name="kelurahansiswa" disabled onchange="toggleRequiredIndicator('village', 'required33')">
                   <option value="">--Pilih--</option>
                 </select>
               </div>
             </div>
           </div>
+        
+            
           <div class="input-box">
             <label>Alamat/Dusun</label><span class="required11">*</span>
             <input type="text" id="alamatsiswa" name="alamatsiswa" placeholder="Kp / Jln / Komp."
@@ -477,8 +479,9 @@
           </div>
           <div class="input-box">
             <label>Kode Pos</label>
-            <input type="number" id="kodepos1" name="kodepost" placeholder="Kode Pos" autocomplete="off" readonly />
+            <input type="number" id="code" name="kodepost" placeholder="Kode Pos" autocomplete="off" readonly />
           </div>
+          
         </div>
         <div class="step-form" data-step="3" style="display: none;">
           <!-- Konten untuk Alamat Sekolah -->
@@ -791,19 +794,21 @@
           </div>
           <div class="input-box">
             <label>Nomor Telp. Rumah</label>
-            <input type="number" id="nohtelprumah" name="notelprumah" placeholder="Masukan Nomor Telp."
+            <input type="text" id="nohtelprumah" name="notelprumah" placeholder="Masukan Nomor Telp."
               autocomplete="off" />
+          </div>
+          <div class="notelp-down" id="notelp-warning">
+            <span>jika tidak ada beritanda -</span>
           </div>
           <div class="input-box">
             <label>Nomor Hp Aktif</label><span class="required24">*</span>
-            <input type="number" id="nohpinput" name="nohpinput" placeholder="Masukan Nomor HP"
-              oninput="toggleRequiredIndicator24(event)" autocomplete="off" required />
+            <input type="tel" id="nohpinput" name="nohpinput" value="+628" placeholder="Masukan Nomor HP"
+              oninput="formatPhoneNumber(event)" autocomplete="off" required maxlength="16" />
           </div>
           <div class="notelp-down" id="notelp-warning">
             <span>Catatan : Untuk informasi selanjutnya, pastikan nomor yang di
               inputkan aktif dan mudah di hubungi</span>
           </div>
-
           <div class="data-wali-opsi">
             <label>Apakah Anak Memiliki Wali?</label>
             <div class="questions-option3">
@@ -1090,7 +1095,6 @@
   <script>
     feather.replace();
   </script>
-  <script src="json/jsfile.js"></script>
   <script src="json/curretyear.js"></script>
   <script src="json/hamburgermenu.js"></script>
   <script src="json/scripstyle2.js"></script>
