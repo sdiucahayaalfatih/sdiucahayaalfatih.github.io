@@ -1,5 +1,6 @@
 /* New modal content styles */
 .modal-content {
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   padding: 20px;
   width: 100%;

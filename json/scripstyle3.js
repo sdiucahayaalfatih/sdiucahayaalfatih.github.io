@@ -174,6 +174,26 @@ function toggleRequiredIndicator16(event) {
     requiredIndicator.style.visibility = "hidden";
   }
 }
+function toggleRequiredIndicatorAyah(event) {
+  var input = event.target;
+  var requiredIndicator = document.querySelector(".requiredAyah");
+
+  if (input.value.trim() === "") {
+    requiredIndicator.style.visibility = "visible";
+  } else {
+    requiredIndicator.style.visibility = "hidden";
+  }
+}
+function toggleRequiredIndicatorIbu(event) {
+  var input = event.target;
+  var requiredIndicator = document.querySelector(".requiredIbu");
+
+  if (input.value.trim() === "") {
+    requiredIndicator.style.visibility = "visible";
+  } else {
+    requiredIndicator.style.visibility = "hidden";
+  }
+}
 function toggleRequiredIndicator17(event) {
   var input = event.target;
   var requiredIndicator = document.querySelector(".required17");
@@ -264,46 +284,7 @@ function toggleRequiredIndicator26(event) {
     requiredIndicator.style.visibility = "hidden";
   }
 }
-function toggleRequiredIndicator30(event) {
-  var input = event.target;
-  var requiredIndicator = document.querySelector(".required30");
 
-  if (input.value.trim() === "") {
-    requiredIndicator.style.visibility = "visible";
-  } else {
-    requiredIndicator.style.visibility = "hidden";
-  }
-}
-function toggleRequiredIndicator31(event) {
-  var input = event.target;
-  var requiredIndicator = document.querySelector(".required31");
-
-  if (input.value.trim() === "") {
-    requiredIndicator.style.visibility = "visible";
-  } else {
-    requiredIndicator.style.visibility = "hidden";
-  }
-}
-function toggleRequiredIndicator32(event) {
-  var input = event.target;
-  var requiredIndicator = document.querySelector(".required32");
-
-  if (input.value.trim() === "") {
-    requiredIndicator.style.visibility = "visible";
-  } else {
-    requiredIndicator.style.visibility = "hidden";
-  }
-}
-function toggleRequiredIndicator33(event) {
-  var input = event.target;
-  var requiredIndicator = document.querySelector(".required33");
-
-  if (input.value.trim() === "") {
-    requiredIndicator.style.visibility = "visible";
-  } else {
-    requiredIndicator.style.visibility = "hidden";
-  }
-}
 function limitTo16Digits(event) {
   var input = event.target;
   var value = input.value;

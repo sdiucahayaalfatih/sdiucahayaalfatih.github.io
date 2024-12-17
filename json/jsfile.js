@@ -95,14 +95,3 @@ function handleGesture() {
     reloadSlider();
   }
 }
-
-// Fungsi untuk melakukan scroll ke atas ketika tombol "Scroll to Top" diklik
-document
-  .querySelector(".scroll-to-top")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });

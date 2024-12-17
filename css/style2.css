@@ -344,3 +344,12 @@
     font-size: 1.2em;
   }
 }
+/* Menghilangkan spinner pada input number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Untuk Firefox */
+}

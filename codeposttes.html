@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Format Nomor HP</title>
+</head>
+<body>
+  <div class="input-box">
+    <label>Nomor Hp Aktif</label><span class="required24">*</span>
+    <input type="tel" id="nohpinput" name="nohpinput" value="+628" placeholder="Masukan Nomor HP"
+      oninput="formatPhoneNumber(event)" autocomplete="off" required maxlength="18" />
+  </div>
+  
+<script>
+function formatPhoneNumber(event) {
+  let input = event.target;
+  let phoneNumber = input.value.replace(/[^0-9+]/g, ''); // Hapus semua karakter selain angka dan +
+
+  // Jika input dimulai dengan +628, lanjutkan, jika tidak tambahkan +628
+  if (!phoneNumber.startsWith('+628')) {
+    phoneNumber = '+628' + phoneNumber.slice(3);
+  }
+
+  // Gunakan regex untuk format nomor telepon sesuai +628XX-XXXX-XXXX
+  phoneNumber = phoneNumber.replace(/^(\+628\d{2})(\d{4})(\d{4})$/, '$1-$2-$3');
+
+  // Terapkan pemformatan ke input
+  input.value = phoneNumber;
+}
+</script>
+
+</body>
+</html>

@@ -103,92 +103,130 @@ inputTanggalLahir.addEventListener("change", function () {
 
   inputUmur.value = umur;
 });
-// Fungsi untuk mempopulasikan data ke dalam select box
-function populateSelectElement(url, selectElement, dataKey, valueKey) { 
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      // Urutkan data berdasarkan nama wilayah (valueKey)
-      data.sort((a, b) => {
-        if (a[valueKey].toLowerCase() < b[valueKey].toLowerCase()) return -1;
-        if (a[valueKey].toLowerCase() > b[valueKey].toLowerCase()) return 1;
-        return 0;
-      });
 
-      // Mulai membangun opsi dropdown
-      let options = `<option value="">--Pilih--</option>`;
-      data.forEach((element) => {
-        options += `<option value="${element[valueKey]}" data-id="${element[dataKey]}">${element[valueKey]}</option>`;
-      });
 
-      // Populasi opsi ke dalam select
-      selectElement.innerHTML = options;
+document.addEventListener("DOMContentLoaded", function () {
+  let jsonData = []; // Variabel untuk menyimpan data dari kodepos.json
+
+  // Muat data JSON
+  fetch("json/kodepos.json")
+    .then(response => response.json())
+    .then(data => {
+      jsonData = data;
+
+      // Urutkan berdasarkan provinsi
+      const provinces = [...new Set(data.map(item => item.province))].sort((a, b) => a.localeCompare(b));
+      populateDropdown("province", provinces);
     })
-    .catch((error) => console.error('Error populating select:', error));
+    .catch(error => console.error("Error loading JSON:", error));
+
+  // Fungsi untuk mengisi dropdown
+  function populateDropdown(id, options) {
+    const dropdown = document.getElementById(id);
+    dropdown.innerHTML = `<option value="">--Pilih--</option>`;
+
+    // Urutkan data sebelum menambahkan ke dropdown
+    options.sort((a, b) => a.localeCompare(b));
+
+    options.forEach(option => {
+      const opt = document.createElement("option");
+      opt.value = option;
+      opt.textContent = option;
+      dropdown.appendChild(opt);
+    });
+    dropdown.disabled = false; // Aktifkan dropdown
+  }
+
+  // Event listener untuk setiap dropdown
+  document.getElementById("province").addEventListener("change", function () {
+    const selectedProvince = this.value;
+    const regencies = [...new Set(jsonData
+      .filter(item => item.province === selectedProvince)
+      .map(item => item.regency))];
+    populateDropdown("regency", regencies);
+    resetDropdowns(["district", "village", "code"]);
+  });
+
+  document.getElementById("regency").addEventListener("change", function () {
+    const selectedProvince = document.getElementById("province").value;
+    const selectedRegency = this.value;
+    const districts = [...new Set(jsonData
+      .filter(item => item.province === selectedProvince && item.regency === selectedRegency)
+      .map(item => item.district))];
+    populateDropdown("district", districts);
+    resetDropdowns(["village", "code"]);
+  });
+
+  document.getElementById("district").addEventListener("change", function () {
+    const selectedProvince = document.getElementById("province").value;
+    const selectedRegency = document.getElementById("regency").value;
+    const selectedDistrict = this.value;
+    const villages = [...new Set(jsonData
+      .filter(item => item.province === selectedProvince && item.regency === selectedRegency && item.district === selectedDistrict)
+      .map(item => item.village))];
+    populateDropdown("village", villages);
+    resetDropdowns(["code"]);
+  });
+
+  document.getElementById("village").addEventListener("change", function () {
+    const selectedProvince = document.getElementById("province").value;
+    const selectedRegency = document.getElementById("regency").value;
+    const selectedDistrict = document.getElementById("district").value;
+    const selectedVillage = this.value;
+
+    // Cari data yang cocok untuk mengisi kode pos
+    const selectedData = jsonData.find(
+      item =>
+        item.province === selectedProvince &&
+        item.regency === selectedRegency &&
+        item.district === selectedDistrict &&
+        item.village === selectedVillage
+    );
+
+    document.getElementById("code").value = selectedData ? selectedData.code : "";
+  });
+
+  // Fungsi untuk mereset dropdown dan input
+  function resetDropdowns(ids) {
+    ids.forEach(id => {
+      const element = document.getElementById(id);
+      if (element.tagName === "SELECT") {
+        element.innerHTML = `<option value="">--Pilih--</option>`;
+        element.disabled = true;
+        const requiredIndicator = document.querySelector(`.required${id}`);
+        if (requiredIndicator) requiredIndicator.style.visibility = "visible"; // Reset *
+      } else if (element.tagName === "INPUT") {
+        element.value = "";
+      }
+    });
+  }
+});
+
+// Fungsi untuk mengelola tanda required (*)
+function toggleRequiredIndicator(selectId, requiredClass) {
+  const selectElement = document.getElementById(selectId);
+  const requiredIndicator = document.querySelector(`.${requiredClass}`);
+
+  if (selectElement.value.trim() === "") {
+    requiredIndicator.style.visibility = "visible"; // Tampilkan *
+  } else {
+    requiredIndicator.style.visibility = "hidden"; // Sembunyikan *
+  }
 }
 
-const provinsiSelect = document.getElementById("provsiswa");
-const kotaSelect = document.getElementById("kotsiswa");
-const kecamatanSelect = document.getElementById("kecsiswa");
-const kelurahanSelect = document.getElementById("kelsiswa");
 
-// Menonaktifkan kolom-kolom yang tidak bisa diisi pada awalnya
-kotaSelect.disabled = true;
-kecamatanSelect.disabled = true;
-kelurahanSelect.disabled = true;
+function formatPhoneNumber(event) {
+  let input = event.target;
+  let phoneNumber = input.value.replace(/[^0-9+]/g, ''); // Hapus semua karakter selain angka dan +
 
-// Event listener untuk Provinsi
-provinsiSelect.addEventListener("change", (e) => {
-  const selectedProvinsi = e.target.value;
-  const provinsiId = e.target.options[e.target.selectedIndex].dataset.id;
-  const kotaUrl = `https://kanglerian.github.io/api-wilayah-indonesia/api/regencies/${provinsiId}.json`;
+  // Jika input dimulai dengan +628, lanjutkan, jika tidak tambahkan +628
+  if (!phoneNumber.startsWith('+628')) {
+    phoneNumber = '+628' + phoneNumber.slice(3);
+  }
 
-  populateSelectElement(kotaUrl, kotaSelect, "id", "name");
+  // Gunakan regex untuk format nomor telepon sesuai +628XX-XXXX-XXXX
+  phoneNumber = phoneNumber.replace(/^(\+628\d{2})(\d{4})(\d{4})$/, '$1-$2-$3');
 
-  // Mengaktifkan kolom Kabupaten/Kota setelah Provinsi dipilih
-  kotaSelect.disabled = false;
-  // Menonaktifkan kolom Kecamatan dan Kelurahan ketika Provinsi dipilih ulang
-  kecamatanSelect.disabled = true;
-  kelurahanSelect.disabled = true;
-
-  // Mengosongkan pilihan di kolom Kecamatan dan Kelurahan
-  kecamatanSelect.innerHTML = '<option value="">--Pilih--</option>';
-  kelurahanSelect.innerHTML = '<option value="">--Pilih--</option>';
-});
-
-// Event listener untuk Kabupaten/Kota
-kotaSelect.addEventListener("change", (e) => {
-  const selectedKota = e.target.value;
-  const kotaId = e.target.options[e.target.selectedIndex].dataset.id;
-  const kecamatanUrl = `https://kanglerian.github.io/api-wilayah-indonesia/api/districts/${kotaId}.json`;
-
-  populateSelectElement(kecamatanUrl, kecamatanSelect, "id", "name");
-
-  // Mengaktifkan kolom Kecamatan setelah Kabupaten/Kota dipilih
-  kecamatanSelect.disabled = false;
-  // Menonaktifkan kolom Kelurahan ketika Kabupaten dipilih ulang
-  kelurahanSelect.disabled = true;
-
-  // Mengosongkan pilihan di kolom Kelurahan
-  kelurahanSelect.innerHTML = '<option value="">--Pilih--</option>';
-});
-
-// Event listener untuk Kecamatan
-kecamatanSelect.addEventListener("change", (e) => {
-  const selectedKecamatan = e.target.value;
-  const kecamatanId = e.target.options[e.target.selectedIndex].dataset.id;
-  const kelurahanUrl = `https://kanglerian.github.io/api-wilayah-indonesia/api/villages/${kecamatanId}.json`;
-
-  populateSelectElement(kelurahanUrl, kelurahanSelect, "id", "name");
-
-  // Mengaktifkan kolom Kelurahan setelah Kecamatan dipilih
-  kelurahanSelect.disabled = false;
-});
-
-// Populate Provinsi
-populateSelectElement(
-  "https://kanglerian.github.io/api-wilayah-indonesia/api/provinces.json",
-  provinsiSelect,
-  "id",
-  "name"
-);
+  // Terapkan pemformatan ke input
+  input.value = phoneNumber;
+}

@@ -1,0 +1,353 @@
+   .li-tex ul {
+        padding-left: 20px;
+    }
+    .body-article {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    height: 100%; /* Menjaga tinggi container sesuai dengan tinggi yang lebih besar */
+}
+
+.article-content {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 600px; /* Atur tinggi minimum untuk artikel */
+    overflow: auto;
+}
+
+.sidebar {
+    flex: 1;
+    background: linear-gradient(135deg, #0073e6, #00bcd4);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    height: 100%; /* Pastikan sidebar memiliki tinggi yang sama */
+}
+
+
+.article-meta {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.share-icons {
+    margin-top: 20px;
+}
+
+.share-icons span {
+    font-weight: bold;
+}
+
+.share-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+}
+
+.share-icon:hover {
+    color: #0073e6;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+.recent-articles {
+    padding: 0;
+    margin-top: 15px;
+}
+
+.recent-article-item {
+    display: flex;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.recent-article-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.recent-article-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.recent-article-content {
+    flex: 1;
+}
+
+.recent-article-title {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.recent-article-title:hover {
+    color: #d1e8ff;
+}
+.sidebar h2 {
+    margin-bottom: 10px;
+}
+.recent-article-excerpt {
+    color: #f0f0f0;
+    font-size: 0.9em;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Membatasi pada 2 baris */
+    -webkit-box-orient: vertical;
+}
+.search-form {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    font-size: 0.9em;
+}
+
+.search-button {
+    background-color: #fff;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    color: #0073e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button:hover {
+    background-color: #e0e0e0;
+}
+.navigation-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Memberikan jarak antara tombol */
+    margin-top: 10px;
+}
+
+#prevButton, #nextButton {
+    padding: 8px 16px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#prevButton:hover, #nextButton:hover {
+    background-color: #005bb5;
+}
+button:disabled {
+    cursor: not-allowed; /* Menampilkan cursor "not-allowed" saat tombol dinonaktifkan */
+    opacity: 0.5; /* Memberikan efek transparansi agar terlihat dinonaktifkan */
+}
+   
+    /* Komentar Form Styles */
+.comments-section {
+    margin-top: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for comment input form */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    resize: none; /* Mematikan resize */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+.comment-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+.comment-form input[type="text"]:focus {
+    border-color: #0073e6;
+    box-shadow: 0 0 8px rgba(0, 115, 230, 0.4);
+    outline: none;
+}
+.comment-form textarea:focus {
+    border-color: #0073e6;
+    box-shadow: 0 0 8px rgba(0, 115, 230, 0.4);
+    outline: none;
+}
+
+.comment-form button {
+    padding: 12px 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    align-self: flex-end;
+}
+
+.comment-form button:hover {
+    background-color: #005bb5;
+}
+
+.comment-form button:active {
+    transform: scale(0.98);
+}
+/* Mengubah layout sidebar dan konten utama pada perangkat kecil */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Menjadikan kolom vertikal pada layar kecil */
+    }
+
+    .sidebar {
+        flex: none;
+        margin-top: 20px;
+    }
+
+    .article-content {
+        flex: none;
+    }
+}
+/* Responsif untuk perangkat kecil */
+@media (max-width: 576px) {
+    .comment-form textarea {
+        font-size: 0.9em;
+    }
+
+    .comment-form button {
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
+
+    .share-icons span {
+        font-size: 1em;
+    }
+
+    .share-icon {
+        margin-right: 8px;
+        font-size: 1em;
+    }
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkmark {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    position: relative;
+    margin-bottom: 15px;
+    animation: pop 0.4s ease-in-out forwards;
+}
+
+.checkmark::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 18px;
+    width: 10px;
+    height: 25px;
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+    transform: rotate(45deg);
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
