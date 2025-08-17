@@ -532,3 +532,69 @@ function limitTo16Digits101(event) {
     warningMessage.style.display = "none";
   }
 }
+
+
+function toggleRequiredIndicatorTinggiBadan(event) {
+  var input = event.target;
+  var requiredIndicator = document.querySelector(".requiredTB");
+
+  if (input.value.trim() === "") {
+    requiredIndicator.style.visibility = "visible";
+  } else {
+    requiredIndicator.style.visibility = "hidden";
+  }
+}
+function toggleRequiredIndicatorBeratBadan(event) {
+  var input = event.target;
+  var requiredIndicator = document.querySelector(".requiredBB");
+
+  if (input.value.trim() === "") {
+    requiredIndicator.style.visibility = "visible";
+  } else {
+    requiredIndicator.style.visibility = "hidden";
+  }
+}
+function toggleRequiredIndicatorLingkarKepala(event) {
+  var input = event.target;
+  var requiredIndicator = document.querySelector(".requiredLK");
+
+  if (input.value.trim() === "") {
+    requiredIndicator.style.visibility = "visible";
+  } else {
+    requiredIndicator.style.visibility = "hidden";
+  }
+}
+
+function toggleRequiredIndicatorCitaCita(event) {
+  var input = event.target;
+  var requiredIndicator = document.querySelector(".requiredCC");
+
+  if (input.value.trim() === "") {
+    requiredIndicator.style.visibility = "visible";
+  } else {
+    requiredIndicator.style.visibility = "hidden";
+  }
+}
+function toggleRequiredIndicatorHobi(event) {
+  var input = event.target;
+  var requiredIndicator = document.querySelector(".requiredHobi");
+
+  if (input.value.trim() === "") {
+    requiredIndicator.style.visibility = "visible";
+  } else {
+    requiredIndicator.style.visibility = "hidden";
+  }
+}
+function toggleRequiredIndicatorJRK(event) {
+  var input = event.target;
+  var requiredIndicator = document.querySelector(".requiredJRK");
+
+  if (input.value.trim() === "") {
+    requiredIndicator.style.visibility = "visible";
+  } else {
+    requiredIndicator.style.visibility = "hidden";
+  }
+}
+
+
+  
